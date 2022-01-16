@@ -7,15 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E3EE116E1424C013E216622 /* Pods_SantaDiary_SantaDiaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15505A215DCDE288858FF95 /* Pods_SantaDiary_SantaDiaryUITests.framework */; };
+		AC071FDF2320CB2A008F8660 /* Pods_SantaDiaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8890C71DBE473BBFACE2714 /* Pods_SantaDiaryTests.framework */; };
+		E260B8B5751DF0DBB9C6491F /* Pods_SantaDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB790B81041A006140C917B3 /* Pods_SantaDiary.framework */; };
 		F71D0C57277517F7000526A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D0C56277517F7000526A6 /* AppDelegate.swift */; };
 		F71D0C59277517F7000526A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D0C58277517F7000526A6 /* SceneDelegate.swift */; };
-		F71D0C5B277517F7000526A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D0C5A277517F7000526A6 /* ViewController.swift */; };
+		F71D0C5B277517F7000526A6 /* ListOfProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D0C5A277517F7000526A6 /* ListOfProfiles.swift */; };
 		F71D0C5E277517F7000526A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71D0C5C277517F7000526A6 /* Main.storyboard */; };
 		F71D0C60277517F9000526A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F71D0C5F277517F9000526A6 /* Assets.xcassets */; };
 		F71D0C63277517F9000526A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71D0C61277517F9000526A6 /* LaunchScreen.storyboard */; };
 		F71D0C6E277517FA000526A6 /* SantaDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D0C6D277517FA000526A6 /* SantaDiaryTests.swift */; };
 		F71D0C78277517FA000526A6 /* SantaDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D0C77277517FA000526A6 /* SantaDiaryUITests.swift */; };
 		F71D0C7A277517FA000526A6 /* SantaDiaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D0C79277517FA000526A6 /* SantaDiaryUITestsLaunchTests.swift */; };
+		F71D0C9027751EB2000526A6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D0C8F27751EB2000526A6 /* UIColor.swift */; };
+		F71D0C9227751F13000526A6 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D0C9127751F13000526A6 /* ColorScheme.swift */; };
+		F73C05D62786A22200EEBB6B /* LetterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C05D42786A22200EEBB6B /* LetterTableViewCell.swift */; };
+		F73C05D72786A22200EEBB6B /* LetterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73C05D52786A22200EEBB6B /* LetterTableViewCell.xib */; };
+		F73C05D92787FBD800EEBB6B /* LetterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C05D82787FBD800EEBB6B /* LetterListViewModel.swift */; };
+		F76AD3B6278404AD006F0B38 /* SelectProfileImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3B5278404AD006F0B38 /* SelectProfileImageCollectionViewController.swift */; };
+		F76AD3B8278405EF006F0B38 /* ProfileImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3B7278405EF006F0B38 /* ProfileImageCollectionViewCell.swift */; };
+		F76AD3BB2784C1A2006F0B38 /* NiceListViewConttroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3BA2784C1A2006F0B38 /* NiceListViewConttroller.swift */; };
+		F76AD3BF2784C1E3006F0B38 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3BE2784C1E3006F0B38 /* DiaryViewController.swift */; };
+		F76AD3C12784C1F2006F0B38 /* MailboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3C02784C1F2006F0B38 /* MailboxViewController.swift */; };
+		F76AD3C32784C277006F0B38 /* WriteLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3C22784C277006F0B38 /* WriteLetterViewController.swift */; };
+		F76AD3C52785101E006F0B38 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3C42785101E006F0B38 /* Letter.swift */; };
+		F76AD3C82785114C006F0B38 /* LetterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3C72785114C006F0B38 /* LetterViewModel.swift */; };
+		F76AD3CA278558AB006F0B38 /* LetterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3C9278558AB006F0B38 /* LetterManager.swift */; };
+		F77060432775215400B4EE52 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77060422775215400B4EE52 /* AppConstants.swift */; };
+		F77060452775342800B4EE52 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77060442775342800B4EE52 /* ProfileViewController.swift */; };
+		F7706047277692EA00B4EE52 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7706046277692EA00B4EE52 /* Profile.swift */; };
+		F77060492776955700B4EE52 /* ProfileListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77060482776955700B4EE52 /* ProfileListViewModel.swift */; };
+		F770604D2776CF4D00B4EE52 /* ListOfProfilesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770604B2776CF4D00B4EE52 /* ListOfProfilesCell.swift */; };
+		F770604E2776CF4D00B4EE52 /* ListOfProfilesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F770604C2776CF4D00B4EE52 /* ListOfProfilesCell.xib */; };
+		F77060502777C53500B4EE52 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770604F2777C53500B4EE52 /* ProfileManager.swift */; };
+		F77060522777D2F100B4EE52 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77060512777D2F100B4EE52 /* ProfileViewModel.swift */; };
+		F79258EE2788A4A5006E872F /* ShowLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79258ED2788A4A5006E872F /* ShowLetterViewController.swift */; };
+		F79258F0278A0D08006E872F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79258EF278A0D08006E872F /* SettingsViewController.swift */; };
+		F79258F4278B5A2F006E872F /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79258F2278B5A2F006E872F /* SettingsTableViewCell.swift */; };
+		F79258F5278B5A2F006E872F /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79258F3278B5A2F006E872F /* SettingsTableViewCell.xib */; };
+		F79258F7278B5C78006E872F /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79258F6278B5C78006E872F /* Setting.swift */; };
+		F79258FA278B5CEB006E872F /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79258F9278B5CEB006E872F /* SettingViewModel.swift */; };
+		F79258FC278B5D95006E872F /* SettingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79258FB278B5D95006E872F /* SettingListViewModel.swift */; };
+		F79258FE278B6408006E872F /* ParentsLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79258FD278B6408006E872F /* ParentsLockViewController.swift */; };
+		F7925900278BF14C006E872F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79258FF278BF14C006E872F /* String.swift */; };
+		F7925902278C883D006E872F /* ParentsLettersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7925901278C883D006E872F /* ParentsLettersViewController.swift */; };
+		F7925905278C8BD2006E872F /* ParentsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7925904278C8BD2006E872F /* ParentsListViewModel.swift */; };
+		F7925907278C8C36006E872F /* ParentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7925906278C8C36006E872F /* ParentsViewModel.swift */; };
+		F7925909278CD95D006E872F /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7925908278CD95D006E872F /* ProgressBar.swift */; };
+		F792590D278CD9E2006E872F /* ProgressBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792590C278CD9E2006E872F /* ProgressBarViewModel.swift */; };
+		F792590F27907D44006E872F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792590E27907D44006E872F /* FeedbackViewController.swift */; };
+		F79259112790BBCD006E872F /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79259102790BBCD006E872F /* CreatePasswordViewController.swift */; };
+		F79259142790CEB2006E872F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79259132790CEB2006E872F /* UIView.swift */; };
+		F792591827936CE2006E872F /* ProfileManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792591727936CE2006E872F /* ProfileManagerTest.swift */; };
+		F7A5D90127797DE40097964C /* EventButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5D90027797DE40097964C /* EventButton.swift */; };
+		F7A5D90327797DF10097964C /* EventButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7A5D90227797DF10097964C /* EventButton.xib */; };
+		F7A5D905277A384B0097964C /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5D904277A384B0097964C /* AddButton.swift */; };
+		F7A5D907277A72050097964C /* AddProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5D906277A72050097964C /* AddProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +83,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		220ABD3FF7BF5284F6269C11 /* Pods-SantaDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SantaDiary.debug.xcconfig"; path = "Target Support Files/Pods-SantaDiary/Pods-SantaDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		918CBBF0177FE9A81BD41FC8 /* Pods-SantaDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SantaDiary.release.xcconfig"; path = "Target Support Files/Pods-SantaDiary/Pods-SantaDiary.release.xcconfig"; sourceTree = "<group>"; };
+		A15505A215DCDE288858FF95 /* Pods_SantaDiary_SantaDiaryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SantaDiary_SantaDiaryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A81F6979724EDADCFB60F289 /* Pods-SantaDiary-SantaDiaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SantaDiary-SantaDiaryUITests.release.xcconfig"; path = "Target Support Files/Pods-SantaDiary-SantaDiaryUITests/Pods-SantaDiary-SantaDiaryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AB790B81041A006140C917B3 /* Pods_SantaDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SantaDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1BC83C795AAA3A78741E265 /* Pods-SantaDiaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SantaDiaryTests.debug.xcconfig"; path = "Target Support Files/Pods-SantaDiaryTests/Pods-SantaDiaryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B458DC2F28326B1936EF0AB8 /* Pods-SantaDiary-SantaDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SantaDiary-SantaDiaryUITests.debug.xcconfig"; path = "Target Support Files/Pods-SantaDiary-SantaDiaryUITests/Pods-SantaDiary-SantaDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8890C71DBE473BBFACE2714 /* Pods_SantaDiaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SantaDiaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D62004BFABB181E914533D2C /* Pods-SantaDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SantaDiaryTests.release.xcconfig"; path = "Target Support Files/Pods-SantaDiaryTests/Pods-SantaDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		F71D0C53277517F7000526A6 /* SantaDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SantaDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71D0C56277517F7000526A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F71D0C58277517F7000526A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F71D0C5A277517F7000526A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F71D0C5A277517F7000526A6 /* ListOfProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfProfiles.swift; sourceTree = "<group>"; };
 		F71D0C5D277517F7000526A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F71D0C5F277517F9000526A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F71D0C62277517F9000526A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +105,50 @@
 		F71D0C73277517FA000526A6 /* SantaDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SantaDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71D0C77277517FA000526A6 /* SantaDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantaDiaryUITests.swift; sourceTree = "<group>"; };
 		F71D0C79277517FA000526A6 /* SantaDiaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantaDiaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F71D0C8F27751EB2000526A6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F71D0C9127751F13000526A6 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		F73C05D42786A22200EEBB6B /* LetterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTableViewCell.swift; sourceTree = "<group>"; };
+		F73C05D52786A22200EEBB6B /* LetterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterTableViewCell.xib; sourceTree = "<group>"; };
+		F73C05D82787FBD800EEBB6B /* LetterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterListViewModel.swift; sourceTree = "<group>"; };
+		F76AD3B5278404AD006F0B38 /* SelectProfileImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProfileImageCollectionViewController.swift; sourceTree = "<group>"; };
+		F76AD3B7278405EF006F0B38 /* ProfileImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		F76AD3BA2784C1A2006F0B38 /* NiceListViewConttroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceListViewConttroller.swift; sourceTree = "<group>"; };
+		F76AD3BE2784C1E3006F0B38 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		F76AD3C02784C1F2006F0B38 /* MailboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxViewController.swift; sourceTree = "<group>"; };
+		F76AD3C22784C277006F0B38 /* WriteLetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLetterViewController.swift; sourceTree = "<group>"; };
+		F76AD3C42785101E006F0B38 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
+		F76AD3C72785114C006F0B38 /* LetterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewModel.swift; sourceTree = "<group>"; };
+		F76AD3C9278558AB006F0B38 /* LetterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterManager.swift; sourceTree = "<group>"; };
+		F77060422775215400B4EE52 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F77060442775342800B4EE52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F7706046277692EA00B4EE52 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		F77060482776955700B4EE52 /* ProfileListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewModel.swift; sourceTree = "<group>"; };
+		F770604B2776CF4D00B4EE52 /* ListOfProfilesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfProfilesCell.swift; sourceTree = "<group>"; };
+		F770604C2776CF4D00B4EE52 /* ListOfProfilesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListOfProfilesCell.xib; sourceTree = "<group>"; };
+		F770604F2777C53500B4EE52 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		F77060512777D2F100B4EE52 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		F79258ED2788A4A5006E872F /* ShowLetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLetterViewController.swift; sourceTree = "<group>"; };
+		F79258EF278A0D08006E872F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F79258F2278B5A2F006E872F /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		F79258F3278B5A2F006E872F /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		F79258F6278B5C78006E872F /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		F79258F9278B5CEB006E872F /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		F79258FB278B5D95006E872F /* SettingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListViewModel.swift; sourceTree = "<group>"; };
+		F79258FD278B6408006E872F /* ParentsLockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsLockViewController.swift; sourceTree = "<group>"; };
+		F79258FF278BF14C006E872F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F7925901278C883D006E872F /* ParentsLettersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsLettersViewController.swift; sourceTree = "<group>"; };
+		F7925904278C8BD2006E872F /* ParentsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsListViewModel.swift; sourceTree = "<group>"; };
+		F7925906278C8C36006E872F /* ParentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsViewModel.swift; sourceTree = "<group>"; };
+		F7925908278CD95D006E872F /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		F792590C278CD9E2006E872F /* ProgressBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarViewModel.swift; sourceTree = "<group>"; };
+		F792590E27907D44006E872F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		F79259102790BBCD006E872F /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
+		F79259132790CEB2006E872F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		F792591727936CE2006E872F /* ProfileManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManagerTest.swift; sourceTree = "<group>"; };
+		F7A5D90027797DE40097964C /* EventButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventButton.swift; sourceTree = "<group>"; };
+		F7A5D90227797DF10097964C /* EventButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventButton.xib; sourceTree = "<group>"; };
+		F7A5D904277A384B0097964C /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		F7A5D906277A72050097964C /* AddProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E260B8B5751DF0DBB9C6491F /* Pods_SantaDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC071FDF2320CB2A008F8660 /* Pods_SantaDiaryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +172,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E3EE116E1424C013E216622 /* Pods_SantaDiary_SantaDiaryUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		142851BF4899F87FB1C4D33D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				220ABD3FF7BF5284F6269C11 /* Pods-SantaDiary.debug.xcconfig */,
+				918CBBF0177FE9A81BD41FC8 /* Pods-SantaDiary.release.xcconfig */,
+				B458DC2F28326B1936EF0AB8 /* Pods-SantaDiary-SantaDiaryUITests.debug.xcconfig */,
+				A81F6979724EDADCFB60F289 /* Pods-SantaDiary-SantaDiaryUITests.release.xcconfig */,
+				B1BC83C795AAA3A78741E265 /* Pods-SantaDiaryTests.debug.xcconfig */,
+				D62004BFABB181E914533D2C /* Pods-SantaDiaryTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8809DB9A027ECF145D5CF7C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB790B81041A006140C917B3 /* Pods_SantaDiary.framework */,
+				A15505A215DCDE288858FF95 /* Pods_SantaDiary_SantaDiaryUITests.framework */,
+				C8890C71DBE473BBFACE2714 /* Pods_SantaDiaryTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F71D0C4A277517F7000526A6 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +209,8 @@
 				F71D0C6C277517FA000526A6 /* SantaDiaryTests */,
 				F71D0C76277517FA000526A6 /* SantaDiaryUITests */,
 				F71D0C54277517F7000526A6 /* Products */,
+				142851BF4899F87FB1C4D33D /* Pods */,
+				8809DB9A027ECF145D5CF7C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +227,14 @@
 		F71D0C55277517F7000526A6 /* SantaDiary */ = {
 			isa = PBXGroup;
 			children = (
+				F71D0C8D27751C7E000526A6 /* Extensions */,
+				F71D0C8C27751C76000526A6 /* Helpers */,
+				F71D0C8927751B2F000526A6 /* Models */,
+				F71D0C8E27751DDD000526A6 /* Views */,
+				F71D0C8B27751B4C000526A6 /* ViewModels */,
+				F71D0C8A27751B3A000526A6 /* ViewControllers */,
 				F71D0C56277517F7000526A6 /* AppDelegate.swift */,
 				F71D0C58277517F7000526A6 /* SceneDelegate.swift */,
-				F71D0C5A277517F7000526A6 /* ViewController.swift */,
 				F71D0C5C277517F7000526A6 /* Main.storyboard */,
 				F71D0C5F277517F9000526A6 /* Assets.xcassets */,
 				F71D0C61277517F9000526A6 /* LaunchScreen.storyboard */,
@@ -114,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				F71D0C6D277517FA000526A6 /* SantaDiaryTests.swift */,
+				F792591727936CE2006E872F /* ProfileManagerTest.swift */,
 			);
 			path = SantaDiaryTests;
 			sourceTree = "<group>";
@@ -127,6 +261,196 @@
 			path = SantaDiaryUITests;
 			sourceTree = "<group>";
 		};
+		F71D0C8927751B2F000526A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7706046277692EA00B4EE52 /* Profile.swift */,
+				F76AD3C42785101E006F0B38 /* Letter.swift */,
+				F79258F6278B5C78006E872F /* Setting.swift */,
+				F7925908278CD95D006E872F /* ProgressBar.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F71D0C8A27751B3A000526A6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F79258F1278A0D0E006E872F /* Settings */,
+				F76AD3BD2784C1B9006F0B38 /* Letters */,
+				F76AD3BC2784C1A5006F0B38 /* Diary */,
+				F76AD3B92784C17C006F0B38 /* NiceList */,
+				F71D0C93277520C9000526A6 /* Profile */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F71D0C8B27751B4C000526A6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F792590A278CD9C9006E872F /* ProgressBar */,
+				F7925903278C8BBD006E872F /* For Parents */,
+				F79258F8278B5CD6006E872F /* Settings */,
+				F76AD3C62785113C006F0B38 /* Letters */,
+				F77060532778435B00B4EE52 /* Profiles */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F71D0C8C27751C76000526A6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F71D0C9127751F13000526A6 /* ColorScheme.swift */,
+				F77060422775215400B4EE52 /* AppConstants.swift */,
+				F770604F2777C53500B4EE52 /* ProfileManager.swift */,
+				F76AD3C9278558AB006F0B38 /* LetterManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F71D0C8D27751C7E000526A6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F71D0C8F27751EB2000526A6 /* UIColor.swift */,
+				F79258FF278BF14C006E872F /* String.swift */,
+				F79259132790CEB2006E872F /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F71D0C8E27751DDD000526A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5D8F827796A070097964C /* Reusables */,
+				F770604A2776CF1E00B4EE52 /* CustomTableViewCells */,
+				F76AD3B7278405EF006F0B38 /* ProfileImageCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F71D0C93277520C9000526A6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5D906277A72050097964C /* AddProfileViewController.swift */,
+				F71D0C5A277517F7000526A6 /* ListOfProfiles.swift */,
+				F76AD3B5278404AD006F0B38 /* SelectProfileImageCollectionViewController.swift */,
+				F77060442775342800B4EE52 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F76AD3B92784C17C006F0B38 /* NiceList */ = {
+			isa = PBXGroup;
+			children = (
+				F76AD3BA2784C1A2006F0B38 /* NiceListViewConttroller.swift */,
+				F792590E27907D44006E872F /* FeedbackViewController.swift */,
+			);
+			path = NiceList;
+			sourceTree = "<group>";
+		};
+		F76AD3BC2784C1A5006F0B38 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				F76AD3BE2784C1E3006F0B38 /* DiaryViewController.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		F76AD3BD2784C1B9006F0B38 /* Letters */ = {
+			isa = PBXGroup;
+			children = (
+				F76AD3C22784C277006F0B38 /* WriteLetterViewController.swift */,
+				F76AD3C02784C1F2006F0B38 /* MailboxViewController.swift */,
+				F79258ED2788A4A5006E872F /* ShowLetterViewController.swift */,
+			);
+			path = Letters;
+			sourceTree = "<group>";
+		};
+		F76AD3C62785113C006F0B38 /* Letters */ = {
+			isa = PBXGroup;
+			children = (
+				F76AD3C72785114C006F0B38 /* LetterViewModel.swift */,
+				F73C05D82787FBD800EEBB6B /* LetterListViewModel.swift */,
+			);
+			path = Letters;
+			sourceTree = "<group>";
+		};
+		F770604A2776CF1E00B4EE52 /* CustomTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F770604B2776CF4D00B4EE52 /* ListOfProfilesCell.swift */,
+				F770604C2776CF4D00B4EE52 /* ListOfProfilesCell.xib */,
+				F73C05D42786A22200EEBB6B /* LetterTableViewCell.swift */,
+				F73C05D52786A22200EEBB6B /* LetterTableViewCell.xib */,
+				F79258F2278B5A2F006E872F /* SettingsTableViewCell.swift */,
+				F79258F3278B5A2F006E872F /* SettingsTableViewCell.xib */,
+			);
+			path = CustomTableViewCells;
+			sourceTree = "<group>";
+		};
+		F77060532778435B00B4EE52 /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				F77060512777D2F100B4EE52 /* ProfileViewModel.swift */,
+				F77060482776955700B4EE52 /* ProfileListViewModel.swift */,
+			);
+			path = Profiles;
+			sourceTree = "<group>";
+		};
+		F79258F1278A0D0E006E872F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F79258FD278B6408006E872F /* ParentsLockViewController.swift */,
+				F7925901278C883D006E872F /* ParentsLettersViewController.swift */,
+				F79259102790BBCD006E872F /* CreatePasswordViewController.swift */,
+				F79258EF278A0D08006E872F /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F79258F8278B5CD6006E872F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F79258F9278B5CEB006E872F /* SettingViewModel.swift */,
+				F79258FB278B5D95006E872F /* SettingListViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F7925903278C8BBD006E872F /* For Parents */ = {
+			isa = PBXGroup;
+			children = (
+				F7925904278C8BD2006E872F /* ParentsListViewModel.swift */,
+				F7925906278C8C36006E872F /* ParentsViewModel.swift */,
+			);
+			path = "For Parents";
+			sourceTree = "<group>";
+		};
+		F792590A278CD9C9006E872F /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				F792590C278CD9E2006E872F /* ProgressBarViewModel.swift */,
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		F7A5D8F827796A070097964C /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5D8FB27796A880097964C /* EventsButton */,
+				F7A5D904277A384B0097964C /* AddButton.swift */,
+			);
+			path = Reusables;
+			sourceTree = "<group>";
+		};
+		F7A5D8FB27796A880097964C /* EventsButton */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5D90027797DE40097964C /* EventButton.swift */,
+				F7A5D90227797DF10097964C /* EventButton.xib */,
+			);
+			path = EventsButton;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +458,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F71D0C7D277517FA000526A6 /* Build configuration list for PBXNativeTarget "SantaDiary" */;
 			buildPhases = (
+				098E82ED4C4CF6E534708BD6 /* [CP] Check Pods Manifest.lock */,
 				F71D0C4F277517F7000526A6 /* Sources */,
 				F71D0C50277517F7000526A6 /* Frameworks */,
 				F71D0C51277517F7000526A6 /* Resources */,
+				CB5A1CED9BD393E7FE58F935 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +477,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F71D0C80277517FA000526A6 /* Build configuration list for PBXNativeTarget "SantaDiaryTests" */;
 			buildPhases = (
+				B70FE5E5B68AF2B33A83208D /* [CP] Check Pods Manifest.lock */,
 				F71D0C65277517FA000526A6 /* Sources */,
 				F71D0C66277517FA000526A6 /* Frameworks */,
 				F71D0C67277517FA000526A6 /* Resources */,
@@ -169,9 +496,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F71D0C83277517FA000526A6 /* Build configuration list for PBXNativeTarget "SantaDiaryUITests" */;
 			buildPhases = (
+				87AF9EE48807194A4BE65912 /* [CP] Check Pods Manifest.lock */,
 				F71D0C6F277517FA000526A6 /* Sources */,
 				F71D0C70277517FA000526A6 /* Frameworks */,
 				F71D0C71277517FA000526A6 /* Resources */,
+				95D847E216B58810BACA2551 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,9 +560,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F79258F5278B5A2F006E872F /* SettingsTableViewCell.xib in Resources */,
+				F770604E2776CF4D00B4EE52 /* ListOfProfilesCell.xib in Resources */,
 				F71D0C63277517F9000526A6 /* LaunchScreen.storyboard in Resources */,
+				F7A5D90327797DF10097964C /* EventButton.xib in Resources */,
 				F71D0C60277517F9000526A6 /* Assets.xcassets in Resources */,
 				F71D0C5E277517F7000526A6 /* Main.storyboard in Resources */,
+				F73C05D72786A22200EEBB6B /* LetterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +586,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		098E82ED4C4CF6E534708BD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SantaDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87AF9EE48807194A4BE65912 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SantaDiary-SantaDiaryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95D847E216B58810BACA2551 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SantaDiary-SantaDiaryUITests/Pods-SantaDiary-SantaDiaryUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SantaDiary-SantaDiaryUITests/Pods-SantaDiary-SantaDiaryUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SantaDiary-SantaDiaryUITests/Pods-SantaDiary-SantaDiaryUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B70FE5E5B68AF2B33A83208D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SantaDiaryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB5A1CED9BD393E7FE58F935 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SantaDiary/Pods-SantaDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SantaDiary/Pods-SantaDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SantaDiary/Pods-SantaDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F71D0C4F277517F7000526A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F71D0C5B277517F7000526A6 /* ViewController.swift in Sources */,
+				F71D0C5B277517F7000526A6 /* ListOfProfiles.swift in Sources */,
+				F79258FA278B5CEB006E872F /* SettingViewModel.swift in Sources */,
+				F76AD3CA278558AB006F0B38 /* LetterManager.swift in Sources */,
+				F792590F27907D44006E872F /* FeedbackViewController.swift in Sources */,
+				F7A5D905277A384B0097964C /* AddButton.swift in Sources */,
+				F76AD3BF2784C1E3006F0B38 /* DiaryViewController.swift in Sources */,
+				F7706047277692EA00B4EE52 /* Profile.swift in Sources */,
+				F770604D2776CF4D00B4EE52 /* ListOfProfilesCell.swift in Sources */,
+				F76AD3C12784C1F2006F0B38 /* MailboxViewController.swift in Sources */,
+				F77060502777C53500B4EE52 /* ProfileManager.swift in Sources */,
+				F79259142790CEB2006E872F /* UIView.swift in Sources */,
+				F73C05D92787FBD800EEBB6B /* LetterListViewModel.swift in Sources */,
+				F77060432775215400B4EE52 /* AppConstants.swift in Sources */,
+				F76AD3BB2784C1A2006F0B38 /* NiceListViewConttroller.swift in Sources */,
+				F77060492776955700B4EE52 /* ProfileListViewModel.swift in Sources */,
+				F7A5D907277A72050097964C /* AddProfileViewController.swift in Sources */,
+				F7925900278BF14C006E872F /* String.swift in Sources */,
+				F79259112790BBCD006E872F /* CreatePasswordViewController.swift in Sources */,
+				F77060522777D2F100B4EE52 /* ProfileViewModel.swift in Sources */,
+				F71D0C9227751F13000526A6 /* ColorScheme.swift in Sources */,
+				F79258F4278B5A2F006E872F /* SettingsTableViewCell.swift in Sources */,
+				F76AD3C32784C277006F0B38 /* WriteLetterViewController.swift in Sources */,
+				F7925902278C883D006E872F /* ParentsLettersViewController.swift in Sources */,
+				F7925909278CD95D006E872F /* ProgressBar.swift in Sources */,
+				F76AD3B6278404AD006F0B38 /* SelectProfileImageCollectionViewController.swift in Sources */,
+				F76AD3C82785114C006F0B38 /* LetterViewModel.swift in Sources */,
+				F7925907278C8C36006E872F /* ParentsViewModel.swift in Sources */,
+				F71D0C9027751EB2000526A6 /* UIColor.swift in Sources */,
+				F79258F7278B5C78006E872F /* Setting.swift in Sources */,
+				F77060452775342800B4EE52 /* ProfileViewController.swift in Sources */,
 				F71D0C57277517F7000526A6 /* AppDelegate.swift in Sources */,
 				F71D0C59277517F7000526A6 /* SceneDelegate.swift in Sources */,
+				F76AD3C52785101E006F0B38 /* Letter.swift in Sources */,
+				F79258F0278A0D08006E872F /* SettingsViewController.swift in Sources */,
+				F79258FC278B5D95006E872F /* SettingListViewModel.swift in Sources */,
+				F7925905278C8BD2006E872F /* ParentsListViewModel.swift in Sources */,
+				F73C05D62786A22200EEBB6B /* LetterTableViewCell.swift in Sources */,
+				F792590D278CD9E2006E872F /* ProgressBarViewModel.swift in Sources */,
+				F76AD3B8278405EF006F0B38 /* ProfileImageCollectionViewCell.swift in Sources */,
+				F79258EE2788A4A5006E872F /* ShowLetterViewController.swift in Sources */,
+				F7A5D90127797DE40097964C /* EventButton.swift in Sources */,
+				F79258FE278B6408006E872F /* ParentsLockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +744,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71D0C6E277517FA000526A6 /* SantaDiaryTests.swift in Sources */,
+				F792591827936CE2006E872F /* ProfileManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +910,7 @@
 		};
 		F71D0C7E277517FA000526A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 220ABD3FF7BF5284F6269C11 /* Pods-SantaDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,6 +919,7 @@
 				DEVELOPMENT_TEAM = SG7HHALT8U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SantaDiary/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Santa Diary";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -462,6 +940,7 @@
 		};
 		F71D0C7F277517FA000526A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 918CBBF0177FE9A81BD41FC8 /* Pods-SantaDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,6 +949,7 @@
 				DEVELOPMENT_TEAM = SG7HHALT8U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SantaDiary/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Santa Diary";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -490,6 +970,7 @@
 		};
 		F71D0C81277517FA000526A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1BC83C795AAA3A78741E265 /* Pods-SantaDiaryTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +996,7 @@
 		};
 		F71D0C82277517FA000526A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D62004BFABB181E914533D2C /* Pods-SantaDiaryTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +1022,7 @@
 		};
 		F71D0C84277517FA000526A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B458DC2F28326B1936EF0AB8 /* Pods-SantaDiary-SantaDiaryUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +1046,7 @@
 		};
 		F71D0C85277517FA000526A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A81F6979724EDADCFB60F289 /* Pods-SantaDiary-SantaDiaryUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

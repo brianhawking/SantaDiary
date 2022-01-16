@@ -1,0 +1,6 @@
+framework module Pods_SantaDiaryTests {
+  umbrella header "Pods-SantaDiaryTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

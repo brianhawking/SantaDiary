@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="171" id="KGk-i7-Jjw" customClass="ListOfProfilesCell" customModule="SantaDiary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="171"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="355" height="171"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0I7-AF-i43" userLabel="CellView">
+                        <rect key="frame" x="0.0" y="35.5" width="355" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCK-Ea-6LJ">
+                                <rect key="frame" x="147" y="35.5" width="61.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tY-B3-ox0">
+                                <rect key="frame" x="273.5" y="35.5" width="41.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dog-1" translatesAutoresizingMaskIntoConstraints="NO" id="k2b-u6-VTg">
+                                <rect key="frame" x="20" y="10" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Kr6-Dl-B0o"/>
+                                    <constraint firstAttribute="width" constant="80" id="xtb-9E-EbB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.86666666670000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eCK-Ea-6LJ" firstAttribute="centerX" secondItem="0I7-AF-i43" secondAttribute="centerX" id="4ly-a5-onm"/>
+                            <constraint firstItem="eCK-Ea-6LJ" firstAttribute="centerY" secondItem="0I7-AF-i43" secondAttribute="centerY" id="9ba-YN-y7d"/>
+                            <constraint firstItem="k2b-u6-VTg" firstAttribute="centerY" secondItem="0I7-AF-i43" secondAttribute="centerY" id="Hfu-XQ-5YM"/>
+                            <constraint firstItem="k2b-u6-VTg" firstAttribute="leading" secondItem="0I7-AF-i43" secondAttribute="leading" constant="20" id="IFY-wc-1CI"/>
+                            <constraint firstItem="7tY-B3-ox0" firstAttribute="centerY" secondItem="0I7-AF-i43" secondAttribute="centerY" id="hfT-hG-BYb"/>
+                            <constraint firstAttribute="height" constant="100" id="pOg-wJ-UBf"/>
+                            <constraint firstAttribute="trailing" secondItem="7tY-B3-ox0" secondAttribute="trailing" constant="40" id="tHr-3I-9dn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="0I7-AF-i43" secondAttribute="trailing" id="JX9-hq-COA"/>
+                    <constraint firstItem="0I7-AF-i43" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Xyv-q2-aec"/>
+                    <constraint firstItem="0I7-AF-i43" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jtD-Wq-gbk"/>
+                    <constraint firstItem="0I7-AF-i43" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qed-Q1-6QI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="age" destination="7tY-B3-ox0" id="oBN-hO-0dF"/>
+                <outlet property="cellView" destination="0I7-AF-i43" id="Y0u-WR-AVw"/>
+                <outlet property="name" destination="eCK-Ea-6LJ" id="s2s-K7-PwZ"/>
+                <outlet property="profileImage" destination="k2b-u6-VTg" id="5aT-GE-IbH"/>
+            </connections>
+            <point key="canvasLocation" x="110.86956521739131" y="86.049107142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Dog-1" width="512" height="512"/>
+    </resources>
+</document>
