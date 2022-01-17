@@ -9,7 +9,7 @@ import Foundation
 
 class App {
     
-    static let appTitle = "Santa Diary"
+    static let appTitle = "Santa"
     
     // segues
     class Segue {
