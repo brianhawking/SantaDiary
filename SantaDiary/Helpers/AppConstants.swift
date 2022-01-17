@@ -11,6 +11,7 @@ class App {
     
     static let appTitle = "Santa Diary"
     
+    
     // segues
     class Segue {
         
