@@ -32,6 +32,9 @@ class App {
         static let parentsToWriteLetter: String = "parentsToWriteLetter"
         static let parentsToFeedback: String = "parentsToFeedback"
         static let parentsToProfile: String = "parentsToProfile"
+        
+        static let diaryToWriteEntry: String = "diaryToWriteEntry"
+        static let diaryToReadEntry: String = "diaryToReadEntry"
     }
     
     static let elves = ["Bob", "Susan", "Tickles"]

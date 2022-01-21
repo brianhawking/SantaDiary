@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class WriteLetterViewController: UIViewController {
     
@@ -55,13 +56,21 @@ class WriteLetterViewController: UIViewController {
                 recipient = profileName!
         }
         
-        recipientLabel.text = "     Dear \(recipient),"
         self.title = "Letter to \(recipient)"
-
+        
+        
+        // adjust recipient label
+        recipientLabel.text = "     Dear \(recipient),"
+        recipientLabel.layer.cornerRadius = 20
+        recipientLabel.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        recipientLabel.clipsToBounds = true
+        
         
         // view adjustments
         letterTextView.textContainerInset = UIEdgeInsets(top: 0, left: 20, bottom: 50, right: 20)
         letterTextView.backgroundColor = UIColor.white
+        letterTextView.layer.cornerRadius = 20
+        letterTextView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
     }
     
@@ -120,6 +129,8 @@ class WriteLetterViewController: UIViewController {
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         
         if (letterTextView.text == "") {
+            letterTextView.shake()
+            SCLAlertView().showWarning("Blank", subTitle: "Don't forget to write your letter.")
             return
         }
         

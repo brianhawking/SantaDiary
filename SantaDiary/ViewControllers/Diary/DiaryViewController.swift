@@ -9,6 +9,9 @@ import UIKit
 
 class DiaryViewController: UIViewController {
 
+    // get current user
+    var profileName = UserDefaults.standard.string(forKey: "SelectedProfile")
+
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -48,6 +51,10 @@ class DiaryViewController: UIViewController {
         tableView.dataSource = self
     }
 
+    
+    @IBAction func addButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: App.Segue.diaryToWriteEntry, sender: nil)
+    }
 }
 
 extension DiaryViewController: UITableViewDelegate, UITableViewDataSource {
@@ -70,7 +77,7 @@ extension DiaryViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.letterDateLabel.text = "HI"
         cell.letterContentLabel.text = "this is content"
-        cell.letterImageView.image = UIImage(named: "happy")
+        cell.letterImageView.image = UIImage(named: "Happy")
         
         return cell
     }

@@ -54,7 +54,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" id="R8w-mh-V2C">
                             <connections>
                                 <action selector="removeParental:" destination="BYZ-38-t0r" id="bYd-zv-L07"/>
-                                <segue destination="m9z-Qc-Rvg" kind="show" identifier="setParentalPasswordSegue" id="Wkh-6K-gjN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -64,6 +63,7 @@
                         <outlet property="titleLabel" destination="Vmy-dH-BLL" id="QGJ-dj-PQe"/>
                         <segue destination="Qfi-wm-pv5" kind="show" identifier="ListToProfileSegue" id="Ymp-bb-Bmy"/>
                         <segue destination="5T8-qe-3Kc" kind="show" identifier="toAddProfileSegue" id="SFO-Ua-N9Q"/>
+                        <segue destination="m9z-Qc-Rvg" kind="show" identifier="setParentalPasswordSegue" id="efe-Zd-IRy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -134,11 +134,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="65"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="cc-number"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your parental password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0S7-56-EDJ">
+                                <rect key="frame" x="0.0" y="230" width="414" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0x3-ra-nta"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0S7-56-EDJ" secondAttribute="trailing" id="0fA-pb-8OP"/>
                             <constraint firstItem="dPI-BB-Drq" firstAttribute="centerY" secondItem="m9U-B4-Ar1" secondAttribute="centerY" id="Lwt-c3-Q8b"/>
+                            <constraint firstItem="0S7-56-EDJ" firstAttribute="leading" secondItem="0x3-ra-nta" secondAttribute="leading" id="RqW-04-2ia"/>
+                            <constraint firstItem="Qfl-wm-BMv" firstAttribute="top" secondItem="0S7-56-EDJ" secondAttribute="bottom" constant="40" id="Sda-u3-tFM"/>
                             <constraint firstItem="dPI-BB-Drq" firstAttribute="centerX" secondItem="m9U-B4-Ar1" secondAttribute="centerX" id="ik2-Vf-Pvp"/>
                             <constraint firstItem="Qfl-wm-BMv" firstAttribute="centerY" secondItem="m9U-B4-Ar1" secondAttribute="centerY" multiplier="0.8" id="nUk-cJ-NB3"/>
                             <constraint firstItem="Qfl-wm-BMv" firstAttribute="centerX" secondItem="m9U-B4-Ar1" secondAttribute="centerX" id="qVW-Ik-JcM"/>
@@ -276,6 +285,155 @@
             </objects>
             <point key="canvasLocation" x="1000" y="886"/>
         </scene>
+        <!--Read-->
+        <scene sceneID="cF7-hH-rzs">
+            <objects>
+                <viewController id="Jrh-ua-Nuc" customClass="ReadDiaryEntryViewController" customModule="SantaDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HLG-uN-T71">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Aq8-AT-krn">
+                                <rect key="frame" x="143" y="118" width="128" height="128"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="prS-63-3XV">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="lSh-Sx-yhs"/>
+                                            <constraint firstAttribute="width" constant="128" id="zHd-wv-7MQ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cEp-FT-KpR">
+                                <rect key="frame" x="20" y="266" width="374" height="576"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wx5-Yg-CsF"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Aq8-AT-krn" firstAttribute="centerX" secondItem="HLG-uN-T71" secondAttribute="centerX" id="0DQ-Of-SxH"/>
+                            <constraint firstItem="Wx5-Yg-CsF" firstAttribute="bottom" secondItem="cEp-FT-KpR" secondAttribute="bottom" constant="20" id="3FG-tx-bJ8"/>
+                            <constraint firstItem="Aq8-AT-krn" firstAttribute="top" secondItem="Wx5-Yg-CsF" secondAttribute="top" constant="30" id="5E5-b8-YtZ"/>
+                            <constraint firstItem="Wx5-Yg-CsF" firstAttribute="trailing" secondItem="cEp-FT-KpR" secondAttribute="trailing" constant="20" id="NaH-Na-XG3"/>
+                            <constraint firstItem="cEp-FT-KpR" firstAttribute="top" secondItem="Aq8-AT-krn" secondAttribute="bottom" constant="20" id="qYG-vx-668"/>
+                            <constraint firstItem="cEp-FT-KpR" firstAttribute="leading" secondItem="Wx5-Yg-CsF" secondAttribute="leading" constant="20" id="uCa-GR-eno"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Read" id="Jb2-Cj-s9R"/>
+                    <connections>
+                        <outlet property="diaryEntryTextView" destination="cEp-FT-KpR" id="90U-bx-dOY"/>
+                        <outlet property="imageView" destination="prS-63-3XV" id="Y73-zq-jHF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFW-89-dl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2436" y="927"/>
+        </scene>
+        <!--Write -->
+        <scene sceneID="POd-7P-5Bk">
+            <objects>
+                <viewController id="i8Z-hF-12T" customClass="WriteDiaryEntryViewController" customModule="SantaDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d26-tk-7yG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="WKv-DR-XsP">
+                                <rect key="frame" x="59" y="118" width="296" height="128"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="CU0-Qy-Lpa">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="G8O-qf-7WM"/>
+                                            <constraint firstAttribute="height" constant="128" id="Lw0-Wn-vYl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Angry" translatesAutoresizingMaskIntoConstraints="NO" id="wBC-mb-16J">
+                                        <rect key="frame" x="168" y="0.0" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="5EO-cV-36g"/>
+                                            <constraint firstAttribute="height" constant="128" id="duL-R5-CI6"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is one thing that made you smile today?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tR-Z1-90J" customClass="PaddingLabel" customModule="SantaDiary" customModuleProvider="target">
+                                <rect key="frame" x="20" y="266" width="374" height="53"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ACk-vA-7hg">
+                                <rect key="frame" x="20" y="329" width="374" height="513"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UfW-eG-yHN"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4tR-Z1-90J" firstAttribute="centerX" secondItem="d26-tk-7yG" secondAttribute="centerX" id="0cf-qM-Ige"/>
+                            <constraint firstItem="WKv-DR-XsP" firstAttribute="top" secondItem="UfW-eG-yHN" secondAttribute="top" constant="30" id="6JD-In-OlW"/>
+                            <constraint firstItem="ACk-vA-7hg" firstAttribute="leading" secondItem="UfW-eG-yHN" secondAttribute="leading" constant="20" id="7dw-qb-Eb4"/>
+                            <constraint firstItem="UfW-eG-yHN" firstAttribute="bottom" secondItem="ACk-vA-7hg" secondAttribute="bottom" constant="20" id="9D6-eY-pEB"/>
+                            <constraint firstItem="ACk-vA-7hg" firstAttribute="top" secondItem="4tR-Z1-90J" secondAttribute="bottom" constant="10" id="TcI-vs-fqc"/>
+                            <constraint firstItem="4tR-Z1-90J" firstAttribute="leading" secondItem="UfW-eG-yHN" secondAttribute="leading" constant="20" id="XcH-DX-56H"/>
+                            <constraint firstItem="UfW-eG-yHN" firstAttribute="trailing" secondItem="4tR-Z1-90J" secondAttribute="trailing" constant="20" id="e4x-4L-R8Y"/>
+                            <constraint firstItem="4tR-Z1-90J" firstAttribute="top" secondItem="WKv-DR-XsP" secondAttribute="bottom" constant="20" id="hDG-zW-C3g"/>
+                            <constraint firstItem="UfW-eG-yHN" firstAttribute="trailing" secondItem="ACk-vA-7hg" secondAttribute="trailing" constant="20" id="nNA-Bk-9UD"/>
+                            <constraint firstItem="WKv-DR-XsP" firstAttribute="centerX" secondItem="d26-tk-7yG" secondAttribute="centerX" id="ux2-32-MdW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Write " id="5aV-ry-M5E">
+                        <rightBarButtonItems>
+                            <barButtonItem image="arrowshape.turn.up.right.fill" catalog="system" id="kRG-Pz-mtg">
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="i8Z-hF-12T" id="1NQ-p1-0vF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="arrowshape.turn.up.left.fill" catalog="system" id="diQ-5L-lI3">
+                                <connections>
+                                    <action selector="prevButtonTapped:" destination="i8Z-hF-12T" id="TYq-If-VLg"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="angryImageView" destination="wBC-mb-16J" id="Kgc-lg-ynA"/>
+                        <outlet property="answerTextView" destination="ACk-vA-7hg" id="eNf-gu-nro"/>
+                        <outlet property="happyImageView" destination="CU0-Qy-Lpa" id="pb4-P5-SvQ"/>
+                        <outlet property="leftBarButton" destination="diQ-5L-lI3" id="2K8-tT-dwv"/>
+                        <outlet property="questionLabel" destination="4tR-Z1-90J" id="N3O-q9-0fP"/>
+                        <outlet property="rightBarButton" destination="kRG-Pz-mtg" id="NaP-33-zt4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HqT-Ia-vah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3378" y="928"/>
+        </scene>
         <!--Select Image-->
         <scene sceneID="hYZ-s4-krN">
             <objects>
@@ -315,7 +473,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41h-8i-P7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="895"/>
+            <point key="canvasLocation" x="1006" y="1630"/>
         </scene>
         <!--Settings-->
         <scene sceneID="zIk-y8-86U">
@@ -600,31 +758,31 @@
                                             <constraint firstItem="8Fj-7H-Dpv" firstAttribute="centerY" secondItem="sx6-lp-sLZ" secondAttribute="centerY" id="ued-0s-5sx"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2Qw-gH-YbM">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2Qw-gH-YbM">
                                         <rect key="frame" x="10" y="289" width="394" height="445"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3di-mY-1uk">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="220"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="217.5"/>
                                                 <subviews>
                                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7p0-Fl-qzy" customClass="EventButton" customModule="SantaDiary" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="192" height="220"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="192" height="217.5"/>
                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                     </view>
                                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DdI-kM-h9S" customClass="EventButton" customModule="SantaDiary" customModuleProvider="target">
-                                                        <rect key="frame" x="202" y="0.0" width="192" height="220"/>
+                                                        <rect key="frame" x="202" y="0.0" width="192" height="217.5"/>
                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                     </view>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lJD-UH-ffU">
-                                                <rect key="frame" x="0.0" y="225" width="394" height="220"/>
+                                                <rect key="frame" x="0.0" y="227.5" width="394" height="217.5"/>
                                                 <subviews>
                                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhq-ZW-4wM" customClass="EventButton" customModule="SantaDiary" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="192" height="220"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="192" height="217.5"/>
                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                     </view>
                                                     <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITg-Dl-AaH" customClass="EventButton" customModule="SantaDiary" customModuleProvider="target">
-                                                        <rect key="frame" x="202" y="0.0" width="192" height="220"/>
+                                                        <rect key="frame" x="202" y="0.0" width="192" height="217.5"/>
                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                     </view>
                                                 </subviews>
@@ -731,6 +889,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="          +            "/>
                                 <connections>
+                                    <action selector="addButtonTapped:" destination="hlw-1P-uSN" eventType="touchUpInside" id="diH-m4-Zuk"/>
                                     <action selector="addProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8v-Ie-ecG"/>
                                 </connections>
                             </button>
@@ -751,6 +910,8 @@
                     <navigationItem key="navigationItem" title="Diary" id="yNw-K6-xMG"/>
                     <connections>
                         <outlet property="tableView" destination="dej-BN-PXL" id="DHx-1b-mgd"/>
+                        <segue destination="Jrh-ua-Nuc" kind="show" identifier="diaryToReadEntry" id="TWI-rp-5RV"/>
+                        <segue destination="i8Z-hF-12T" kind="show" identifier="diaryToWriteEntry" id="Onq-0d-ubw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4jR-fo-Ppg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -911,7 +1072,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HL6-ZQ-PQd">
                                         <rect key="frame" x="20" y="20" width="334" height="568"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="PAv-fX-JgG">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="PAv-fX-JgG">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="qfG-wK-tyf"/>
@@ -1233,10 +1394,11 @@
         <image name="Happy" width="512" height="512"/>
         <image name="Reindeer" width="512" height="512"/>
         <image name="Snowman" width="512" height="512"/>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="back-button" width="32" height="32"/>
         <image name="fast-forward" width="32" height="32"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
-        <image name="happy" width="60" height="60"/>
         <image name="person.fill.badge.plus" catalog="system" width="128" height="124"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

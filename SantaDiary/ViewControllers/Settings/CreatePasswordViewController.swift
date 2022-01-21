@@ -23,12 +23,13 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
         
         self.navigationItem.setHidesBackButton(true, animated: true)
         
+        setupView()
         showAlert()
         setupHiddenTextField()
         setupBoxes()
     }
     
-    
+   
     @IBAction func saveButtonTapped(_ sender: Any) {
         
         print(hiddenTextField.text!)
@@ -60,7 +61,7 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     func showAlert() {
-        SCLAlertView().showNotice("Password", subTitle: "Create your parental password.")
+        SCLAlertView().showNotice("Password", subTitle: "Create your parental password. THIS CANNOT BE CHANGED OR RECOVERED.")
     }
 
     func setupHiddenTextField() {
@@ -88,20 +89,23 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
         
         navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont(name: "Noteworthy Bold", size: 50) ?? UIFont.systemFont(ofSize: 40)
+            NSAttributedString.Key.font: UIFont(name: "Noteworthy Bold", size: 32) ?? UIFont.systemFont(ofSize: 32)
         ]
         
         view.backgroundColor = ColorScheme.backgroundColor
+        
+        self.title = "Set up parental passcode"
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         
         if Int(textField.text!) == nil {
-            return
+//            return
         }
         
         // get text count, 0 if it's null
         var characterCount = textField.text?.count ?? 0
+        
         
         print("digit: \(digit), count \(characterCount)")
         
@@ -117,6 +121,10 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
             // add a character
             digits[characterCount-1].text = textField.text![characterCount - 1]
 //            digits[characterCount-1].text = "\u{2022}"
+            
+            if (digit == 3) {
+                saveButtonTapped((Any).self)
+            }
             
             if (digit < 3) {
                 digit += 1

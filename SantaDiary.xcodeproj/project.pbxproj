@@ -63,6 +63,13 @@
 		F7A5D90327797DF10097964C /* EventButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7A5D90227797DF10097964C /* EventButton.xib */; };
 		F7A5D905277A384B0097964C /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5D904277A384B0097964C /* AddButton.swift */; };
 		F7A5D907277A72050097964C /* AddProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5D906277A72050097964C /* AddProfileViewController.swift */; };
+		F7A6E0FA279A519C00024F18 /* DiaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6E0F9279A519C00024F18 /* DiaryEntry.swift */; };
+		F7A6E0FD279A531500024F18 /* DiaryEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6E0FC279A531500024F18 /* DiaryEntryViewModel.swift */; };
+		F7A6E0FF279A532100024F18 /* DiaryEntryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6E0FE279A532100024F18 /* DiaryEntryListViewModel.swift */; };
+		F7A6E101279A5C8700024F18 /* ReadDiaryEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6E100279A5C8700024F18 /* ReadDiaryEntryViewController.swift */; };
+		F7A6E103279A609A00024F18 /* WriteDiaryEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6E102279A609A00024F18 /* WriteDiaryEntryViewController.swift */; };
+		F7A6E105279A61FA00024F18 /* DiaryPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6E104279A61FA00024F18 /* DiaryPrompt.swift */; };
+		F7A6E107279A680600024F18 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6E106279A680600024F18 /* PaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +156,13 @@
 		F7A5D90227797DF10097964C /* EventButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventButton.xib; sourceTree = "<group>"; };
 		F7A5D904277A384B0097964C /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		F7A5D906277A72050097964C /* AddProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileViewController.swift; sourceTree = "<group>"; };
+		F7A6E0F9279A519C00024F18 /* DiaryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntry.swift; sourceTree = "<group>"; };
+		F7A6E0FC279A531500024F18 /* DiaryEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntryViewModel.swift; sourceTree = "<group>"; };
+		F7A6E0FE279A532100024F18 /* DiaryEntryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntryListViewModel.swift; sourceTree = "<group>"; };
+		F7A6E100279A5C8700024F18 /* ReadDiaryEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadDiaryEntryViewController.swift; sourceTree = "<group>"; };
+		F7A6E102279A609A00024F18 /* WriteDiaryEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryEntryViewController.swift; sourceTree = "<group>"; };
+		F7A6E104279A61FA00024F18 /* DiaryPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPrompt.swift; sourceTree = "<group>"; };
+		F7A6E106279A680600024F18 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +282,8 @@
 				F76AD3C42785101E006F0B38 /* Letter.swift */,
 				F79258F6278B5C78006E872F /* Setting.swift */,
 				F7925908278CD95D006E872F /* ProgressBar.swift */,
+				F7A6E0F9279A519C00024F18 /* DiaryEntry.swift */,
+				F7A6E104279A61FA00024F18 /* DiaryPrompt.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,6 +303,7 @@
 		F71D0C8B27751B4C000526A6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F7A6E0FB279A52F100024F18 /* Diary */,
 				F792590A278CD9C9006E872F /* ProgressBar */,
 				F7925903278C8BBD006E872F /* For Parents */,
 				F79258F8278B5CD6006E872F /* Settings */,
@@ -351,6 +368,8 @@
 			isa = PBXGroup;
 			children = (
 				F76AD3BE2784C1E3006F0B38 /* DiaryViewController.swift */,
+				F7A6E102279A609A00024F18 /* WriteDiaryEntryViewController.swift */,
+				F7A6E100279A5C8700024F18 /* ReadDiaryEntryViewController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -438,6 +457,7 @@
 			children = (
 				F7A5D8FB27796A880097964C /* EventsButton */,
 				F7A5D904277A384B0097964C /* AddButton.swift */,
+				F7A6E106279A680600024F18 /* PaddingLabel.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -449,6 +469,15 @@
 				F7A5D90227797DF10097964C /* EventButton.xib */,
 			);
 			path = EventsButton;
+			sourceTree = "<group>";
+		};
+		F7A6E0FB279A52F100024F18 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				F7A6E0FC279A531500024F18 /* DiaryEntryViewModel.swift */,
+				F7A6E0FE279A532100024F18 /* DiaryEntryListViewModel.swift */,
+			);
+			path = Diary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -697,8 +726,11 @@
 				F71D0C5B277517F7000526A6 /* ListOfProfiles.swift in Sources */,
 				F79258FA278B5CEB006E872F /* SettingViewModel.swift in Sources */,
 				F76AD3CA278558AB006F0B38 /* LetterManager.swift in Sources */,
+				F7A6E103279A609A00024F18 /* WriteDiaryEntryViewController.swift in Sources */,
+				F7A6E0FD279A531500024F18 /* DiaryEntryViewModel.swift in Sources */,
 				F792590F27907D44006E872F /* FeedbackViewController.swift in Sources */,
 				F7A5D905277A384B0097964C /* AddButton.swift in Sources */,
+				F7A6E105279A61FA00024F18 /* DiaryPrompt.swift in Sources */,
 				F76AD3BF2784C1E3006F0B38 /* DiaryViewController.swift in Sources */,
 				F7706047277692EA00B4EE52 /* Profile.swift in Sources */,
 				F770604D2776CF4D00B4EE52 /* ListOfProfilesCell.swift in Sources */,
@@ -712,6 +744,8 @@
 				F7A5D907277A72050097964C /* AddProfileViewController.swift in Sources */,
 				F7925900278BF14C006E872F /* String.swift in Sources */,
 				F79259112790BBCD006E872F /* CreatePasswordViewController.swift in Sources */,
+				F7A6E101279A5C8700024F18 /* ReadDiaryEntryViewController.swift in Sources */,
+				F7A6E0FF279A532100024F18 /* DiaryEntryListViewModel.swift in Sources */,
 				F77060522777D2F100B4EE52 /* ProfileViewModel.swift in Sources */,
 				F71D0C9227751F13000526A6 /* ColorScheme.swift in Sources */,
 				F79258F4278B5A2F006E872F /* SettingsTableViewCell.swift in Sources */,
@@ -723,6 +757,7 @@
 				F7925907278C8C36006E872F /* ParentsViewModel.swift in Sources */,
 				F71D0C9027751EB2000526A6 /* UIColor.swift in Sources */,
 				F79258F7278B5C78006E872F /* Setting.swift in Sources */,
+				F7A6E0FA279A519C00024F18 /* DiaryEntry.swift in Sources */,
 				F77060452775342800B4EE52 /* ProfileViewController.swift in Sources */,
 				F71D0C57277517F7000526A6 /* AppDelegate.swift in Sources */,
 				F71D0C59277517F7000526A6 /* SceneDelegate.swift in Sources */,
@@ -731,6 +766,7 @@
 				F79258FC278B5D95006E872F /* SettingListViewModel.swift in Sources */,
 				F7925905278C8BD2006E872F /* ParentsListViewModel.swift in Sources */,
 				F73C05D62786A22200EEBB6B /* LetterTableViewCell.swift in Sources */,
+				F7A6E107279A680600024F18 /* PaddingLabel.swift in Sources */,
 				F792590D278CD9E2006E872F /* ProgressBarViewModel.swift in Sources */,
 				F76AD3B8278405EF006F0B38 /* ProfileImageCollectionViewCell.swift in Sources */,
 				F79258EE2788A4A5006E872F /* ShowLetterViewController.swift in Sources */,

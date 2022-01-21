@@ -59,7 +59,6 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
             NSAttributedString.Key.font: UIFont(name: "Noteworthy Bold", size: 42) ?? UIFont.systemFont(ofSize: 40)
         ]
         
-        print("DEBUG: \(editingType)")
         if editingType == .create {
             self.title = "Create Profile"
         }
@@ -72,6 +71,8 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
         }
         
         view.backgroundColor = ColorScheme.backgroundColor
+        
+        profileDetailsView.layer.cornerRadius = 10
     }
     
     // MARK: - Selectors
@@ -88,10 +89,12 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
         
         if (nameTextField.text == "") {
             print("DEBUG: Enter a name")
+            nameTextField.shake()
             return
         }
         else if profileImageView.image == UIImage(systemName: "person.fill.badge.plus") {
             print("DEBUG: Choose a photo")
+            profileImageView.shake()
             return
         }
         

@@ -32,11 +32,14 @@ class ListOfProfiles: UIViewController {
     
     @IBAction func removeParental(_ sender: Any) {
         
-        if UserDefaults.standard.string(forKey: "parentalPassword") != nil {
+        if parentalPasswordSet() {
             UserDefaults.standard.removeObject(forKey: "parentalPassword")
         }
         
+        performSegue(withIdentifier: App.Segue.setParentalPasswordSegue, sender: nil)
+        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -46,9 +49,13 @@ class ListOfProfiles: UIViewController {
     
     func parentalPasswordSet() -> Bool {
         if UserDefaults.standard.string(forKey: "parentalPassword") != nil {
+    
+            let password = UserDefaults.standard.string(forKey: "parentalPassword")!
+            print("DEBUG: password is \(password)")
             return true
         }
         else {
+            print("DEBUG: password not set")
             return false
         }
     }
@@ -77,10 +84,6 @@ class ListOfProfiles: UIViewController {
         tableView.dataSource = self
     }
 
-
-    @IBAction func buttonTapped(_ sender: Any) {
-        performSegue(withIdentifier: App.Segue.ListToProfile, sender: nil)
-    }
     
     @IBAction func addProfileButton(_ sender: UIButton) {
         
