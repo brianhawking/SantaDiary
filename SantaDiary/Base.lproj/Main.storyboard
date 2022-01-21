@@ -1020,7 +1020,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1NY-PC-pem">
-                                <rect key="frame" x="15" y="383.5" width="384" height="512.5"/>
+                                <rect key="frame" x="15" y="383.5" width="384" height="492.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1040,7 +1040,7 @@
                         <viewLayoutGuide key="safeArea" id="f5I-8i-lP7"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="1NY-PC-pem" secondAttribute="bottom" id="MoD-7o-BAq"/>
+                            <constraint firstAttribute="bottom" secondItem="1NY-PC-pem" secondAttribute="bottom" constant="20" id="MoD-7o-BAq"/>
                             <constraint firstItem="3lf-kB-aLX" firstAttribute="centerX" secondItem="f5I-8i-lP7" secondAttribute="centerX" id="VhM-Oo-472"/>
                             <constraint firstAttribute="trailing" secondItem="1NY-PC-pem" secondAttribute="trailing" constant="15" id="Wtl-f9-rXa"/>
                             <constraint firstItem="m5z-uh-8XO" firstAttribute="leading" secondItem="f5I-8i-lP7" secondAttribute="leading" constant="20" id="Ygz-Ms-3no"/>
@@ -1158,8 +1158,8 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Anj-dE-aB2">
-                                <rect key="frame" x="15" y="383.5" width="384" height="512.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anj-dE-aB2">
+                                <rect key="frame" x="15" y="383.5" width="384" height="492.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1189,7 +1189,7 @@
                             <constraint firstItem="gEh-PZ-DWr" firstAttribute="leading" secondItem="gsT-Fk-B4k" secondAttribute="leading" constant="15" id="XCt-kG-Lpj"/>
                             <constraint firstItem="nLd-mK-0Bp" firstAttribute="leading" secondItem="gsT-Fk-B4k" secondAttribute="leading" constant="20" id="cwz-Jk-L1b"/>
                             <constraint firstItem="gEh-PZ-DWr" firstAttribute="centerY" secondItem="pEf-ia-KPu" secondAttribute="centerY" multiplier="0.8" id="fEX-Yz-VLV"/>
-                            <constraint firstAttribute="bottom" secondItem="Anj-dE-aB2" secondAttribute="bottom" id="p7n-b2-i5m"/>
+                            <constraint firstAttribute="bottom" secondItem="Anj-dE-aB2" secondAttribute="bottom" constant="20" id="p7n-b2-i5m"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Letter from ..." id="KwT-Lj-hdd"/>

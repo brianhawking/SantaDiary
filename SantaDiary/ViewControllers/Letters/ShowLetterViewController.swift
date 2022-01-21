@@ -44,9 +44,18 @@ class ShowLetterViewController: UIViewController {
             letterTextView.text = letter.content
         }
         
+        // adjust recipientLabel top corners
+        recipientLabel.layer.cornerRadius = 20
+        recipientLabel.clipsToBounds = true
+        recipientLabel.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        
         // view adjustments
         letterTextView.textContainerInset = UIEdgeInsets(top: 0, left: 20, bottom: 50, right: 20)
         letterTextView.backgroundColor = UIColor.white
+        
+        letterTextView.layer.cornerRadius = 20
+        letterTextView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
         
     }
