@@ -41,6 +41,11 @@ struct ProfileViewModel {
         let date = Date()
         let year = Calendar.current.dateComponents([.year], from: profile.birthday, to: date).year
         return String(year!)
-    }    
+    }
+    
+    func deleteProfile() -> Bool {
+        if ProfileManager.shared.deleteProfile(profile: profile) {return true}
+        return false
+    }
     
 }

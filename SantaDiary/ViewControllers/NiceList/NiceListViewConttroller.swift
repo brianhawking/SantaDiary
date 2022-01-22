@@ -66,6 +66,7 @@ class NiceListViewConttroller: UIViewController {
     
     func setupFeedbackView() {
         feedbackView.layer.cornerRadius = 10
+        feedbackTextView.backgroundColor = .white
     }
     
     func setupView() {

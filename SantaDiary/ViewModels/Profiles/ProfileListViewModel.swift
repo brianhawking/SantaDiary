@@ -28,5 +28,10 @@ class ProfileListViewModel {
         return ProfileViewModel(profile: items[indexPath.row])
     }
     
+    func deleteProfileViewModel( at indexPath: IndexPath) {
+        if ProfileViewModel(profile: items[indexPath.row]).deleteProfile() {
+            reloadProfiles()
+        }
+    }
 }
 

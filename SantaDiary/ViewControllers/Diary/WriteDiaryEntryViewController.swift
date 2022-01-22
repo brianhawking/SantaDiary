@@ -38,6 +38,7 @@ class WriteDiaryEntryViewController: UIViewController {
         setupView()
         setupPrompts()
         setupImages()
+        
     }
     
     func setupView() {
@@ -56,7 +57,8 @@ class WriteDiaryEntryViewController: UIViewController {
         dateFormatter.dateStyle = .long
         self.title = dateFormatter.string(from: Date())
         
-        
+        answerTextView.backgroundColor = .white
+
         leftBarButton.image = .none
     }
     

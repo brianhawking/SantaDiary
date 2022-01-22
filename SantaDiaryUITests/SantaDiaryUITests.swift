@@ -8,6 +8,8 @@
 import XCTest
 
 class SantaDiaryUITests: XCTestCase {
+    
+    private var userDefaults: UserDefaults!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -16,27 +18,63 @@ class SantaDiaryUITests: XCTestCase {
         continueAfterFailure = false
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        
+        
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testPasscodeEnteredIncorrectly() throws {
+        
+//        let app = XCUIApplication()
+//        app.launch()
+//        
+//        print(app.debugDescription)
+//
+//        app.navigationBars["List of Profiles"].buttons["Item"].tap()
+//
+//        app/*@START_MENU_TOKEN@*/.buttons.containing(.staticText, identifier:"Done").element.tap()/*[[".otherElements[\"SCLAlertView\"].buttons[\"Done\"]",".tap()",".press(forDuration: 0.8);",".buttons.containing(.staticText, identifier:\"Done\").element"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,1]]@END_MENU_TOKEN@*/
+//     
+//        let textField = app.children(matching: .window).element(boundBy: 0)
+//        textField.typeText("1111")
+//
+//        let confirmYourPasswordTextField = app/*@START_MENU_TOKEN@*/.textFields["Confirm your password"]/*[[".otherElements[\"SCLAlertView\"].textFields[\"Confirm your password\"]",".textFields[\"Confirm your password\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        confirmYourPasswordTextField.tap()
+//        confirmYourPasswordTextField.typeText("11111")
+//        app/*@START_MENU_TOKEN@*/.buttons["Confirm"]/*[[".otherElements[\"SCLAlertView\"].buttons[\"Confirm\"]",".buttons[\"Confirm\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//        XCTAssertTrue(confirmYourPasswordTextField.exists)
+//         
     }
+    
+    func testPasscodeEnteredCorrectly() throws {
+        
+//        let app = XCUIApplication()
+//        app.launch()
+//
+//        app.navigationBars["List of Profiles"].buttons["Item"].tap()
+//
+//        app/*@START_MENU_TOKEN@*/.buttons.containing(.staticText, identifier:"Done").element/*[[".otherElements[\"SCLAlertView\"].buttons[\"Done\"]",".buttons.containing(.staticText, identifier:\"Done\").element"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//        let textField = app.children(matching: .window).element(boundBy: 0)
+//        textField.typeText("1111")
+//
+//        let confirmYourPasswordTextField = app/*@START_MENU_TOKEN@*/.textFields["Confirm your password"]/*[[".otherElements[\"SCLAlertView\"].textFields[\"Confirm your password\"]",".textFields[\"Confirm your password\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        confirmYourPasswordTextField.tap()
+//        confirmYourPasswordTextField.typeText("1111")
+//        app/*@START_MENU_TOKEN@*/.buttons["Confirm"]/*[[".otherElements[\"SCLAlertView\"].buttons[\"Confirm\"]",".buttons[\"Confirm\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//        XCTAssertFalse(confirmYourPasswordTextField.exists)
+         
+    }
+}
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+
+extension XCUIApplication {
+    func removeParentalPassword() {
+        launchArguments += ["-"]
     }
 }

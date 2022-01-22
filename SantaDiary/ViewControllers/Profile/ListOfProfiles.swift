@@ -13,6 +13,8 @@ class ListOfProfiles: UIViewController {
     
     @IBOutlet weak var addButton: AddButton!
     
+    @IBOutlet weak var removePasswordButton: UIBarButtonItem!
+    
     // IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -23,6 +25,8 @@ class ListOfProfiles: UIViewController {
         setupView()
         setupTitle()
         setupTableView()
+        
+        removePasswordButton.title = ""
         
         if !parentalPasswordSet() {
             performSegue(withIdentifier: App.Segue.setParentalPasswordSegue, sender: nil)
@@ -152,6 +156,19 @@ extension ListOfProfiles: UITableViewDelegate, UITableViewDataSource {
         
         performSegue(withIdentifier: App.Segue.ListToProfile, sender: nil)
         
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            profiles.deleteProfileViewModel(at: indexPath)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
     }
     
     
