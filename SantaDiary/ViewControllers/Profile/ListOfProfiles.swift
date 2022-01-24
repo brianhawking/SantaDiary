@@ -79,8 +79,8 @@ class ListOfProfiles: UIViewController {
     
     func setupTableView() {
         
-        // need this!
-        tableView.backgroundColor = .clear
+        // this is on the main. what should it be?
+        tableView.backgroundColor = .blue
 
         
         // connect to tableview cell
