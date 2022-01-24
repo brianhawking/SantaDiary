@@ -846,23 +846,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CrA-ev-vXb">
-                                <rect key="frame" x="57" y="98" width="300" height="36"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CrA-ev-vXb">
+                                <rect key="frame" x="20" y="98" width="374" height="36"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jj-PJ-rUm">
-                                        <rect key="frame" x="0.0" y="0.0" width="32" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <state key="normal" image="back-button"/>
+                                        <connections>
+                                            <action selector="changeMonth:" destination="hlw-1P-uSN" eventType="touchUpInside" id="6dg-86-QNQ"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="September 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COP-VV-JDF">
-                                        <rect key="frame" x="42" y="0.0" width="216" height="36"/>
+                                        <rect key="frame" x="50" y="0.0" width="269" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSZ-a4-6oY">
-                                        <rect key="frame" x="268" y="0.0" width="32" height="36"/>
+                                        <rect key="frame" x="329" y="0.0" width="45" height="36"/>
                                         <state key="normal" image="fast-forward"/>
+                                        <connections>
+                                            <action selector="changeMonth:" destination="hlw-1P-uSN" eventType="touchUpInside" id="0Q2-xF-7AA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -907,14 +913,17 @@
                             <constraint firstItem="ej1-wJ-6Di" firstAttribute="centerX" secondItem="SaV-IH-f1K" secondAttribute="centerX" id="3MD-cg-dab"/>
                             <constraint firstItem="SvZ-vA-7IC" firstAttribute="trailing" secondItem="dej-BN-PXL" secondAttribute="trailing" constant="20" id="980-Zg-P8q"/>
                             <constraint firstAttribute="bottom" secondItem="ej1-wJ-6Di" secondAttribute="bottom" constant="20" id="IRU-Oc-hRA"/>
+                            <constraint firstItem="CrA-ev-vXb" firstAttribute="leading" secondItem="SaV-IH-f1K" secondAttribute="leading" constant="20" id="TgS-pH-ocD"/>
                             <constraint firstItem="CrA-ev-vXb" firstAttribute="centerX" secondItem="SaV-IH-f1K" secondAttribute="centerX" id="fLu-be-owN"/>
                             <constraint firstItem="CrA-ev-vXb" firstAttribute="top" secondItem="SvZ-vA-7IC" secondAttribute="top" constant="10" id="iRM-g4-DMs"/>
+                            <constraint firstAttribute="trailing" secondItem="CrA-ev-vXb" secondAttribute="trailing" constant="20" id="lSz-eJ-vbx"/>
                             <constraint firstItem="SvZ-vA-7IC" firstAttribute="bottom" secondItem="dej-BN-PXL" secondAttribute="bottom" constant="50" id="ujN-Hj-d1A"/>
                             <constraint firstItem="dej-BN-PXL" firstAttribute="top" secondItem="CrA-ev-vXb" secondAttribute="bottom" constant="20" id="vPO-eC-VPU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Diary" id="yNw-K6-xMG"/>
                     <connections>
+                        <outlet property="dateLabel" destination="COP-VV-JDF" id="UjO-Fw-8BL"/>
                         <outlet property="tableView" destination="dej-BN-PXL" id="DHx-1b-mgd"/>
                         <segue destination="Jrh-ua-Nuc" kind="show" identifier="diaryToReadEntry" id="TWI-rp-5RV"/>
                         <segue destination="i8Z-hF-12T" kind="show" identifier="diaryToWriteEntry" id="Onq-0d-ubw"/>

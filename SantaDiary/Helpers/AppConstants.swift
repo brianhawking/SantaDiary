@@ -43,6 +43,8 @@ class App {
     
     static let holidayImages = ["OrnamentSanta", "OrnamentSnowman", "Sleigh", "Reindeer", "Snowman"]
     
+    static let emojis = ["Happy", "Angry"]
+    
     class envelope {
         static let opened = [
             "FromUser": "fromUser",
@@ -51,5 +53,6 @@ class App {
         ]
         static let new = "ClosedEnvelope"
     }
+    
     
 }

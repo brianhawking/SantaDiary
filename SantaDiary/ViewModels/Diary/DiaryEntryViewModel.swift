@@ -15,6 +15,24 @@ struct DiaryEntryViewModel {
         self.entry = entry
     }
     
+    var preview: String {
+        return entry.prompts[1].answer
+    }
+    
+    var month: Int {
+        let calendar = Calendar.current
+        return calendar.component(.month, from: entry.date)
+    }
+    
+    var year: Int {
+        let calendar = Calendar.current
+        return calendar.component(.year, from: entry.date)
+    }
+    
+    var prompts: [DiaryPrompt] {
+        return entry.prompts
+    }
+    
     var text: String {
         
         var txt = ""
@@ -23,6 +41,10 @@ struct DiaryEntryViewModel {
         }
         
         return txt
+    }
+    
+    var image: String {
+        return entry.image
     }
     
     var date: Date {

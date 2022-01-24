@@ -72,6 +72,33 @@ struct ProfileManager {
         }
     }
     
+    func updateProgress(user: String) {
+        
+        let profile = getProfile(name: user)
+        var newProfile = profile
+        
+        let niceListProgress = DiaryManager.shared.countQuestionsAnswered(for: profile.name)
+        
+        print("DEBUG: \(niceListProgress)")
+        print("DEBUG: \(profile.kindness) \(niceListProgress.kindness / 4)")
+        
+        if profile.kindness < (niceListProgress.kindness / 4) {
+            newProfile.kindness += 1
+        }
+        if profile.smiles < (niceListProgress.smile / 4) {
+            newProfile.smiles += 1
+        }
+        if profile.learning < (niceListProgress.learning / 4) {
+            newProfile.learning += 1
+        }
+        
+        print("DEBUG: \(newProfile)")
+        
+        if createProfile(profile: newProfile, editingType: .edit) {
+            print("DEBUG: update progress successful")
+        }
+    }
+    
     
     func editProfile(from oldProfile: Profile, to newProfile: Profile) -> Bool {
         
@@ -161,7 +188,7 @@ struct ProfileManager {
             if String(data: jsonData, encoding: .utf8) != nil {
             
                 // check if the user has a profile
-                if userExists(name: profile.name) {
+                if userExists(name: profile.name) && editingType == .create {
                     print("\(profile.name) already exists.")
                     return false
                 }

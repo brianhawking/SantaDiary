@@ -108,19 +108,6 @@ class WriteLetterViewController: UIViewController {
                 
             }, completion: {_ in
                 
-//                let fakeLetter = Letter(
-//                    author: "Santa",
-//                    recipient: self.author,
-//                    content: "This is a fake letter by Santa",
-//                    authorType: .santa)
-//
-//                if LetterManager.shared.createLetter(letter: fakeLetter) {
-//                    print("DEBUG: letter created")
-//                }
-//                else {
-//                    print("DEBUG: fake letter failed")
-//                }
-                
                 self.navigationController?.popViewController(animated: true)
             })
         })

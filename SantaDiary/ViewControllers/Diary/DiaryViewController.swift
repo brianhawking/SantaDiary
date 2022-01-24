@@ -12,8 +12,14 @@ class DiaryViewController: UIViewController {
     // get current user
     var profileName = UserDefaults.standard.string(forKey: "SelectedProfile")
 
+    let diaryEntries = DiaryEntryListViewModel()
+    var readOrWrite = ReadOrWrite.write
+    var entryToSend: DiaryEntryViewModel?
+    var monthYear = MonthYear()
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +28,21 @@ class DiaryViewController: UIViewController {
         
         setupView()
         setupTableView()
+        
+        dateLabel.text = monthYear.asString()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateDiary()
+        
+    }
+    
+    func updateDiary() {
+        diaryEntries.reload(for: profileName!)
+        diaryEntries.filter(monthYear: monthYear)
+        tableView.reloadData()
     }
     
     func setupView() {
@@ -53,7 +74,37 @@ class DiaryViewController: UIViewController {
 
     
     @IBAction func addButtonTapped(_ sender: UIButton) {
+        readOrWrite = .write
         performSegue(withIdentifier: App.Segue.diaryToWriteEntry, sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! WriteDiaryEntryViewController
+        vc.readOrWrite = readOrWrite
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        vc.title = dateFormatter.string(from: Date())
+        
+        if readOrWrite == .read {
+            vc.prompts = entryToSend!.prompts
+            vc.selectedImage = entryToSend!.image
+            vc.title = entryToSend!.formattedDate
+        }
+    }
+    
+    @IBAction func changeMonth(_ sender: UIButton) {
+        
+        if sender.tag == 1 {
+            monthYear.back()
+        }
+        else {
+            monthYear.forward()
+        }
+        
+        dateLabel.text = monthYear.asString()
+        updateDiary()
+        
     }
 }
 
@@ -64,22 +115,34 @@ extension DiaryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return diaryEntries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: LetterTableViewCell.identifier, for: indexPath) as! LetterTableViewCell
         
+        let diary = diaryEntries.getDiaryEntryViewModel(at: indexPath)
+        
         // adjust cell
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
         
-        cell.letterDateLabel.text = "HI"
-        cell.letterContentLabel.text = "this is content"
-        cell.letterImageView.image = UIImage(named: "Happy")
+        cell.letterDateLabel.text = diary.formattedDate
+        cell.letterContentLabel.text = diary.preview
+        cell.letterImageView.image = UIImage(named: diary.image)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        entryToSend = diaryEntries.getDiaryEntryViewModel(at: indexPath)
+        
+        readOrWrite = .read
+        
+        performSegue(withIdentifier: App.Segue.diaryToWriteEntry, sender: nil)
+        
     }
     
     

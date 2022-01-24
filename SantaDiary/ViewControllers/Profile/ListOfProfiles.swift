@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class ListOfProfiles: UIViewController {
     
@@ -160,10 +161,28 @@ extension ListOfProfiles: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            tableView.beginUpdates()
-            profiles.deleteProfileViewModel(at: indexPath)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            tableView.endUpdates()
+            
+            let appearance = SCLAlertView.SCLAppearance(
+                kTitleFont: UIFont(name: "Noteworthy Bold", size: 32)!,
+                kTextFont: UIFont.systemFont(ofSize: 26),
+                kButtonFont: UIFont(name: "Noteworthy Bold", size: 20)!,
+                showCloseButton: false,
+                dynamicAnimatorActive: true,
+                buttonsLayout: .horizontal
+            )
+            
+            let alert = SCLAlertView(appearance: appearance)
+            alert.addButton("YES") {
+                self.tableView.beginUpdates()
+                self.profiles.deleteProfileViewModel(at: indexPath)
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+                self.tableView.endUpdates()
+            }
+            alert.addButton("NO") {
+                
+            }
+            alert.showWarning("Confirm...", subTitle: "Are you sure you want to delete this profile?")
+            
         }
     }
     

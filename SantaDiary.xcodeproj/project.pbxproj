@@ -70,6 +70,11 @@
 		F7A6E103279A609A00024F18 /* WriteDiaryEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6E102279A609A00024F18 /* WriteDiaryEntryViewController.swift */; };
 		F7A6E105279A61FA00024F18 /* DiaryPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6E104279A61FA00024F18 /* DiaryPrompt.swift */; };
 		F7A6E107279A680600024F18 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6E106279A680600024F18 /* PaddingLabel.swift */; };
+		F7B926F6279CA58000188AF3 /* DiaryQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B926F5279CA58000188AF3 /* DiaryQuestions.swift */; };
+		F7B926F8279CF72900188AF3 /* DiaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B926F7279CF72900188AF3 /* DiaryManager.swift */; };
+		F7B926FC279D03D000188AF3 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B926FB279D03D000188AF3 /* CustomAlert.swift */; };
+		F7B92700279D103700188AF3 /* NiceListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B926FF279D103700188AF3 /* NiceListManager.swift */; };
+		F7B92702279D2C1B00188AF3 /* MonthYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B92701279D2C1B00188AF3 /* MonthYear.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +168,11 @@
 		F7A6E102279A609A00024F18 /* WriteDiaryEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryEntryViewController.swift; sourceTree = "<group>"; };
 		F7A6E104279A61FA00024F18 /* DiaryPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPrompt.swift; sourceTree = "<group>"; };
 		F7A6E106279A680600024F18 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		F7B926F5279CA58000188AF3 /* DiaryQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryQuestions.swift; sourceTree = "<group>"; };
+		F7B926F7279CF72900188AF3 /* DiaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryManager.swift; sourceTree = "<group>"; };
+		F7B926FB279D03D000188AF3 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		F7B926FF279D103700188AF3 /* NiceListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceListManager.swift; sourceTree = "<group>"; };
+		F7B92701279D2C1B00188AF3 /* MonthYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYear.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +330,10 @@
 				F77060422775215400B4EE52 /* AppConstants.swift */,
 				F770604F2777C53500B4EE52 /* ProfileManager.swift */,
 				F76AD3C9278558AB006F0B38 /* LetterManager.swift */,
+				F7B926F7279CF72900188AF3 /* DiaryManager.swift */,
+				F7B926F5279CA58000188AF3 /* DiaryQuestions.swift */,
+				F7B926FF279D103700188AF3 /* NiceListManager.swift */,
+				F7B92701279D2C1B00188AF3 /* MonthYear.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -337,6 +351,7 @@
 		F71D0C8E27751DDD000526A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F7B926FA279D03BC00188AF3 /* CustomAlerts */,
 				F7A5D8F827796A070097964C /* Reusables */,
 				F770604A2776CF1E00B4EE52 /* CustomTableViewCells */,
 				F76AD3B7278405EF006F0B38 /* ProfileImageCollectionViewCell.swift */,
@@ -478,6 +493,14 @@
 				F7A6E0FE279A532100024F18 /* DiaryEntryListViewModel.swift */,
 			);
 			path = Diary;
+			sourceTree = "<group>";
+		};
+		F7B926FA279D03BC00188AF3 /* CustomAlerts */ = {
+			isa = PBXGroup;
+			children = (
+				F7B926FB279D03D000188AF3 /* CustomAlert.swift */,
+			);
+			path = CustomAlerts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -730,6 +753,7 @@
 				F7A6E0FD279A531500024F18 /* DiaryEntryViewModel.swift in Sources */,
 				F792590F27907D44006E872F /* FeedbackViewController.swift in Sources */,
 				F7A5D905277A384B0097964C /* AddButton.swift in Sources */,
+				F7B92702279D2C1B00188AF3 /* MonthYear.swift in Sources */,
 				F7A6E105279A61FA00024F18 /* DiaryPrompt.swift in Sources */,
 				F76AD3BF2784C1E3006F0B38 /* DiaryViewController.swift in Sources */,
 				F7706047277692EA00B4EE52 /* Profile.swift in Sources */,
@@ -743,8 +767,11 @@
 				F77060492776955700B4EE52 /* ProfileListViewModel.swift in Sources */,
 				F7A5D907277A72050097964C /* AddProfileViewController.swift in Sources */,
 				F7925900278BF14C006E872F /* String.swift in Sources */,
+				F7B926F8279CF72900188AF3 /* DiaryManager.swift in Sources */,
 				F79259112790BBCD006E872F /* CreatePasswordViewController.swift in Sources */,
 				F7A6E101279A5C8700024F18 /* ReadDiaryEntryViewController.swift in Sources */,
+				F7B926FC279D03D000188AF3 /* CustomAlert.swift in Sources */,
+				F7B92700279D103700188AF3 /* NiceListManager.swift in Sources */,
 				F7A6E0FF279A532100024F18 /* DiaryEntryListViewModel.swift in Sources */,
 				F77060522777D2F100B4EE52 /* ProfileViewModel.swift in Sources */,
 				F71D0C9227751F13000526A6 /* ColorScheme.swift in Sources */,
@@ -754,6 +781,7 @@
 				F7925909278CD95D006E872F /* ProgressBar.swift in Sources */,
 				F76AD3B6278404AD006F0B38 /* SelectProfileImageCollectionViewController.swift in Sources */,
 				F76AD3C82785114C006F0B38 /* LetterViewModel.swift in Sources */,
+				F7B926F6279CA58000188AF3 /* DiaryQuestions.swift in Sources */,
 				F7925907278C8C36006E872F /* ParentsViewModel.swift in Sources */,
 				F71D0C9027751EB2000526A6 /* UIColor.swift in Sources */,
 				F79258F7278B5C78006E872F /* Setting.swift in Sources */,

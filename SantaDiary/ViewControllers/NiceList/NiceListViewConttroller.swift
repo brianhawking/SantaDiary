@@ -27,6 +27,7 @@ class NiceListViewConttroller: UIViewController {
     @IBOutlet weak var learningProgressBar: UIProgressView!
     @IBOutlet weak var learningCumulative: UILabel!
     
+    var progress = NiceListProgress(kindness: 0, learning: 0, smile: 0)
     
     
     // progress bar variables
@@ -43,7 +44,22 @@ class NiceListViewConttroller: UIViewController {
         setupView()
         setupFeedbackView()
         setupProgressBars()
+        calculateProgress()
         
+        
+    }
+    
+    func calculateProgress() {
+        
+        progress = DiaryManager.shared.countQuestionsAnswered(for: profileName!)
+        
+        smileProgress = Float(progress.smile % 4) / 4
+        learningProgress = Float(progress.learning % 4) / 4
+        kindnessProgress = Float(progress.kindness % 4) / 4
+        
+        smileCumulative.text = " " + String(progress.smile / 4) + " "
+        learningCumulative.text = " " + String(progress.learning / 4) + " "
+        kindnessCumulative.text = " " + String(progress.kindness / 4) + " "
         
     }
     
