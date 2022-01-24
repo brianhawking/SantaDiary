@@ -79,10 +79,9 @@ class ListOfProfiles: UIViewController {
     
     func setupTableView() {
         
-        // this is on the main. what should it be?
-        tableView.backgroundColor = .blue
+        // make sure this is .clear!!
+        tableView.backgroundColor = .clear
 
-        
         // connect to tableview cell
         let nib = UINib(nibName: ListOfProfilesCell.identifer, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: ListOfProfilesCell.identifer)
