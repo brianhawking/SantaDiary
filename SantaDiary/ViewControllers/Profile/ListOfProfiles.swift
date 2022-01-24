@@ -79,7 +79,7 @@ class ListOfProfiles: UIViewController {
     
     func setupTableView() {
         
-        tableView.backgroundColor = .clear
+        tableView.backgroundColor = .black
         
         // connect to tableview cell
         let nib = UINib(nibName: ListOfProfilesCell.identifer, bundle: nil)
