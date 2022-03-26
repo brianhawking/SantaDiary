@@ -75,6 +75,14 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
         
+        // if custom image, change corner radius
+        if setting.customImage {
+            cell.settingImageView.layer.cornerRadius = cell.settingImageView.frame.height/2
+            cell.settingImageView.layer.borderWidth = 2
+            cell.settingImageView.layer.borderColor = UIColor.black.cgColor
+            cell.settingImageView.contentMode = .scaleToFill
+        }
+        
         cell.settingImageView.image = setting.image
         cell.settingLabel.text = setting.name
         

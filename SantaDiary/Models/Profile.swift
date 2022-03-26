@@ -17,6 +17,8 @@ struct Profile: Codable {
     var kindness = 0
     var smiles = 0
     var learning = 0
+    var notificationForElf = ""
+    var notificationForSanta = ""
 }
 
 struct Profiles: Codable {

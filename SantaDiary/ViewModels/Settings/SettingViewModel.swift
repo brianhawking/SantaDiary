@@ -24,6 +24,10 @@ struct SettingViewModel {
         return setting.segue
     }
     
+    var customImage: Bool {
+        return setting.customImage
+    }
+    
     var image: UIImage {
         
         if setting.image != "UserImage" {

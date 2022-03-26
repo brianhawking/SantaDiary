@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 struct LetterManager {
     
@@ -111,6 +112,7 @@ struct LetterManager {
             if String(data: jsonData, encoding: .utf8) != nil {
             
                 var user = ""
+                var removeNotification = false
                 
                 // create the letters folder
                 do {
@@ -118,8 +120,10 @@ struct LetterManager {
                     switch letter.authorType {
                     case "User":
                         user = letter.author
+                        ProfileManager.shared.sendLetterNotification(user: user, from: letter.recipient)
                     default:
                         user = letter.recipient
+                        removeNotification = true
                     }
                     
                     try FileManager.default.createDirectory(at: getLettersFolderURL(user: user), withIntermediateDirectories: true, attributes: nil)
@@ -129,6 +133,12 @@ struct LetterManager {
                     let fileName = dateFormatter.string(from: letter.date)
                     
                     try jsonData.write(to: getLetterURL(user: user, fileName: fileName))
+                    
+                    // if a notification was set, you can remove it
+                    if removeNotification {
+                        ProfileManager.shared.cancelNotification(user: user, from: letter.recipient)
+                    }
+                    
                     
                 }
                 catch {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="inc-3b-F8J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="inc-3b-F8J">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -54,11 +54,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="3yx-gf-0FX">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="R8w-mh-V2C">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="Bwa-S5-suY">
                             <connections>
-                                <action selector="removeParental:" destination="BYZ-38-t0r" id="bYd-zv-L07"/>
+                                <segue destination="S8k-qf-DLp" kind="show" identifier="ListToCredits" id="mIg-Dg-hN3"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" id="R8w-mh-V2C">
+                                <connections>
+                                    <action selector="removeParental:" destination="BYZ-38-t0r" id="bYd-zv-L07"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Remove" id="YeP-Hv-gAK">
+                                <connections>
+                                    <action selector="removeAll:" destination="BYZ-38-t0r" id="jwe-KL-um4"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="5hX-0h-3Ig" id="vf1-ge-GJc"/>
@@ -369,7 +381,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is one thing that made you smile today?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tR-Z1-90J" customClass="PaddingLabel" customModule="SantaDiary" customModuleProvider="target">
-                                <rect key="frame" x="20" y="266" width="374" height="53"/>
+                                <rect key="frame" x="20" y="266" width="374" height="73"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -390,7 +402,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ACk-vA-7hg">
-                                <rect key="frame" x="20" y="329" width="374" height="513"/>
+                                <rect key="frame" x="20" y="349" width="374" height="493"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -480,6 +492,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41h-8i-P7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1006" y="1630"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="kLe-3i-aOn">
+            <objects>
+                <viewController id="S8k-qf-DLp" customClass="CreditsViewController" customModule="SantaDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A6c-3G-4di">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmp-bO-FFw">
+                                <rect key="frame" x="20" y="364.5" width="374" height="167.5"/>
+                                <string key="text">App Created by 
+Brian Veitch
+
+All icons made by Freepik from www.flaticon.com</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PTH-DQ-1eR"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.43529411759999997" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qmp-bO-FFw" firstAttribute="centerY" secondItem="A6c-3G-4di" secondAttribute="centerY" id="0Ok-AV-VDr"/>
+                            <constraint firstAttribute="trailing" secondItem="Qmp-bO-FFw" secondAttribute="trailing" constant="20" id="BfL-km-sD0"/>
+                            <constraint firstItem="Qmp-bO-FFw" firstAttribute="centerX" secondItem="A6c-3G-4di" secondAttribute="centerX" id="TRy-2c-6P4"/>
+                            <constraint firstItem="Qmp-bO-FFw" firstAttribute="leading" secondItem="A6c-3G-4di" secondAttribute="leading" constant="20" id="jAG-6e-v45"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" largeTitleDisplayMode="always" id="vP8-QL-GDw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Oi-f0-FiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-70" y="-730"/>
         </scene>
         <!--Settings-->
         <scene sceneID="zIk-y8-86U">
@@ -1240,6 +1286,7 @@
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FFY-Ko-XZc">
                                 <rect key="frame" x="55.5" y="108" width="303" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <segments>
                                     <segment title="Unread"/>
                                     <segment title="Received"/>
@@ -1380,7 +1427,7 @@
     </scenes>
     <designables>
         <designable name="4tR-Z1-90J">
-            <size key="intrinsicContentSize" width="430.5" height="26.5"/>
+            <size key="intrinsicContentSize" width="470.5" height="46.5"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>

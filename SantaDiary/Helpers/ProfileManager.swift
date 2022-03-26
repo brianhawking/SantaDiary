@@ -12,20 +12,6 @@ struct ProfileManager {
     
     static let shared = ProfileManager()
     
-    // create fake data
-    func createFakeProfiles() {
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
-        let profile1 = Profile(userID: 0, name: "Sean", image: "Bee-1", birthday: dateFormatterGet.date(from: "2016-02-29 12:24:26")!, customImage: true)
-        let profile2 = Profile(userID: 1, name: "Casey", image: "Dog-1", birthday: Date(), customImage: false)
-        
-        if createProfile(profile: profile1, editingType: .create) && createProfile(profile: profile2, editingType: .create) {
-            print("accounts made")
-        }
-        
-    }
-    
     // return path to root profile folder
     private func profileRootURL(name: String) -> URL {
         return FileManager.default.urls(for: .documentDirectory, in:
@@ -80,22 +66,101 @@ struct ProfileManager {
         let niceListProgress = DiaryManager.shared.countQuestionsAnswered(for: profile.name)
         
         print("DEBUG: \(niceListProgress)")
-        print("DEBUG: \(profile.kindness) \(niceListProgress.kindness / 4)")
+        print("DEBUG: \(profile.smiles) \(niceListProgress.smile)")
         
         if profile.kindness < (niceListProgress.kindness / 4) {
             newProfile.kindness += 1
+            
+            // send letter from elf
+            sendLetterNotification(user: user, from: "Elf")
         }
         if profile.smiles < (niceListProgress.smile / 4) {
             newProfile.smiles += 1
+            
+            // send letter from elf
+            sendLetterNotification(user: user, from: "Elf")
         }
         if profile.learning < (niceListProgress.learning / 4) {
             newProfile.learning += 1
+            
+            // send letter from elf
+            sendLetterNotification(user: user, from: "Elf")
         }
         
-        print("DEBUG: \(newProfile)")
+//        print("DEBUG: \(newProfile)")
         
         if createProfile(profile: newProfile, editingType: .edit) {
             print("DEBUG: update progress successful")
+        }
+    }
+    
+    func cancelNotification(user: String, from: String) {
+        
+        let profile = getProfile(name: user)
+        var newProfile = profile
+        
+        if from == "Elf" {
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [newProfile.notificationForElf])
+            newProfile.notificationForElf = ""
+        }
+        else {
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [newProfile.notificationForSanta])
+            newProfile.notificationForSanta = ""
+        }
+        
+        if createProfile(profile: newProfile, editingType: .edit) {
+            print("DEBUG: notification removed from \(user)")
+        }
+    }
+    
+    private func saveNotificationIdentifier(user: String, from: String, identifier: String) {
+        
+        let profile = getProfile(name: user)
+        var newProfile = profile
+        
+        if from == "Elf" {
+            newProfile.notificationForElf = identifier
+        }
+        else {
+            newProfile.notificationForSanta = identifier
+        }
+        
+        if createProfile(profile: newProfile, editingType: .edit) {
+            print("DEBUG: \(identifier) saved to \(user)")
+        }
+        
+    }
+    
+    func sendLetterNotification(user: String, from: String) {
+        let content = UNMutableNotificationContent()
+        
+        
+        if from == "Elf" {
+            content.title = "Diary task completed!"
+            content.subtitle = "\(user) is waiting for a letter from a Santa Elf."
+        }
+        else {
+            content.title = "Santa letter sent!"
+            content.subtitle = "\(user) is waiting for a letter from Santa."
+        }
+        content.sound = UNNotificationSound.default
+
+        // show this notification five seconds from now
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+
+        // choose a random identifier
+        let ID = UUID().uuidString
+        let request = UNNotificationRequest(identifier: ID, content: content, trigger: trigger)
+
+        // add our notification request
+        UNUserNotificationCenter.current().add(request) { error in
+            if error != nil {
+                print("DEBUG: issue sending notification")
+            }
+            else {
+                print("DEBUG: notificaiton sent: \(ID)")
+                saveNotificationIdentifier(user: user, from: from, identifier: ID)
+            }
         }
     }
     
@@ -248,7 +313,7 @@ struct ProfileManager {
                 try FileManager.default.createDirectory(at: getUsersURL(), withIntermediateDirectories: true, attributes: nil)
             }
             catch {
-                print("DEBUG: \(error.localizedDescription)")
+                print("DEBUG 1: \(error.localizedDescription)")
             }
             
         }
@@ -295,6 +360,7 @@ struct ProfileManager {
             // loop through users folder
             for user in directoryContents {
                 
+                print("DEBUG adding user: \(user)\n")
                 path = profileURL(name: user.lastPathComponent)
                 
                 do {
@@ -306,7 +372,7 @@ struct ProfileManager {
             
         }
         catch {
-            print(error)
+            print("DEBUG: \(error)")
         }
         
         // reorder by age

@@ -17,7 +17,4 @@ struct ColorScheme {
     
     static let eventButtonBackgroundColor = UIColor(hex: "#EDDDB8ff")
     static let eventButtonTextColor = UIColor.black
-    
-    
-    
 }

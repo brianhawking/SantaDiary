@@ -28,6 +28,14 @@ struct ProfileViewModel {
         return profile.birthday
     }
     
+    var notificationForElf: String {
+        return profile.notificationForElf
+    }
+    
+    var notificationForSanta: String {
+        return profile.notificationForSanta
+    }
+    
     var image: UIImage {
         let imagePath = ProfileManager.shared.profileImageURL(name: profile.name).path
         guard let image = UIImage(contentsOfFile: imagePath) else {

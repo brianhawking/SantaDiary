@@ -29,4 +29,9 @@ class CustomAlert {
         }
         alert.showSuccess(title, subTitle: subTitle)
     }
+    
+    func incompleteForm(title: String, subTitle: String) {
+        let alert = SCLAlertView(appearance: appearance())
+        alert.showError(title, subTitle: subTitle)
+    }
 }

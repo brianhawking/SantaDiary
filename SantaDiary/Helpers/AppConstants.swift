@@ -35,15 +35,17 @@ class App {
         
         static let diaryToWriteEntry: String = "diaryToWriteEntry"
         static let diaryToReadEntry: String = "diaryToReadEntry"
+        
+        static let ListToCredits: String = "ListToCredits"
     }
     
-    static let elves = ["Bob", "Susan", "Tickles"]
+    static let elves = ["Bubbles", "Tickles"]
     
-    static let avatars = ["TRex", "Bee-1", "HotDog", "Ankylosaurus","Styracosaurus", "Bee-hive", "Dog-1", "Footprint", "Pick", "SportsCar", "Sunflower"]
+    static let avatars = ["TRex", "Bee-1", "HotDog", "Ankylosaurus","Styracosaurus", "Dog-1", "Footprint", "Pick", "SportsCar", "Sunflower"]
     
     static let holidayImages = ["OrnamentSanta", "OrnamentSnowman", "Sleigh", "Reindeer", "Snowman"]
     
-    static let emojis = ["Happy", "Angry"]
+    static let emojis:[String] = ["Happy", "Angry"]
     
     class envelope {
         static let opened = [

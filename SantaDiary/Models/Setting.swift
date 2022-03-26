@@ -11,5 +11,6 @@ struct Setting {
     var image: String
     var name: String
     var segue: String
+    var customImage: Bool = false
 }
 

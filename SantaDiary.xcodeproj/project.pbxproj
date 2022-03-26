@@ -75,6 +75,10 @@
 		F7B926FC279D03D000188AF3 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B926FB279D03D000188AF3 /* CustomAlert.swift */; };
 		F7B92700279D103700188AF3 /* NiceListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B926FF279D103700188AF3 /* NiceListManager.swift */; };
 		F7B92702279D2C1B00188AF3 /* MonthYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B92701279D2C1B00188AF3 /* MonthYear.swift */; };
+		F7B9275D27A048B600188AF3 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9275C27A048B600188AF3 /* Feedback.swift */; };
+		F7B9276027A0490C00188AF3 /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9275F27A0490C00188AF3 /* FeedbackViewModel.swift */; };
+		F7B9276227A04A5800188AF3 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9276127A04A5800188AF3 /* FeedbackManager.swift */; };
+		F7D70BAB27E684F500DC4813 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D70BAA27E684F500DC4813 /* CreditsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +177,10 @@
 		F7B926FB279D03D000188AF3 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		F7B926FF279D103700188AF3 /* NiceListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceListManager.swift; sourceTree = "<group>"; };
 		F7B92701279D2C1B00188AF3 /* MonthYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYear.swift; sourceTree = "<group>"; };
+		F7B9275C27A048B600188AF3 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		F7B9275F27A0490C00188AF3 /* FeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
+		F7B9276127A04A5800188AF3 /* FeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
+		F7D70BAA27E684F500DC4813 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +302,7 @@
 				F7925908278CD95D006E872F /* ProgressBar.swift */,
 				F7A6E0F9279A519C00024F18 /* DiaryEntry.swift */,
 				F7A6E104279A61FA00024F18 /* DiaryPrompt.swift */,
+				F7B9275C27A048B600188AF3 /* Feedback.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,6 +315,7 @@
 				F76AD3BC2784C1A5006F0B38 /* Diary */,
 				F76AD3B92784C17C006F0B38 /* NiceList */,
 				F71D0C93277520C9000526A6 /* Profile */,
+				F7D70BAA27E684F500DC4813 /* CreditsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -313,6 +323,7 @@
 		F71D0C8B27751B4C000526A6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F7B9275E27A048ED00188AF3 /* Feedback */,
 				F7A6E0FB279A52F100024F18 /* Diary */,
 				F792590A278CD9C9006E872F /* ProgressBar */,
 				F7925903278C8BBD006E872F /* For Parents */,
@@ -334,6 +345,7 @@
 				F7B926F5279CA58000188AF3 /* DiaryQuestions.swift */,
 				F7B926FF279D103700188AF3 /* NiceListManager.swift */,
 				F7B92701279D2C1B00188AF3 /* MonthYear.swift */,
+				F7B9276127A04A5800188AF3 /* FeedbackManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -501,6 +513,14 @@
 				F7B926FB279D03D000188AF3 /* CustomAlert.swift */,
 			);
 			path = CustomAlerts;
+			sourceTree = "<group>";
+		};
+		F7B9275E27A048ED00188AF3 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				F7B9275F27A0490C00188AF3 /* FeedbackViewModel.swift */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -749,6 +769,8 @@
 				F71D0C5B277517F7000526A6 /* ListOfProfiles.swift in Sources */,
 				F79258FA278B5CEB006E872F /* SettingViewModel.swift in Sources */,
 				F76AD3CA278558AB006F0B38 /* LetterManager.swift in Sources */,
+				F7B9276027A0490C00188AF3 /* FeedbackViewModel.swift in Sources */,
+				F7B9276227A04A5800188AF3 /* FeedbackManager.swift in Sources */,
 				F7A6E103279A609A00024F18 /* WriteDiaryEntryViewController.swift in Sources */,
 				F7A6E0FD279A531500024F18 /* DiaryEntryViewModel.swift in Sources */,
 				F792590F27907D44006E872F /* FeedbackViewController.swift in Sources */,
@@ -757,6 +779,7 @@
 				F7A6E105279A61FA00024F18 /* DiaryPrompt.swift in Sources */,
 				F76AD3BF2784C1E3006F0B38 /* DiaryViewController.swift in Sources */,
 				F7706047277692EA00B4EE52 /* Profile.swift in Sources */,
+				F7D70BAB27E684F500DC4813 /* CreditsViewController.swift in Sources */,
 				F770604D2776CF4D00B4EE52 /* ListOfProfilesCell.swift in Sources */,
 				F76AD3C12784C1F2006F0B38 /* MailboxViewController.swift in Sources */,
 				F77060502777C53500B4EE52 /* ProfileManager.swift in Sources */,
@@ -783,6 +806,7 @@
 				F76AD3C82785114C006F0B38 /* LetterViewModel.swift in Sources */,
 				F7B926F6279CA58000188AF3 /* DiaryQuestions.swift in Sources */,
 				F7925907278C8C36006E872F /* ParentsViewModel.swift in Sources */,
+				F7B9275D27A048B600188AF3 /* Feedback.swift in Sources */,
 				F71D0C9027751EB2000526A6 /* UIColor.swift in Sources */,
 				F79258F7278B5C78006E872F /* Setting.swift in Sources */,
 				F7A6E0FA279A519C00024F18 /* DiaryEntry.swift in Sources */,
@@ -988,8 +1012,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -999,7 +1023,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1019,8 +1043,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1030,7 +1054,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

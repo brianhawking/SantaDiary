@@ -65,6 +65,16 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
         else {
             self.title = "Edit Profile"
             let profile = ProfileViewModel(profile: ProfileManager.shared.getProfile(name: profileName!))
+            
+            // if custom image, change corner radius
+            if profile.customImage {
+                profileImageView.layer.cornerRadius = profileImageView.frame.height/2
+                profileImageView.layer.borderWidth = 2
+                profileImageView.layer.borderColor = UIColor.black.cgColor
+                profileImageView.contentMode = .scaleToFill
+            }
+            
+            
             profileImageView.image = profile.image
             nameTextField.text = profile.name
             birthdayPicker.date = profile.date
@@ -130,6 +140,8 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
     func createProfile() {
 
         let newProfile = Profile(userID: 0, name: nameTextField.text!, image: "profilePic.png", birthday: birthdayPicker.date, customImage: customImage)
+        let feedback = Feedback(name: nameTextField.text!, image: "Happy", feedback: "Please continue completing diary entries until we have enough information to determine which list you are on.")
+        
         
         if ProfileManager.shared.createProfile(profile: newProfile, editingType: editingType) {
             
@@ -137,10 +149,14 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
             print("DEBUG: profile saved. now save image")
             ProfileManager.shared.saveProfileImage(profile: newProfile, image: profileImageView.image!)
             
+            // save a feedback template
+            if !FeedbackManager.shared.createFeedback(feedback: feedback) {
+                print("DEBUG: issue creating the initial feedback file")
+            }
+            
             // return to profiles viewcontroller
             completionHandler?(true)
             navigationController?.popViewController(animated: true)
-            
         }
         
     }

@@ -45,7 +45,7 @@ struct DiaryPrompt: Codable {
             
         case .random:
          
-            switch (dayOfMonth.day ?? 0 % 3) {
+            switch ( (dayOfMonth.day ?? 0) % 3) {
                 
             case 0:
                 self.question = QuestionType.kindness.rawValue

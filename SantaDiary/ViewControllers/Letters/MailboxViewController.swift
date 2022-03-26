@@ -36,6 +36,9 @@ class MailboxViewController: UIViewController {
     
     func setupSegmentedControl() {
         mailboxSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .callout), NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
+        
+        mailboxSegmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
+
     }
     
     func updateLetters() {

@@ -12,6 +12,8 @@ class NiceListViewConttroller: UIViewController {
     // get current user
     var profileName = UserDefaults.standard.string(forKey: "SelectedProfile")
     
+    var feedback: FeedbackViewModel?
+    
     
     
     // UI Elements
@@ -42,11 +44,17 @@ class NiceListViewConttroller: UIViewController {
         // Do any additional setup after loading the view.
         
         setupView()
+        getFeedback()
         setupFeedbackView()
+        setupImage()
         setupProgressBars()
         calculateProgress()
         
         
+    }
+    
+    func getFeedback() {
+        feedback = FeedbackViewModel(feedback: FeedbackManager.shared.getFeedback(name: profileName!))
     }
     
     func calculateProgress() {
@@ -83,6 +91,16 @@ class NiceListViewConttroller: UIViewController {
     func setupFeedbackView() {
         feedbackView.layer.cornerRadius = 10
         feedbackTextView.backgroundColor = .white
+        
+        if let feedback = feedback {
+            feedbackTextView.text = feedback.feedback
+        }
+    }
+    
+    func setupImage() {
+        if let feedback = feedback {
+            NiceNaughtyImage.image = UIImage(named: feedback.image)
+        }
     }
     
     func setupView() {

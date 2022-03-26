@@ -29,6 +29,17 @@ class ListOfProfiles: UIViewController {
         
         removePasswordButton.title = ""
         
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+            if success {
+                print("All set!")
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+        
+//        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+//        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+//
         if !parentalPasswordSet() {
             performSegue(withIdentifier: App.Segue.setParentalPasswordSegue, sender: nil)
         }
@@ -48,8 +59,25 @@ class ListOfProfiles: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        updateTableData()
+        
+    }
+    
+    func updateTableData() {
         profiles.reloadProfiles()
         tableView.reloadData()
+    }
+    
+    
+    @IBAction func removeAll(_ sender: Any) {
+        for profile in profiles.items {
+            if !ProfileManager.shared.deleteProfile(profile: profile) {
+                print("DEBUG: problem deleting \(profile)")
+            }
+        }
+        
+        updateTableData()
+        
     }
     
     func parentalPasswordSet() -> Bool {
@@ -141,6 +169,8 @@ extension ListOfProfiles: UITableViewDelegate, UITableViewDataSource {
             cell.profileImage.layer.borderColor = UIColor.black.cgColor
             cell.profileImage.contentMode = .scaleToFill
         }
+        
+        print("\(profile.name) - \(profile.notificationForElf)")
         
         cell.backgroundColor = .clear
         cell.name.text = profile.name
