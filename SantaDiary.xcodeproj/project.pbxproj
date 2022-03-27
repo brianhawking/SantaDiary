@@ -24,6 +24,9 @@
 		F73C05D62786A22200EEBB6B /* LetterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C05D42786A22200EEBB6B /* LetterTableViewCell.swift */; };
 		F73C05D72786A22200EEBB6B /* LetterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73C05D52786A22200EEBB6B /* LetterTableViewCell.xib */; };
 		F73C05D92787FBD800EEBB6B /* LetterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C05D82787FBD800EEBB6B /* LetterListViewModel.swift */; };
+		F73DACB827EF9B5B007A92D4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DACB727EF9B5B007A92D4 /* OnboardingViewController.swift */; };
+		F73DACBA27EFA022007A92D4 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DACB927EFA022007A92D4 /* OnboardingSlide.swift */; };
+		F73DACBC27EFB20F007A92D4 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DACBB27EFB20F007A92D4 /* OnboardingCollectionViewCell.swift */; };
 		F76AD3B6278404AD006F0B38 /* SelectProfileImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3B5278404AD006F0B38 /* SelectProfileImageCollectionViewController.swift */; };
 		F76AD3B8278405EF006F0B38 /* ProfileImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3B7278405EF006F0B38 /* ProfileImageCollectionViewCell.swift */; };
 		F76AD3BB2784C1A2006F0B38 /* NiceListViewConttroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3BA2784C1A2006F0B38 /* NiceListViewConttroller.swift */; };
@@ -126,6 +129,9 @@
 		F73C05D42786A22200EEBB6B /* LetterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTableViewCell.swift; sourceTree = "<group>"; };
 		F73C05D52786A22200EEBB6B /* LetterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterTableViewCell.xib; sourceTree = "<group>"; };
 		F73C05D82787FBD800EEBB6B /* LetterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterListViewModel.swift; sourceTree = "<group>"; };
+		F73DACB727EF9B5B007A92D4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		F73DACB927EFA022007A92D4 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		F73DACBB27EFB20F007A92D4 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		F76AD3B5278404AD006F0B38 /* SelectProfileImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProfileImageCollectionViewController.swift; sourceTree = "<group>"; };
 		F76AD3B7278405EF006F0B38 /* ProfileImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		F76AD3BA2784C1A2006F0B38 /* NiceListViewConttroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceListViewConttroller.swift; sourceTree = "<group>"; };
@@ -259,6 +265,7 @@
 		F71D0C55277517F7000526A6 /* SantaDiary */ = {
 			isa = PBXGroup;
 			children = (
+				F73DACB327EF9A70007A92D4 /* Onboarding */,
 				F71D0C8D27751C7E000526A6 /* Extensions */,
 				F71D0C8C27751C76000526A6 /* Helpers */,
 				F71D0C8927751B2F000526A6 /* Models */,
@@ -380,6 +387,40 @@
 				F77060442775342800B4EE52 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F73DACB327EF9A70007A92D4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F73DACB627EF9ABE007A92D4 /* CustomViews */,
+				F73DACB527EF9AA8007A92D4 /* Pages */,
+				F73DACB427EF9A8C007A92D4 /* Models */,
+				F73DACB727EF9B5B007A92D4 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		F73DACB427EF9A8C007A92D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F73DACB927EFA022007A92D4 /* OnboardingSlide.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F73DACB527EF9AA8007A92D4 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		F73DACB627EF9ABE007A92D4 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F73DACBB27EFB20F007A92D4 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		F76AD3B92784C17C006F0B38 /* NiceList */ = {
@@ -771,6 +812,7 @@
 				F76AD3CA278558AB006F0B38 /* LetterManager.swift in Sources */,
 				F7B9276027A0490C00188AF3 /* FeedbackViewModel.swift in Sources */,
 				F7B9276227A04A5800188AF3 /* FeedbackManager.swift in Sources */,
+				F73DACBC27EFB20F007A92D4 /* OnboardingCollectionViewCell.swift in Sources */,
 				F7A6E103279A609A00024F18 /* WriteDiaryEntryViewController.swift in Sources */,
 				F7A6E0FD279A531500024F18 /* DiaryEntryViewModel.swift in Sources */,
 				F792590F27907D44006E872F /* FeedbackViewController.swift in Sources */,
@@ -781,6 +823,7 @@
 				F7706047277692EA00B4EE52 /* Profile.swift in Sources */,
 				F7D70BAB27E684F500DC4813 /* CreditsViewController.swift in Sources */,
 				F770604D2776CF4D00B4EE52 /* ListOfProfilesCell.swift in Sources */,
+				F73DACB827EF9B5B007A92D4 /* OnboardingViewController.swift in Sources */,
 				F76AD3C12784C1F2006F0B38 /* MailboxViewController.swift in Sources */,
 				F77060502777C53500B4EE52 /* ProfileManager.swift in Sources */,
 				F79259142790CEB2006E872F /* UIView.swift in Sources */,
@@ -805,6 +848,7 @@
 				F76AD3B6278404AD006F0B38 /* SelectProfileImageCollectionViewController.swift in Sources */,
 				F76AD3C82785114C006F0B38 /* LetterViewModel.swift in Sources */,
 				F7B926F6279CA58000188AF3 /* DiaryQuestions.swift in Sources */,
+				F73DACBA27EFA022007A92D4 /* OnboardingSlide.swift in Sources */,
 				F7925907278C8C36006E872F /* ParentsViewModel.swift in Sources */,
 				F7B9275D27A048B600188AF3 /* Feedback.swift in Sources */,
 				F71D0C9027751EB2000526A6 /* UIColor.swift in Sources */,
