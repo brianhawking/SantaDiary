@@ -36,6 +36,10 @@
 		F76AD3C52785101E006F0B38 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3C42785101E006F0B38 /* Letter.swift */; };
 		F76AD3C82785114C006F0B38 /* LetterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3C72785114C006F0B38 /* LetterViewModel.swift */; };
 		F76AD3CA278558AB006F0B38 /* LetterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AD3C9278558AB006F0B38 /* LetterManager.swift */; };
+		F76CE9F627F00CF2008FE073 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76CE9F527F00CF2008FE073 /* UIViewController.swift */; };
+		F76CE9F827F00EB8008FE073 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76CE9F727F00EB8008FE073 /* UserDefaults.swift */; };
+		F76CE9FB27F016BB008FE073 /* GoalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76CE9F927F016BB008FE073 /* GoalsTableViewCell.swift */; };
+		F76CE9FC27F016BB008FE073 /* GoalsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76CE9FA27F016BB008FE073 /* GoalsTableViewCell.xib */; };
 		F77060432775215400B4EE52 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77060422775215400B4EE52 /* AppConstants.swift */; };
 		F77060452775342800B4EE52 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77060442775342800B4EE52 /* ProfileViewController.swift */; };
 		F7706047277692EA00B4EE52 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7706046277692EA00B4EE52 /* Profile.swift */; };
@@ -82,6 +86,7 @@
 		F7B9276027A0490C00188AF3 /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9275F27A0490C00188AF3 /* FeedbackViewModel.swift */; };
 		F7B9276227A04A5800188AF3 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9276127A04A5800188AF3 /* FeedbackManager.swift */; };
 		F7D70BAB27E684F500DC4813 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D70BAA27E684F500DC4813 /* CreditsViewController.swift */; };
+		F7FD7A8B27F8B8B1002B88E7 /* ParentalOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD7A8A27F8B8B1002B88E7 /* ParentalOnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +146,10 @@
 		F76AD3C42785101E006F0B38 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		F76AD3C72785114C006F0B38 /* LetterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewModel.swift; sourceTree = "<group>"; };
 		F76AD3C9278558AB006F0B38 /* LetterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterManager.swift; sourceTree = "<group>"; };
+		F76CE9F527F00CF2008FE073 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F76CE9F727F00EB8008FE073 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		F76CE9F927F016BB008FE073 /* GoalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewCell.swift; sourceTree = "<group>"; };
+		F76CE9FA27F016BB008FE073 /* GoalsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalsTableViewCell.xib; sourceTree = "<group>"; };
 		F77060422775215400B4EE52 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		F77060442775342800B4EE52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7706046277692EA00B4EE52 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -187,6 +196,7 @@
 		F7B9275F27A0490C00188AF3 /* FeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
 		F7B9276127A04A5800188AF3 /* FeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
 		F7D70BAA27E684F500DC4813 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		F7FD7A8A27F8B8B1002B88E7 /* ParentalOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentalOnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +373,8 @@
 				F71D0C8F27751EB2000526A6 /* UIColor.swift */,
 				F79258FF278BF14C006E872F /* String.swift */,
 				F79259132790CEB2006E872F /* UIView.swift */,
+				F76CE9F527F00CF2008FE073 /* UIViewController.swift */,
+				F76CE9F727F00EB8008FE073 /* UserDefaults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,6 +408,7 @@
 				F73DACB527EF9AA8007A92D4 /* Pages */,
 				F73DACB427EF9A8C007A92D4 /* Models */,
 				F73DACB727EF9B5B007A92D4 /* OnboardingViewController.swift */,
+				F7FD7A8A27F8B8B1002B88E7 /* ParentalOnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -470,6 +483,8 @@
 				F73C05D52786A22200EEBB6B /* LetterTableViewCell.xib */,
 				F79258F2278B5A2F006E872F /* SettingsTableViewCell.swift */,
 				F79258F3278B5A2F006E872F /* SettingsTableViewCell.xib */,
+				F76CE9F927F016BB008FE073 /* GoalsTableViewCell.swift */,
+				F76CE9FA27F016BB008FE073 /* GoalsTableViewCell.xib */,
 			);
 			path = CustomTableViewCells;
 			sourceTree = "<group>";
@@ -673,6 +688,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F76CE9FC27F016BB008FE073 /* GoalsTableViewCell.xib in Resources */,
 				F79258F5278B5A2F006E872F /* SettingsTableViewCell.xib in Resources */,
 				F770604E2776CF4D00B4EE52 /* ListOfProfilesCell.xib in Resources */,
 				F71D0C63277517F9000526A6 /* LaunchScreen.storyboard in Resources */,
@@ -812,6 +828,7 @@
 				F76AD3CA278558AB006F0B38 /* LetterManager.swift in Sources */,
 				F7B9276027A0490C00188AF3 /* FeedbackViewModel.swift in Sources */,
 				F7B9276227A04A5800188AF3 /* FeedbackManager.swift in Sources */,
+				F76CE9F827F00EB8008FE073 /* UserDefaults.swift in Sources */,
 				F73DACBC27EFB20F007A92D4 /* OnboardingCollectionViewCell.swift in Sources */,
 				F7A6E103279A609A00024F18 /* WriteDiaryEntryViewController.swift in Sources */,
 				F7A6E0FD279A531500024F18 /* DiaryEntryViewModel.swift in Sources */,
@@ -837,6 +854,7 @@
 				F79259112790BBCD006E872F /* CreatePasswordViewController.swift in Sources */,
 				F7A6E101279A5C8700024F18 /* ReadDiaryEntryViewController.swift in Sources */,
 				F7B926FC279D03D000188AF3 /* CustomAlert.swift in Sources */,
+				F7FD7A8B27F8B8B1002B88E7 /* ParentalOnboardingViewController.swift in Sources */,
 				F7B92700279D103700188AF3 /* NiceListManager.swift in Sources */,
 				F7A6E0FF279A532100024F18 /* DiaryEntryListViewModel.swift in Sources */,
 				F77060522777D2F100B4EE52 /* ProfileViewModel.swift in Sources */,
@@ -850,6 +868,7 @@
 				F7B926F6279CA58000188AF3 /* DiaryQuestions.swift in Sources */,
 				F73DACBA27EFA022007A92D4 /* OnboardingSlide.swift in Sources */,
 				F7925907278C8C36006E872F /* ParentsViewModel.swift in Sources */,
+				F76CE9FB27F016BB008FE073 /* GoalsTableViewCell.swift in Sources */,
 				F7B9275D27A048B600188AF3 /* Feedback.swift in Sources */,
 				F71D0C9027751EB2000526A6 /* UIColor.swift in Sources */,
 				F79258F7278B5C78006E872F /* Setting.swift in Sources */,
@@ -865,6 +884,7 @@
 				F7A6E107279A680600024F18 /* PaddingLabel.swift in Sources */,
 				F792590D278CD9E2006E872F /* ProgressBarViewModel.swift in Sources */,
 				F76AD3B8278405EF006F0B38 /* ProfileImageCollectionViewCell.swift in Sources */,
+				F76CE9F627F00CF2008FE073 /* UIViewController.swift in Sources */,
 				F79258EE2788A4A5006E872F /* ShowLetterViewController.swift in Sources */,
 				F7A5D90127797DE40097964C /* EventButton.swift in Sources */,
 				F79258FE278B6408006E872F /* ParentsLockViewController.swift in Sources */,

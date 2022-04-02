@@ -525,7 +525,7 @@ All icons made by Freepik from www.flaticon.com</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Oi-f0-FiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-70" y="-730"/>
+            <point key="canvasLocation" x="-75" y="-741"/>
         </scene>
         <!--Settings-->
         <scene sceneID="zIk-y8-86U">
@@ -661,6 +661,7 @@ All icons made by Freepik from www.flaticon.com</string>
                         <outletCollection property="digits" destination="i1I-Ri-xHa" collectionClass="NSMutableArray" id="agw-ut-0ez"/>
                         <outletCollection property="digits" destination="SMH-vu-tlp" collectionClass="NSMutableArray" id="WXo-Lw-PMj"/>
                         <segue destination="a5u-ti-nhq" kind="show" identifier="parentsLockToLetters" id="OSu-WC-mcT"/>
+                        <segue destination="K77-Pd-R5n" kind="show" identifier="parentsLockToOnboarding" id="yN1-BX-QP7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQH-Zg-P2T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -728,16 +729,16 @@ All icons made by Freepik from www.flaticon.com</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="54N-R9-4ZH">
-                                <rect key="frame" x="59" y="138" width="296" height="128"/>
+                                <rect key="frame" x="59" y="128" width="296" height="128"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="lBA-7g-xMd">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="lBA-7g-xMd">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="128" id="88L-gJ-JQF"/>
                                             <constraint firstAttribute="height" constant="128" id="xy4-4d-IAh"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Angry" translatesAutoresizingMaskIntoConstraints="NO" id="Ijc-Cj-2J2">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Angry" translatesAutoresizingMaskIntoConstraints="NO" id="Ijc-Cj-2J2">
                                         <rect key="frame" x="168" y="0.0" width="128" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="9WK-yr-O60"/>
@@ -746,23 +747,48 @@ All icons made by Freepik from www.flaticon.com</string>
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bhb-ht-qbp">
-                                <rect key="frame" x="15" y="296" width="384" height="546"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R65-UM-iyw">
+                                <rect key="frame" x="20" y="336" width="374" height="506"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="goalCell" textLabel="2ll-aE-5jL" style="IBUITableViewCellStyleDefault" id="60W-tF-0Ps">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="60W-tF-0Ps" id="XY2-Mr-U0J">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2ll-aE-5jL">
+                                                    <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwc-sS-szM">
+                                <rect key="frame" x="20" y="276" width="374" height="40"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ysT-4Q-K1q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bhb-ht-qbp" firstAttribute="top" secondItem="54N-R9-4ZH" secondAttribute="bottom" constant="30" id="8AX-2M-YoF"/>
-                            <constraint firstItem="ysT-4Q-K1q" firstAttribute="trailing" secondItem="bhb-ht-qbp" secondAttribute="trailing" constant="15" id="CfE-mL-gf4"/>
+                            <constraint firstItem="R65-UM-iyw" firstAttribute="top" secondItem="fwc-sS-szM" secondAttribute="bottom" constant="20" id="3tm-20-sa1"/>
+                            <constraint firstItem="ysT-4Q-K1q" firstAttribute="trailing" secondItem="fwc-sS-szM" secondAttribute="trailing" constant="20" id="9uj-Sb-kgB"/>
+                            <constraint firstItem="R65-UM-iyw" firstAttribute="leading" secondItem="ysT-4Q-K1q" secondAttribute="leading" constant="20" id="ava-9d-1Tw"/>
+                            <constraint firstItem="fwc-sS-szM" firstAttribute="top" secondItem="54N-R9-4ZH" secondAttribute="bottom" constant="20" id="g2A-Ae-PT5"/>
                             <constraint firstItem="54N-R9-4ZH" firstAttribute="centerX" secondItem="Pxk-qy-2jj" secondAttribute="centerX" id="h3g-VJ-TU6"/>
-                            <constraint firstItem="bhb-ht-qbp" firstAttribute="leading" secondItem="ysT-4Q-K1q" secondAttribute="leading" constant="15" id="ipE-5m-iek"/>
-                            <constraint firstItem="ysT-4Q-K1q" firstAttribute="bottom" secondItem="bhb-ht-qbp" secondAttribute="bottom" constant="20" id="ryY-wy-hrn"/>
-                            <constraint firstItem="54N-R9-4ZH" firstAttribute="top" secondItem="ysT-4Q-K1q" secondAttribute="top" constant="50" id="xdd-ds-Mwc"/>
+                            <constraint firstItem="ysT-4Q-K1q" firstAttribute="bottom" secondItem="R65-UM-iyw" secondAttribute="bottom" constant="20" id="jYn-eT-ysR"/>
+                            <constraint firstItem="fwc-sS-szM" firstAttribute="leading" secondItem="ysT-4Q-K1q" secondAttribute="leading" constant="20" id="nGl-FT-5bB"/>
+                            <constraint firstItem="ysT-4Q-K1q" firstAttribute="trailing" secondItem="R65-UM-iyw" secondAttribute="trailing" constant="20" id="qH8-r2-jsa"/>
+                            <constraint firstItem="54N-R9-4ZH" firstAttribute="top" secondItem="ysT-4Q-K1q" secondAttribute="top" constant="40" id="xdd-ds-Mwc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Feedback" id="FLN-Du-JJz">
@@ -774,8 +800,8 @@ All icons made by Freepik from www.flaticon.com</string>
                     </navigationItem>
                     <connections>
                         <outlet property="angryImageView" destination="Ijc-Cj-2J2" id="Q4e-FW-fqJ"/>
-                        <outlet property="feedbackTextView" destination="bhb-ht-qbp" id="puL-Mn-FB8"/>
                         <outlet property="happyImageView" destination="lBA-7g-xMd" id="kyM-7z-4mG"/>
+                        <outlet property="tableView" destination="R65-UM-iyw" id="41O-UG-ODt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tq-g3-6TW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1134,17 +1160,24 @@ All icons made by Freepik from www.flaticon.com</string>
                                         <rect key="frame" x="20" y="20" width="334" height="568"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="PAv-fX-JgG">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="150"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="qfG-wK-tyf"/>
+                                                    <constraint firstAttribute="height" constant="150" id="qfG-wK-tyf"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob8-ja-20d">
+                                                <rect key="frame" x="0.0" y="160" width="334" height="192"/>
+                                                <string key="text">One of Santa's elves left you with a new goal. Doing positive activities is a great opportunity to smile, be kind, and learn something new.</string>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q9h-aR-KOs">
-                                                <rect key="frame" x="0.0" y="110" width="334" height="458"/>
+                                                <rect key="frame" x="0.0" y="362" width="334" height="206"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
@@ -1409,7 +1442,7 @@ All icons made by Freepik from www.flaticon.com</string>
         <!--Onboarding View Controller-->
         <scene sceneID="xQD-KA-9Wc">
             <objects>
-                <viewController id="9yd-ut-A2w" customClass="OnboardingViewController" customModule="SantaDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController" id="9yd-ut-A2w" customClass="OnboardingViewController" customModule="SantaDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zX0-zI-E5V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1432,38 +1465,41 @@ All icons made by Freepik from www.flaticon.com</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5v6-yD-GBg">
-                                                    <rect key="frame" x="81" y="78" width="250" height="250"/>
+                                                    <rect key="frame" x="106" y="72" width="200" height="200"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="250" id="CYP-bI-iko"/>
-                                                        <constraint firstAttribute="width" constant="250" id="dXT-MB-s5C"/>
+                                                        <constraint firstAttribute="height" constant="200" id="CYP-bI-iko"/>
+                                                        <constraint firstAttribute="width" constant="200" id="dXT-MB-s5C"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyn-aM-O2Z">
-                                                    <rect key="frame" x="178.5" y="378" width="55" height="48"/>
-                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                    <rect key="frame" x="177" y="292" width="58.5" height="51.5"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRj-FH-826">
-                                                    <rect key="frame" x="20" y="456" width="372" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xun-Dr-M3K">
+                                                    <rect key="frame" x="20" y="363.5" width="372" height="241.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Xun-Dr-M3K" secondAttribute="trailing" constant="20" id="1lX-0q-sKi"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xun-Dr-M3K" secondAttribute="bottom" constant="20" id="5qU-ub-jeb"/>
                                                 <constraint firstItem="tyn-aM-O2Z" firstAttribute="centerX" secondItem="fyE-dS-Xua" secondAttribute="centerX" id="CM8-zG-p3E"/>
-                                                <constraint firstItem="5v6-yD-GBg" firstAttribute="centerY" secondItem="fyE-dS-Xua" secondAttribute="centerY" multiplier="0.65" id="R3c-Yg-BPP"/>
+                                                <constraint firstItem="Xun-Dr-M3K" firstAttribute="top" secondItem="tyn-aM-O2Z" secondAttribute="bottom" constant="20" id="Irq-V2-SN5"/>
+                                                <constraint firstItem="5v6-yD-GBg" firstAttribute="centerY" secondItem="fyE-dS-Xua" secondAttribute="centerY" multiplier="0.55" id="R3c-Yg-BPP"/>
                                                 <constraint firstItem="5v6-yD-GBg" firstAttribute="centerX" secondItem="fyE-dS-Xua" secondAttribute="centerX" id="UQG-Fo-Amm"/>
-                                                <constraint firstAttribute="trailing" secondItem="qRj-FH-826" secondAttribute="trailing" constant="20" id="WzF-Oh-1GS"/>
-                                                <constraint firstItem="qRj-FH-826" firstAttribute="top" secondItem="tyn-aM-O2Z" secondAttribute="bottom" constant="30" id="do4-Te-L0q"/>
-                                                <constraint firstItem="qRj-FH-826" firstAttribute="leading" secondItem="fyE-dS-Xua" secondAttribute="leading" constant="20" id="e8n-VY-Mb8"/>
-                                                <constraint firstItem="tyn-aM-O2Z" firstAttribute="top" secondItem="5v6-yD-GBg" secondAttribute="bottom" constant="50" id="irS-iW-qcp"/>
+                                                <constraint firstItem="Xun-Dr-M3K" firstAttribute="leading" secondItem="fyE-dS-Xua" secondAttribute="leading" constant="20" id="ZhN-Ns-vct"/>
+                                                <constraint firstItem="tyn-aM-O2Z" firstAttribute="top" secondItem="5v6-yD-GBg" secondAttribute="bottom" constant="20" id="irS-iW-qcp"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="412" height="625"/>
                                         <connections>
-                                            <outlet property="slideDescriptionLabel" destination="qRj-FH-826" id="tf2-BE-YuH"/>
+                                            <outlet property="slideDescriptionTextView" destination="Xun-Dr-M3K" id="FIW-QJ-rF8"/>
                                             <outlet property="slideImageView" destination="5v6-yD-GBg" id="3Pl-R0-GoE"/>
                                             <outlet property="slideTitleLabel" destination="tyn-aM-O2Z" id="R1H-Sx-4kE"/>
                                         </connections>
@@ -1512,7 +1548,7 @@ All icons made by Freepik from www.flaticon.com</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJB-DE-JWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1457.9710144927537" y="75.669642857142847"/>
+            <point key="canvasLocation" x="-1616" y="56"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gW7-ra-MRH">
@@ -1520,6 +1556,7 @@ All icons made by Freepik from www.flaticon.com</string>
                 <navigationController storyboardIdentifier="toHome" automaticallyAdjustsScrollViewInsets="NO" id="inc-3b-F8J" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w9d-uK-9nC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1529,7 +1566,120 @@ All icons made by Freepik from www.flaticon.com</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Y9-v1-BOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95.652173913043484" y="65.625"/>
+            <point key="canvasLocation" x="91" y="56"/>
+        </scene>
+        <!--Parental Onboarding View Controller-->
+        <scene sceneID="8F1-7E-icY">
+            <objects>
+                <viewController storyboardIdentifier="ParentalOnboardingViewController" id="K77-Pd-R5n" customClass="ParentalOnboardingViewController" customModule="SantaDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q1V-RD-KMU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6d7-Hw-50q">
+                                <rect key="frame" x="0.0" y="88" width="414" height="618"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hXE-k9-NF2">
+                                    <size key="itemSize" width="412" height="625"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onboardingCollectionViewCell" id="iOC-ir-JkL" customClass="OnboardingCollectionViewCell" customModule="SantaDiary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-3.5" width="412" height="625"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fkJ-zv-2Gd">
+                                            <rect key="frame" x="0.0" y="0.0" width="412" height="625"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwm-El-6Eu">
+                                                    <rect key="frame" x="106" y="72" width="200" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="7aY-0Z-XNT"/>
+                                                        <constraint firstAttribute="height" constant="200" id="wXv-lx-joK"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBg-yI-8rX">
+                                                    <rect key="frame" x="177" y="292" width="58.5" height="51.5"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5n-uM-McW">
+                                                    <rect key="frame" x="20" y="363.5" width="372" height="241.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fwm-El-6Eu" firstAttribute="centerX" secondItem="fkJ-zv-2Gd" secondAttribute="centerX" id="9ju-cc-bwX"/>
+                                                <constraint firstItem="LBg-yI-8rX" firstAttribute="top" secondItem="fwm-El-6Eu" secondAttribute="bottom" constant="20" id="R7z-im-GiZ"/>
+                                                <constraint firstItem="A5n-uM-McW" firstAttribute="top" secondItem="LBg-yI-8rX" secondAttribute="bottom" constant="20" id="VaJ-Jh-yrd"/>
+                                                <constraint firstItem="LBg-yI-8rX" firstAttribute="centerX" secondItem="fkJ-zv-2Gd" secondAttribute="centerX" id="gKM-F8-rnw"/>
+                                                <constraint firstItem="fwm-El-6Eu" firstAttribute="centerY" secondItem="fkJ-zv-2Gd" secondAttribute="centerY" multiplier="0.55" id="kUs-t7-c40"/>
+                                                <constraint firstAttribute="bottom" secondItem="A5n-uM-McW" secondAttribute="bottom" constant="20" id="pgb-a0-kjX"/>
+                                                <constraint firstItem="A5n-uM-McW" firstAttribute="leading" secondItem="fkJ-zv-2Gd" secondAttribute="leading" constant="20" id="w5K-pw-Euy"/>
+                                                <constraint firstAttribute="trailing" secondItem="A5n-uM-McW" secondAttribute="trailing" constant="20" id="ygt-mf-R14"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="412" height="625"/>
+                                        <connections>
+                                            <outlet property="slideDescriptionTextView" destination="A5n-uM-McW" id="eDR-9h-Gdh"/>
+                                            <outlet property="slideImageView" destination="fwm-El-6Eu" id="t2Z-LB-4hp"/>
+                                            <outlet property="slideTitleLabel" destination="LBg-yI-8rX" id="pPG-dn-IRv"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-jp-rMD">
+                                <rect key="frame" x="82" y="772" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.86666666670000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="WTV-tn-vDC"/>
+                                    <constraint firstAttribute="height" constant="50" id="YtQ-AB-q4P"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="K77-Pd-R5n" eventType="touchUpInside" id="RB3-0y-MYj"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0tB-Yw-olY">
+                                <rect key="frame" x="149.5" y="726" width="115.5" height="26"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GT2-mB-fYF"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dbZ-jp-rMD" firstAttribute="centerX" secondItem="q1V-RD-KMU" secondAttribute="centerX" id="5GD-XR-Wfp"/>
+                            <constraint firstItem="0tB-Yw-olY" firstAttribute="top" secondItem="6d7-Hw-50q" secondAttribute="bottom" constant="20" id="6DD-H8-GM1"/>
+                            <constraint firstItem="6d7-Hw-50q" firstAttribute="trailing" secondItem="GT2-mB-fYF" secondAttribute="trailing" id="Xnb-ev-hJI"/>
+                            <constraint firstItem="GT2-mB-fYF" firstAttribute="bottom" secondItem="dbZ-jp-rMD" secondAttribute="bottom" constant="40" id="i8i-ER-N0h"/>
+                            <constraint firstItem="dbZ-jp-rMD" firstAttribute="top" secondItem="0tB-Yw-olY" secondAttribute="bottom" constant="20" id="npO-r8-pen"/>
+                            <constraint firstItem="0tB-Yw-olY" firstAttribute="centerX" secondItem="q1V-RD-KMU" secondAttribute="centerX" id="rbT-BF-KJg"/>
+                            <constraint firstItem="6d7-Hw-50q" firstAttribute="leading" secondItem="GT2-mB-fYF" secondAttribute="leading" id="sSQ-k8-695"/>
+                            <constraint firstItem="6d7-Hw-50q" firstAttribute="top" secondItem="GT2-mB-fYF" secondAttribute="top" id="tg8-qQ-luf"/>
+                            <constraint firstItem="6d7-Hw-50q" firstAttribute="centerX" secondItem="q1V-RD-KMU" secondAttribute="centerX" id="vo7-2U-lzD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5I7-xs-7jY"/>
+                    <connections>
+                        <outlet property="collectionView" destination="6d7-Hw-50q" id="trj-Rt-NuU"/>
+                        <outlet property="nextButton" destination="dbZ-jp-rMD" id="ncm-Qo-zVy"/>
+                        <outlet property="pageControl" destination="0tB-Yw-olY" id="PyV-SX-xnw"/>
+                        <segue destination="a5u-ti-nhq" kind="show" identifier="onboardingToParentSettings" id="Hj1-GG-ugI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y1T-Bn-7nq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2332" y="56"/>
         </scene>
     </scenes>
     <designables>
@@ -1538,7 +1688,8 @@ All icons made by Freepik from www.flaticon.com</string>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="5Mb-mu-djb"/>
+        <segue reference="yfh-cN-VXy"/>
+        <segue reference="Hj1-GG-ugI"/>
         <segue reference="SFO-Ua-N9Q"/>
     </inferredMetricsTieBreakers>
     <resources>

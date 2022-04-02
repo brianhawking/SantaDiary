@@ -44,24 +44,22 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     func showConfirmation() {
-        let alert = SCLAlertView()
-    
+        let appearence = CustomAlert().appearanceWithDone()
+        let alert = SCLAlertView(appearance: appearence)
         
-        let password = alert.addTextField("Confirm your password")
+//
+//        let password = alert.addTextField("Confirm your password")
         alert.addButton("Confirm") { [self] in
-            if password.text == self.hiddenTextField.text! {
-                UserDefaults.standard.set(password.text!, forKey: "parentalPassword")
+            UserDefaults.standard.set(self.hiddenTextField.text!, forKey: "parentalPassword")
                 self.navigationController?.popViewController(animated: true)
-            }
-            else {
-                self.showConfirmation()
-            }
+            
         }
-        alert.showEdit("Confirm", subTitle: "Confirm your password...")
+        alert.showSuccess("Password set!", subTitle: "Your password is \(self.hiddenTextField.text!). Please save it somewhere because it cannot be reset or recovered.")
+    
     }
     
     func showAlert() {
-        SCLAlertView().showNotice("Password", subTitle: "Create your parental password. THIS CANNOT BE CHANGED OR RECOVERED.")
+        SCLAlertView(appearance: CustomAlert().appearanceWithDone()).showNotice("Password", subTitle: "Create your parental password. THIS CANNOT BE CHANGED OR RECOVERED.")
     }
 
     func setupHiddenTextField() {

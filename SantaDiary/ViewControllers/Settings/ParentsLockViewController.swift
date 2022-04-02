@@ -103,7 +103,14 @@ class ParentsLockViewController: UIViewController, UITextViewDelegate, UITextFie
         }
         
         if (textField.text == password) {
-            performSegue(withIdentifier: App.Segue.parentsLockToLetters, sender: nil)
+            
+            if UserDefaults.standard.parentHasOnboarded == true {
+                performSegue(withIdentifier: App.Segue.parentsLockToLetters, sender: nil)
+            }
+            else {
+                performSegue(withIdentifier: "parentsLockToOnboarding", sender: nil)
+            }
+            
         }
         
     }

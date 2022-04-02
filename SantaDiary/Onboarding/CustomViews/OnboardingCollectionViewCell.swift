@@ -13,11 +13,14 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var slideTitleLabel: UILabel!
     @IBOutlet weak var slideDescriptionLabel: UILabel!
     
+    @IBOutlet weak var slideDescriptionTextView: UITextView!
+    
     func setup(slide: OnboardingSlide) {
         slideImageView.image = slide.image
         slideTitleLabel.text = slide.title
         slideTitleLabel.font = UIFont(name: "Noteworthy Bold", size: 36)
-        slideDescriptionLabel.text = slide.description
+//        slideDescriptionLabel.text = slide.description
+        slideDescriptionTextView.text = slide.description
     }
     
     

@@ -15,7 +15,7 @@ class ParentsListViewModel {
         self.items = [
             Setting(image: "fromSanta", name: "From Santa", segue: App.Segue.parentsToWriteLetter),
             Setting(image: "fromElf", name: "From Elf", segue: App.Segue.parentsToWriteLetter),
-            Setting(image: "SantaClaus3", name: "Nice List Feedback", segue: App.Segue.parentsToFeedback),
+            Setting(image: "SantaClaus3", name: "Nice List Goals", segue: App.Segue.parentsToFeedback),
             Setting(image: "UserImage", name: "Back to Profile", segue: App.Segue.parentsToProfile)
         ]
     }

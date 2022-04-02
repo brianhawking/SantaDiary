@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OnboardingViewController: UIViewController {
+class ParentalOnboardingViewController: UIViewController {
 
     
     @IBOutlet weak var nextButton: UIButton!
@@ -35,10 +35,11 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         slides = [
-            OnboardingSlide(title: "Santa Letters", description: "You can write letters to Santa as many times as you want. You can tell Santa why you should be on the Nice list and what you want for Christmas. You will also receive a letter from Santa within a few days. ", image: UIImage(named: App.holidayImages[0])!),
-            OnboardingSlide(title: "Santa Diary", description: "This app acts as a Christmas themed diary. Each day you answer two simple questions that helps you journal and reflect. The second question will be one of the categories: Kindness, Smiles, and Learning.  After a certain number of questions are answered in a given category, a Santa elf will write you a letter.", image: UIImage(named: App.holidayImages[1])!),
-            OnboardingSlide(title: "Nice or Naughty List", description: "You can check if you are on the Nice or Naughty list. No matter which list you are on, you will always receive a goal to complete. An example could be 'help someone with their chores.' Completing these goals will also give you something to write about in your diary. ", image: UIImage(named: App.holidayImages[3])!),
-            OnboardingSlide(title: "Parent's Section", description: "Parents - your involvment is crucial. After this onboarding you will be prompted to enter a password. This gives you access to the Parent's section of the app, which is found in each profile. More information about what you do will be found there.", image: UIImage(named: App.holidayImages[4])!)
+            OnboardingSlide(title: "Your responsibility", description: "Your role is very important. Your job is to assist the child when entering diary entrires or writing letters. You also respond on behalf of Santa or his elves. Make it an engaging activity each night to reflect on their day. It helps you open a dialog to discuss good or not so good parts of their day.", image: UIImage(named: App.holidayImages[4])!),
+            OnboardingSlide(title: "Santa Letters", description: "When a child writes a letter to Santa, you will come here and write a letter back. Make sure you are responding to specific things in their letter. You can also prompt the child with some goals for the week.", image: UIImage(named: App.holidayImages[0])!),
+            OnboardingSlide(title: "Santa Diary", description: "There are three categories of questions. When a child answers one cateogry question four times, the app will prompt you to write a letter to the child as a Santa Elf. Write a meaningful message that focuses on those specific diary entries. You can address any positive or negative things as long as you are constructive and encouraging.", image: UIImage(named: App.holidayImages[1])!),
+            OnboardingSlide(title: "Nice or Naughty List", description: "You have to pre-select whether the child is on the nice or naughty list, which you can change at any point. You can also select a goal for the child to complete.", image: UIImage(named: App.holidayImages[3])!)
+            
         ]
 
         collectionView.delegate = self
@@ -48,23 +49,31 @@ class OnboardingViewController: UIViewController {
         setupViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func setupViews() {
+  
+        pageControl.numberOfPages = slides.count
         
         // next button
         nextButton.layer.cornerRadius = 10
         nextButton.backgroundColor = ColorScheme.eventButtonBackgroundColor
         nextButton.setTitleColor(ColorScheme.eventButtonTextColor, for: .normal)
-        
-        pageControl.numberOfPages = slides.count
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         if currentPage == slides.count - 1 {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "toHome") as! UINavigationController
-            vc.modalPresentationStyle = .fullScreen
-            vc.modalTransitionStyle = .flipHorizontal
-            UserDefaults.standard.hasOnboarded = true
-            present(vc, animated: true)
+            
+            UserDefaults.standard.parentHasOnboarded = true
+            performSegue(withIdentifier: "onboardingToParentSettings", sender: nil)
         } else {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
@@ -74,7 +83,7 @@ class OnboardingViewController: UIViewController {
     
 }
 
-extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ParentalOnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "onboardingCollectionViewCell", for: indexPath) as! OnboardingCollectionViewCell

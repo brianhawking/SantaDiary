@@ -22,11 +22,11 @@ class ListOfProfiles: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UserDefaults.standard.hasOnboarded = false
+        UserDefaults.standard.removeObject(forKey: "parentalPassword")
         setupView()
         setupTitle()
         setupTableView()
-        
         removePasswordButton.title = ""
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
@@ -37,9 +37,6 @@ class ListOfProfiles: UIViewController {
             }
         }
         
-//        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
-//        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-//
         if !parentalPasswordSet() {
             performSegue(withIdentifier: App.Segue.setParentalPasswordSegue, sender: nil)
         }

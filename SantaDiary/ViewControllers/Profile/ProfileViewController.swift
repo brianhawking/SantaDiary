@@ -36,6 +36,7 @@ class ProfileViewController: UIViewController {
         super.viewDidAppear(animated)
         profileName = UserDefaults.standard.string(forKey: "SelectedProfile")
         setupProfile()
+        setupButtons()
     }
     
     func setupProfile() {
@@ -91,6 +92,17 @@ class ProfileViewController: UIViewController {
             let gesture = UITapGestureRecognizer(target: self, action: #selector(setupSegue))
             gesture.numberOfTouchesRequired = 1
             event.addGestureRecognizer(gesture)
+            
+            if LetterManager.shared.getLetters(for: profileName!, type: .unread).count != 0 && event == event4 {
+                event.layer.borderColor = UIColor.yellow.cgColor
+                event.layer.borderWidth = 5
+                event.layer.shadowColor = UIColor.yellow.cgColor
+                event.layer.shadowOpacity = 0.5
+                event.layer.shadowOffset = .zero
+                event.layer.shadowRadius = 5
+                event.layer.cornerRadius = 10
+            }
+
         }
         
         event1.update(with: .niceList)

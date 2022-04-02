@@ -21,6 +21,16 @@ class CustomAlert {
         )
     }
     
+    func appearanceWithDone() -> SCLAlertView.SCLAppearance {
+        return SCLAlertView.SCLAppearance(
+            kTitleFont: UIFont(name: "Noteworthy Bold", size: 30)!,
+            kTextFont: UIFont.systemFont(ofSize: 24),
+            kButtonFont: UIFont(name: "Noteworthy Bold", size: 20)!,
+            dynamicAnimatorActive: true,
+            buttonsLayout: .horizontal
+        )
+    }
+    
     func showSuccessAndPop(title: String, subTitle: String, buttonText: String, vc: UIViewController) {
         
         let alert = SCLAlertView(appearance: appearance())

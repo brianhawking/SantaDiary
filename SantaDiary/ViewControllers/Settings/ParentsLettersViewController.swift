@@ -22,6 +22,7 @@ class ParentsLettersViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        UserDefaults.standard.parentHasOnboarded = false
         setupView()
         setupTableView()
     }
@@ -30,6 +31,8 @@ class ParentsLettersViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles  = true
         navigationController!.navigationBar.tintColor           = ColorScheme.textColorOnBackground
         view.backgroundColor                                    = ColorScheme.backgroundColor
+        
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     func setupTableView() {
