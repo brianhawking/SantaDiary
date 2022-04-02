@@ -90,6 +90,14 @@ extension ParentsLettersViewController: UITableViewDelegate, UITableViewDataSour
         
         let setting = settings.getSettingViewModel(at: indexPath)
         
+        if setting.customImage {
+            cell.settingImageView.layer.cornerRadius = cell.settingImageView.frame.height/2
+            cell.settingImageView.layer.borderWidth = 2
+            cell.settingImageView.layer.borderColor = UIColor.black.cgColor
+            cell.settingImageView.contentMode = .scaleToFill
+        }
+        
+        
         cell.settingLabel.text = setting.name
         cell.settingImageView.image = setting.image
         

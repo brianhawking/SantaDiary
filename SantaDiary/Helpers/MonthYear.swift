@@ -72,7 +72,7 @@ class MonthYear {
         let m = calendar.component(.month, from: Date())
         let y = calendar.component(.year, from: Date())
         
-        if m+1 > month && year >= y {
+        if m-1 < month && year >= y {
             return
         }
         

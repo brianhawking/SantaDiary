@@ -24,6 +24,10 @@ struct ParentsViewModel {
         return setting.segue
     }
     
+    var customImage: Bool {
+        return setting.customImage
+    }
+    
     var imageString: String {
         return setting.image
     }
