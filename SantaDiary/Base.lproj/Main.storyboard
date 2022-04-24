@@ -355,7 +355,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="WKv-DR-XsP">
-                                <rect key="frame" x="59" y="118" width="296" height="128"/>
+                                <rect key="frame" x="59" y="103" width="296" height="128"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="CU0-Qy-Lpa">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -374,7 +374,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is one thing that made you smile today?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tR-Z1-90J" customClass="PaddingLabel" customModule="SantaDiary" customModuleProvider="target">
-                                <rect key="frame" x="20" y="266" width="374" height="82.5"/>
+                                <rect key="frame" x="20" y="251" width="374" height="82.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -395,7 +395,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ACk-vA-7hg">
-                                <rect key="frame" x="20" y="358.5" width="374" height="483.5"/>
+                                <rect key="frame" x="20" y="343.5" width="374" height="498.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -407,12 +407,11 @@
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4tR-Z1-90J" firstAttribute="centerX" secondItem="d26-tk-7yG" secondAttribute="centerX" id="0cf-qM-Ige"/>
-                            <constraint firstItem="WKv-DR-XsP" firstAttribute="top" secondItem="UfW-eG-yHN" secondAttribute="top" constant="30" id="6JD-In-OlW"/>
+                            <constraint firstItem="WKv-DR-XsP" firstAttribute="top" secondItem="UfW-eG-yHN" secondAttribute="top" constant="15" id="6JD-In-OlW"/>
                             <constraint firstItem="ACk-vA-7hg" firstAttribute="leading" secondItem="UfW-eG-yHN" secondAttribute="leading" constant="20" id="7dw-qb-Eb4"/>
                             <constraint firstItem="UfW-eG-yHN" firstAttribute="bottom" secondItem="ACk-vA-7hg" secondAttribute="bottom" constant="20" id="9D6-eY-pEB"/>
                             <constraint firstItem="ACk-vA-7hg" firstAttribute="top" secondItem="4tR-Z1-90J" secondAttribute="bottom" constant="10" id="TcI-vs-fqc"/>
                             <constraint firstItem="4tR-Z1-90J" firstAttribute="leading" secondItem="UfW-eG-yHN" secondAttribute="leading" constant="20" id="XcH-DX-56H"/>
-                            <constraint firstItem="UfW-eG-yHN" firstAttribute="trailing" secondItem="4tR-Z1-90J" secondAttribute="trailing" constant="20" id="e4x-4L-R8Y"/>
                             <constraint firstItem="4tR-Z1-90J" firstAttribute="top" secondItem="WKv-DR-XsP" secondAttribute="bottom" constant="20" id="hDG-zW-C3g"/>
                             <constraint firstItem="UfW-eG-yHN" firstAttribute="trailing" secondItem="ACk-vA-7hg" secondAttribute="trailing" constant="20" id="nNA-Bk-9UD"/>
                             <constraint firstItem="WKv-DR-XsP" firstAttribute="centerX" secondItem="d26-tk-7yG" secondAttribute="centerX" id="ux2-32-MdW"/>

@@ -68,7 +68,7 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
             
             hiddenTextField.becomeFirstResponder()
         }
-        alert.showNotice("Password", subTitle: "Create your parental password. Make sure you check out the parent's section after creating the child's profile to understand your role in this app.")
+        alert.showNotice("Password", subTitle: "Create your parental password. Make sure you check out the parent's section (settings icon in child's profile) after creating the child's profile to understand your role in this app.")
 //        hiddenTextField.becomeFirstResponder()
     }
 

@@ -35,6 +35,7 @@ class ParentalOnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         slides = [
+            OnboardingSlide(title: "Turn on Notifications", description: "Please make sure you allow notifications. The app will notify you when you need to write a letter on behalf of Santa or one of Santa's elves.", image: UIImage(named: App.holidayImages[2])!),
             OnboardingSlide(title: "Your responsibility", description: "Your role is very important. Your job is to assist the child when entering diary entrires or writing letters. Make it an engaging activity each night to reflect on their day. It helps you open a dialog to discuss good or not so good parts of their day.", image: UIImage(named: App.holidayImages[4])!),
             OnboardingSlide(title: "Santa Letters", description: "When a child writes a letter to Santa, you will come here and write a letter back on behalf of Santa. Make sure you are responding to specific things in their letter. You can also prompt the child with some goals as well.", image: UIImage(named: App.holidayImages[0])!),
             OnboardingSlide(title: "Santa Diary", description: "There are three categories of questions. When a child answers one cateogry question four times, the app will prompt you (the parent) to write a letter to the child as a Santa Elf. Write a meaningful message that focuses on those specific diary entries. You can address any positive or negative things as long as you are constructive and encouraging.", image: UIImage(named: App.holidayImages[1])!),

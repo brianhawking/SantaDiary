@@ -72,7 +72,7 @@ class EventButton: UIView {
         case .niceList:
             eventImage.image = UIImage(named: "Presents")
         case .writeLetter:
-            eventImage.image = UIImage(named: "OpenEnvelope")
+            eventImage.image = UIImage(named: "fromSanta")
         case .readLetter:
             eventImage.image = UIImage(named: "Mailbox")
         case .diary:
