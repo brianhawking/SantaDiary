@@ -21,6 +21,7 @@
 		F71D0C7A277517FA000526A6 /* SantaDiaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D0C79277517FA000526A6 /* SantaDiaryUITestsLaunchTests.swift */; };
 		F71D0C9027751EB2000526A6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D0C8F27751EB2000526A6 /* UIColor.swift */; };
 		F71D0C9227751F13000526A6 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D0C9127751F13000526A6 /* ColorScheme.swift */; };
+		F72C784028079EA9007B4D7C /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C783F28079EA9007B4D7C /* AddGoalViewController.swift */; };
 		F73C05D62786A22200EEBB6B /* LetterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C05D42786A22200EEBB6B /* LetterTableViewCell.swift */; };
 		F73C05D72786A22200EEBB6B /* LetterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73C05D52786A22200EEBB6B /* LetterTableViewCell.xib */; };
 		F73C05D92787FBD800EEBB6B /* LetterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C05D82787FBD800EEBB6B /* LetterListViewModel.swift */; };
@@ -85,6 +86,7 @@
 		F7B9275D27A048B600188AF3 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9275C27A048B600188AF3 /* Feedback.swift */; };
 		F7B9276027A0490C00188AF3 /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9275F27A0490C00188AF3 /* FeedbackViewModel.swift */; };
 		F7B9276227A04A5800188AF3 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9276127A04A5800188AF3 /* FeedbackManager.swift */; };
+		F7D086A027F8E47A0081E440 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D0869F27F8E47A0081E440 /* StoreKit.framework */; };
 		F7D70BAB27E684F500DC4813 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D70BAA27E684F500DC4813 /* CreditsViewController.swift */; };
 		F7FD7A8B27F8B8B1002B88E7 /* ParentalOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD7A8A27F8B8B1002B88E7 /* ParentalOnboardingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -131,6 +133,7 @@
 		F71D0C79277517FA000526A6 /* SantaDiaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantaDiaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F71D0C8F27751EB2000526A6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		F71D0C9127751F13000526A6 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		F72C783F28079EA9007B4D7C /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
 		F73C05D42786A22200EEBB6B /* LetterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTableViewCell.swift; sourceTree = "<group>"; };
 		F73C05D52786A22200EEBB6B /* LetterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterTableViewCell.xib; sourceTree = "<group>"; };
 		F73C05D82787FBD800EEBB6B /* LetterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterListViewModel.swift; sourceTree = "<group>"; };
@@ -195,6 +198,7 @@
 		F7B9275C27A048B600188AF3 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		F7B9275F27A0490C00188AF3 /* FeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
 		F7B9276127A04A5800188AF3 /* FeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
+		F7D0869F27F8E47A0081E440 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F7D70BAA27E684F500DC4813 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		F7FD7A8A27F8B8B1002B88E7 /* ParentalOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentalOnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E260B8B5751DF0DBB9C6491F /* Pods_SantaDiary.framework in Frameworks */,
+				F7D086A027F8E47A0081E440 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +248,7 @@
 		8809DB9A027ECF145D5CF7C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7D0869F27F8E47A0081E440 /* StoreKit.framework */,
 				AB790B81041A006140C917B3 /* Pods_SantaDiary.framework */,
 				A15505A215DCDE288858FF95 /* Pods_SantaDiary_SantaDiaryUITests.framework */,
 				C8890C71DBE473BBFACE2714 /* Pods_SantaDiaryTests.framework */,
@@ -439,6 +445,7 @@
 		F76AD3B92784C17C006F0B38 /* NiceList */ = {
 			isa = PBXGroup;
 			children = (
+				F72C783F28079EA9007B4D7C /* AddGoalViewController.swift */,
 				F76AD3BA2784C1A2006F0B38 /* NiceListViewConttroller.swift */,
 				F792590E27907D44006E872F /* FeedbackViewController.swift */,
 			);
@@ -856,6 +863,7 @@
 				F7B926FC279D03D000188AF3 /* CustomAlert.swift in Sources */,
 				F7FD7A8B27F8B8B1002B88E7 /* ParentalOnboardingViewController.swift in Sources */,
 				F7B92700279D103700188AF3 /* NiceListManager.swift in Sources */,
+				F72C784028079EA9007B4D7C /* AddGoalViewController.swift in Sources */,
 				F7A6E0FF279A532100024F18 /* DiaryEntryListViewModel.swift in Sources */,
 				F77060522777D2F100B4EE52 /* ProfileViewModel.swift in Sources */,
 				F71D0C9227751F13000526A6 /* ColorScheme.swift in Sources */,
@@ -1083,7 +1091,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = BrianVeitch.SantaDiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BrianVeitch.SantaDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1114,7 +1122,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = BrianVeitch.SantaDiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BrianVeitch.SantaDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

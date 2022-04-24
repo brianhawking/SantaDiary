@@ -52,6 +52,7 @@ class WriteDiaryEntryViewController: UIViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController!.navigationBar.tintColor = ColorScheme.textColorOnBackground
+        
         navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: UIFont(name: "Noteworthy Bold", size: 32) ?? UIFont.systemFont(ofSize: 32)

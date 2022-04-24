@@ -36,6 +36,7 @@ class ProfileViewController: UIViewController {
         super.viewDidAppear(animated)
         profileName = UserDefaults.standard.string(forKey: "SelectedProfile")
         setupProfile()
+        setupView()
         setupButtons()
     }
     
@@ -94,13 +95,10 @@ class ProfileViewController: UIViewController {
             event.addGestureRecognizer(gesture)
             
             if LetterManager.shared.getLetters(for: profileName!, type: .unread).count != 0 && event == event4 {
-                event.layer.borderColor = UIColor.yellow.cgColor
-                event.layer.borderWidth = 5
-                event.layer.shadowColor = UIColor.yellow.cgColor
-                event.layer.shadowOpacity = 0.5
-                event.layer.shadowOffset = .zero
-                event.layer.shadowRadius = 5
-                event.layer.cornerRadius = 10
+                event.applyGoldView()
+            }
+            else {
+                event.applyView()
             }
 
         }
@@ -109,6 +107,10 @@ class ProfileViewController: UIViewController {
         event2.update(with: .writeLetter)
         event3.update(with: .diary)
         event4.update(with: .readLetter)
+        
+    }
+    
+    func updateButtons() {
         
     }
     

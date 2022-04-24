@@ -19,14 +19,17 @@
             <rect key="frame" x="0.0" y="0.0" width="281" height="260"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RCf-fS-bJL">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RCf-fS-bJL">
                     <rect key="frame" x="20" y="20" width="241" height="240"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Presents" translatesAutoresizingMaskIntoConstraints="NO" id="dPN-Zv-t8C">
-                            <rect key="frame" x="80.5" y="0.0" width="80" height="129.5"/>
+                            <rect key="frame" x="66.5" y="0.0" width="108" height="108"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="dPN-Zv-t8C" secondAttribute="height" multiplier="1:1" id="IlN-LX-iNj"/>
+                            </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgQ-Yb-7bs">
-                            <rect key="frame" x="0.0" y="129.5" width="241" height="110.5"/>
+                            <rect key="frame" x="0.0" y="108" width="241" height="132"/>
                             <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -42,7 +45,7 @@
             <color key="backgroundColor" red="0.92941176469999998" green="0.86666666670000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="RCf-fS-bJL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="LMo-sC-JzA"/>
-                <constraint firstItem="dPN-Zv-t8C" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.6" id="Ov2-nU-257"/>
+                <constraint firstItem="dPN-Zv-t8C" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.5" id="Ov2-nU-257"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RCf-fS-bJL" secondAttribute="trailing" constant="20" id="WnC-e0-6qw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RCf-fS-bJL" secondAttribute="bottom" id="lME-pn-TiU"/>
                 <constraint firstItem="RCf-fS-bJL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="tvV-JS-Cc0"/>

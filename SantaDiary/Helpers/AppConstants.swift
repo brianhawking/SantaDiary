@@ -39,6 +39,18 @@ class App {
         static let ListToCredits: String = "ListToCredits"
     }
     
+    static let goals = [
+        "Do your homework without being asked.",
+        "Tell someone a joke to make them laugh.",
+        "Make your bed.",
+        "Donate a toy or book you do not play or read anymore.",
+        "Help someone with their chores for the week.",
+        "Give someone you care about a big hug.",
+        "Make a drawing or piece of art for someone.",
+        "Fold your own clothes",
+        "Introduce yourself to someone new in your class. Invite them to play with you."
+    ]
+    
     static let elves = ["Bubbles", "Tickles"]
     
     static let avatars = ["TRex", "Bee-1", "HotDog", "Ankylosaurus","Styracosaurus", "Dog-1", "Footprint", "Pick", "SportsCar", "Sunflower"]

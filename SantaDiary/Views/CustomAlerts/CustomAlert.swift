@@ -12,9 +12,9 @@ class CustomAlert {
     
     func appearance() -> SCLAlertView.SCLAppearance {
         return SCLAlertView.SCLAppearance(
-            kTitleFont: UIFont(name: "Noteworthy Bold", size: 32)!,
-            kTextFont: UIFont.systemFont(ofSize: 26),
-            kButtonFont: UIFont(name: "Noteworthy Bold", size: 20)!,
+            kTitleFont: UIFont(name: "Chalkboard SE Regular", size: 24)!,
+            kTextFont: UIFont(name: "Chalkboard SE Regular", size: 20)!,
+            kButtonFont: UIFont(name: "Chalkboard SE Regular", size: 20)!,
             showCloseButton: false,
             dynamicAnimatorActive: true,
             buttonsLayout: .horizontal
@@ -23,9 +23,9 @@ class CustomAlert {
     
     func appearanceWithDone() -> SCLAlertView.SCLAppearance {
         return SCLAlertView.SCLAppearance(
-            kTitleFont: UIFont(name: "Noteworthy Bold", size: 30)!,
-            kTextFont: UIFont.systemFont(ofSize: 24),
-            kButtonFont: UIFont(name: "Noteworthy Bold", size: 20)!,
+            kTitleFont: UIFont(name: "Chalkboard SE Regular", size: 24)!,
+            kTextFont: UIFont(name: "Chalkboard SE Regular", size: 20)!,
+            kButtonFont: UIFont(name: "Chalkboard SE Regular", size: 20)!,
             dynamicAnimatorActive: true,
             buttonsLayout: .horizontal
         )

@@ -27,6 +27,12 @@ struct ProfileManager {
             .appendingPathExtension("json")
     }
     
+    func isCustomImage(name: String) -> Bool {
+        
+        let profile = getProfile(name: name)
+        return profile.customImage
+    }
+    
     // return path to users folder
     private func getUsersURL() -> URL {
         return FileManager.default.urls(for: .documentDirectory, in:

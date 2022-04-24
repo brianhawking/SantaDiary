@@ -66,7 +66,7 @@ struct FeedbackManager {
     func getFeedback(name: String) -> Feedback {
         
         // create empty feedback
-        var feedback = Feedback(name: name, image: "Happy", feedback: "There was an error retreiving your feedback")
+        var feedback = Feedback(name: name, image: "Happy", feedback: "There was an error retreiving your feedback", goals: [])
         
         // get path to user feedback.json
         let path = getFeedbackURL(name: name)

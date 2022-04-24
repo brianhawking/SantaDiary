@@ -22,8 +22,8 @@ class ListOfProfiles: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.hasOnboarded = false
-        UserDefaults.standard.removeObject(forKey: "parentalPassword")
+//        UserDefaults.standard.hasOnboarded = false
+//        UserDefaults.standard.removeObject(forKey: "parentalPassword")
         setupView()
         setupTitle()
         setupTableView()
@@ -191,9 +191,9 @@ extension ListOfProfiles: UITableViewDelegate, UITableViewDataSource {
         if editingStyle == .delete {
             
             let appearance = SCLAlertView.SCLAppearance(
-                kTitleFont: UIFont(name: "Noteworthy Bold", size: 32)!,
-                kTextFont: UIFont.systemFont(ofSize: 26),
-                kButtonFont: UIFont(name: "Noteworthy Bold", size: 20)!,
+                kTitleFont: UIFont(name: "Chalkboard SE Regular", size: 24)!,
+                kTextFont: UIFont(name: "Chalkboard SE Regular", size: 20)!,
+                kButtonFont: UIFont(name: "Chalkboard SE Regular", size: 20)!,
                 showCloseButton: false,
                 dynamicAnimatorActive: true,
                 buttonsLayout: .horizontal

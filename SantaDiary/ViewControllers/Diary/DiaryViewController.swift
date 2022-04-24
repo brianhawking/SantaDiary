@@ -17,6 +17,8 @@ class DiaryViewController: UIViewController {
     var entryToSend: DiaryEntryViewModel?
     var monthYear = MonthYear()
     
+    @IBOutlet weak var filterStackView: UIStackView!
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
     
@@ -35,13 +37,16 @@ class DiaryViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateDiary()
-        
+        updateDiary(filter: true)
+        setupView()
     }
     
-    func updateDiary() {
+    func updateDiary(filter: Bool) {
         diaryEntries.reload(for: profileName!)
-        diaryEntries.filter(monthYear: monthYear)
+        if filter {
+            diaryEntries.filter(monthYear: monthYear)
+        }
+        
         tableView.reloadData()
     }
     
@@ -84,7 +89,7 @@ class DiaryViewController: UIViewController {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
-        vc.title = dateFormatter.string(from: Date())
+//        vc.title = dateFormatter.string(from: Date())
         
         if readOrWrite == .read {
             vc.prompts = entryToSend!.prompts
@@ -103,8 +108,20 @@ class DiaryViewController: UIViewController {
         }
         
         dateLabel.text = monthYear.asString()
-        updateDiary()
+        updateDiary(filter: true)
         
+    }
+    
+    
+    @IBAction func filterByMonth(_ sender: Any) {
+        updateDiary(filter: true)
+        filterStackView.isHidden = false
+    }
+    
+    
+    @IBAction func viewAll(_ sender: Any) {
+        updateDiary(filter: false)
+        filterStackView.isHidden = true
     }
 }
 

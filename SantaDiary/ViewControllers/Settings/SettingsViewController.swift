@@ -9,6 +9,9 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    // get user's name
+    let profileName = UserDefaults.standard.string(forKey: "SelectedProfile")
+    
     @IBOutlet weak var tableView: UITableView!
     
     let settings = SettingListViewModel()
@@ -76,7 +79,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         
         // if custom image, change corner radius
-        if setting.customImage {
+        if setting.customImage && ProfileManager.shared.isCustomImage(name: profileName!) {
             cell.settingImageView.layer.cornerRadius = cell.settingImageView.frame.height/2
             cell.settingImageView.layer.borderWidth = 2
             cell.settingImageView.layer.borderColor = UIColor.black.cgColor

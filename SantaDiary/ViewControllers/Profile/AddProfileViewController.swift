@@ -140,7 +140,17 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
     func createProfile() {
 
         let newProfile = Profile(userID: 0, name: nameTextField.text!, image: "profilePic.png", birthday: birthdayPicker.date, customImage: customImage)
-        let feedback = Feedback(name: nameTextField.text!, image: "Happy", feedback: "Please continue completing diary entries until we have enough information to determine which list you are on.")
+        let feedback = Feedback(name: nameTextField.text!, image: "Happy", feedback: "Please continue completing diary entries so we can figure out the types of goals for you.", goals: [
+            "Do your homework without being asked.",
+            "Tell someone a joke to make them laugh.",
+            "Make your bed.",
+            "Donate a toy or book you do not play or read anymore.",
+            "Help someone with their chores for the week.",
+            "Give someone you care about a big hug.",
+            "Make a drawing or piece of art for someone.",
+            "Fold your own clothes",
+            "Introduce yourself to someone new in your class. Invite them to play with you."
+        ])
         
         
         if ProfileManager.shared.createProfile(profile: newProfile, editingType: editingType) {

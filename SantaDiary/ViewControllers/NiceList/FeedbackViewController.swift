@@ -23,19 +23,8 @@ class FeedbackViewController: UIViewController {
     var selectedImage = 0
     var selectedGoal = -1
     
-    var goals = [
-        "Do your homework without being asked.",
-        "Tell someone a joke to make them laugh.",
-        "Make your bed.",
-        "Donate a toy or book you do not play or read anymore.",
-        "Help someone with their chores for the week.",
-        "Give someone you care about a big hug.",
-        "Make a drawing or piece of art for someone.",
-        "Fold your own clothes",
-        "Introduce yourself to someone new in your class. Invite them to play with you."
-    ]
-    
     var feedback: FeedbackViewModel?
+    var goals: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,13 +38,26 @@ class FeedbackViewController: UIViewController {
         setupTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateTableData()
+    }
+    
+    func updateTableData() {
+        getFeedback()
+        tableView.reloadData()
+    }
+    
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        
+          
         // connect to tableview cell
         let nib = UINib(nibName: SettingsTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: SettingsTableViewCell.identifier)
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 600
         
         tableView.backgroundColor = .clear
         
@@ -63,6 +65,9 @@ class FeedbackViewController: UIViewController {
     
     func getFeedback() {
         feedback = FeedbackViewModel(feedback: FeedbackManager.shared.getFeedback(name: profileName!))
+        if let goals = feedback?.goals {
+            self.goals = goals
+        }
     }
     
     func setupImages() {
@@ -134,7 +139,7 @@ class FeedbackViewController: UIViewController {
         }
         
         // update feedback
-        let updatedFeedback = Feedback(name: profileName!, image: App.emojis[selectedImage], feedback: goals[selectedGoal])
+        let updatedFeedback = Feedback(name: profileName!, image: App.emojis[selectedImage], feedback: goals[selectedGoal], goals: goals)
         
         if FeedbackManager.shared.updateFeedback(feedback: updatedFeedback) {
             
@@ -199,13 +204,16 @@ extension FeedbackViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return goals.count
+        guard let count = feedback?.goals.count else {return 0}
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifier, for: indexPath) as! SettingsTableViewCell
         
         cell.backgroundColor = .clear
+        
+        cell.settingLabel.font = UIFont(name: "Chalkboard SE Regular", size: 20)
         
         cell.settingLabel.text = goals[indexPath.row]
         cell.settingImageView.image = UIImage(named: App.holidayImages[indexPath.row % 4])
@@ -217,6 +225,46 @@ extension FeedbackViewController: UITableViewDelegate, UITableViewDataSource {
         selectedGoal = indexPath.row
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            let appearance = SCLAlertView.SCLAppearance(
+                kTitleFont: UIFont(name: "Chalkboard SE Bold", size: 24)!,
+                kTextFont: UIFont(name: "Chalkboard SE Regular", size: 20)!,
+                kButtonFont: UIFont(name: "Chalkboard SE Regular", size: 20)!,
+                showCloseButton: false,
+                dynamicAnimatorActive: true,
+                buttonsLayout: .horizontal
+            )
+            
+            let alert = SCLAlertView(appearance: appearance)
+            alert.addButton("YES") {
+                self.tableView.beginUpdates()
+                
+                self.goals.remove(at: indexPath.row)
+                
+                let updatedFeedback = Feedback(name: self.profileName!, image: self.feedback!.image, feedback: self.feedback!.feedback, goals: self.goals)
+                
+                
+                if FeedbackManager.shared.updateFeedback(feedback: updatedFeedback) {
+                    print("SUCCESSFUL")
+                }
+                
+                self.feedback = FeedbackViewModel(feedback: FeedbackManager.shared.getFeedback(name: self.profileName!))
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+                self.tableView.endUpdates()
+            }
+            alert.addButton("NO") {
+                
+            }
+            alert.showWarning("Confirm...", subTitle: "Are you sure you want to delete this profile?")
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
     
     
 }

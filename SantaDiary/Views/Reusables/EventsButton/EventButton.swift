@@ -46,6 +46,16 @@ class EventButton: UIView {
         parentView.isUserInteractionEnabled = true
     }
     
+    func applyGoldView() {
+        parentView.layer.borderColor = UIColor.yellow.cgColor
+        parentView.layer.borderWidth = 5
+        parentView.layer.shadowColor = UIColor.yellow.cgColor
+        parentView.layer.shadowOpacity = 0.5
+        parentView.layer.shadowOffset = .zero
+        parentView.layer.shadowRadius = 5
+        parentView.layer.cornerRadius = 10
+    }
+    
     enum EventType: String {
         case niceList = "Nice List"
         case writeLetter = "Send Letter"

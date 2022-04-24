@@ -16,4 +16,13 @@ extension UIView {
         animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
         layer.add(animation, forKey: "shake")
     }
+ 
+    func rotate(end: Double) {
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation.toValue = NSNumber(value: Double.pi * 2 + .pi * (end))
+        rotation.duration = 1
+        rotation.isCumulative = true
+        rotation.repeatCount = 0
+        self.layer.add(rotation, forKey: "rotationAnimation")
+    }
 }

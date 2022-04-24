@@ -11,6 +11,7 @@ struct Feedback: Codable {
     let name: String
     let image: String
     let feedback: String
+    let goals: [String]
 }
 
 enum FeedbackImageType: String {

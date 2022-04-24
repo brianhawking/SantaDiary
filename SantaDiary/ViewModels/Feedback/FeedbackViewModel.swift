@@ -10,7 +10,7 @@ import UIKit
 
 struct FeedbackViewModel {
     
-    let entry: Feedback
+    var entry: Feedback
     
     init(feedback: Feedback) {
         self.entry = feedback
@@ -35,6 +35,10 @@ struct FeedbackViewModel {
     
     var feedback: String {
         return entry.feedback
+    }
+    
+    var goals: [String] {
+        return entry.goals
     }
     
 }

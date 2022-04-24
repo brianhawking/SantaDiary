@@ -65,9 +65,12 @@ class NiceListViewConttroller: UIViewController {
         learningProgress = Float(progress.learning % 4) / 4
         kindnessProgress = Float(progress.kindness % 4) / 4
         
-        smileCumulative.text = " " + String(progress.smile / 4) + " "
-        learningCumulative.text = " " + String(progress.learning / 4) + " "
-        kindnessCumulative.text = " " + String(progress.kindness / 4) + " "
+        smileCumulative.text = "  "
+        //+ String(progress.smile / 4) + " "
+        learningCumulative.text = "  "
+        //+ String(progress.learning / 4) + " "
+        kindnessCumulative.text = "  "
+        //+ String(progress.kindness / 4) + " "
         
     }
     
@@ -91,9 +94,9 @@ class NiceListViewConttroller: UIViewController {
     func setupFeedbackView() {
         feedbackView.layer.cornerRadius = 10
         feedbackTextView.backgroundColor = .white
-        
+        let elf = App.elves.randomElement()!
         if let feedback = feedback {
-            feedbackTextView.text = feedback.feedback
+            feedbackTextView.text = "\(elf) the Elf left you with a new goal:\n\n" +  feedback.feedback
         }
     }
     
@@ -111,7 +114,7 @@ class NiceListViewConttroller: UIViewController {
         
         navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont(name: "Noteworthy Bold", size: 40) ?? UIFont.systemFont(ofSize: 40)
+            NSAttributedString.Key.font: UIFont(name: "Noteworthy Bold", size: 32) ?? UIFont.systemFont(ofSize: 32)
         ]
         
         view.backgroundColor = ColorScheme.backgroundColor

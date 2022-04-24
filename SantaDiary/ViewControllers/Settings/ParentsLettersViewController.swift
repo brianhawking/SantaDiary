@@ -22,7 +22,7 @@ class ParentsLettersViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        UserDefaults.standard.parentHasOnboarded = false
+//        UserDefaults.standard.parentHasOnboarded = false
         setupView()
         setupTableView()
     }
@@ -90,7 +90,8 @@ extension ParentsLettersViewController: UITableViewDelegate, UITableViewDataSour
         
         let setting = settings.getSettingViewModel(at: indexPath)
         
-        if setting.customImage {
+        if setting.customImage && ProfileManager.shared.isCustomImage(name: profileName!) {
+            
             cell.settingImageView.layer.cornerRadius = cell.settingImageView.frame.height/2
             cell.settingImageView.layer.borderWidth = 2
             cell.settingImageView.layer.borderColor = UIColor.black.cgColor

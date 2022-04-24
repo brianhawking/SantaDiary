@@ -59,18 +59,11 @@
                                 <segue destination="S8k-qf-DLp" kind="show" identifier="ListToCredits" id="mIg-Dg-hN3"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" id="R8w-mh-V2C">
-                                <connections>
-                                    <action selector="removeParental:" destination="BYZ-38-t0r" id="bYd-zv-L07"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Remove" id="YeP-Hv-gAK">
-                                <connections>
-                                    <action selector="removeAll:" destination="BYZ-38-t0r" id="jwe-KL-um4"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="R8w-mh-V2C">
+                            <connections>
+                                <action selector="removeParental:" destination="BYZ-38-t0r" id="bYd-zv-L07"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="5hX-0h-3Ig" id="vf1-ge-GJc"/>
@@ -151,8 +144,8 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="cc-number"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your parental password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0S7-56-EDJ">
-                                <rect key="frame" x="0.0" y="230" width="414" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <rect key="frame" x="0.0" y="233" width="414" height="35.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -353,7 +346,7 @@
             </objects>
             <point key="canvasLocation" x="2436" y="927"/>
         </scene>
-        <!--Write -->
+        <!--Write Diary Entry View Controller-->
         <scene sceneID="POd-7P-5Bk">
             <objects>
                 <viewController id="i8Z-hF-12T" customClass="WriteDiaryEntryViewController" customModule="SantaDiary" customModuleProvider="target" sceneMemberID="viewController">
@@ -381,9 +374,9 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is one thing that made you smile today?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tR-Z1-90J" customClass="PaddingLabel" customModule="SantaDiary" customModuleProvider="target">
-                                <rect key="frame" x="20" y="266" width="374" height="73"/>
+                                <rect key="frame" x="20" y="266" width="374" height="82.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -402,11 +395,11 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ACk-vA-7hg">
-                                <rect key="frame" x="20" y="349" width="374" height="493"/>
+                                <rect key="frame" x="20" y="358.5" width="374" height="483.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -425,7 +418,7 @@
                             <constraint firstItem="WKv-DR-XsP" firstAttribute="centerX" secondItem="d26-tk-7yG" secondAttribute="centerX" id="ux2-32-MdW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Write " id="5aV-ry-M5E">
+                    <navigationItem key="navigationItem" id="5aV-ry-M5E">
                         <rightBarButtonItems>
                             <barButtonItem image="arrowshape.turn.up.right.fill" catalog="system" id="kRG-Pz-mtg">
                                 <connections>
@@ -502,12 +495,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmp-bO-FFw">
-                                <rect key="frame" x="20" y="364.5" width="374" height="167.5"/>
+                                <rect key="frame" x="20" y="335" width="374" height="226.5"/>
                                 <string key="text">App Created by 
 Brian Veitch
 
 All icons made by Freepik from www.flaticon.com</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -729,7 +722,7 @@ All icons made by Freepik from www.flaticon.com</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="54N-R9-4ZH">
-                                <rect key="frame" x="59" y="128" width="296" height="128"/>
+                                <rect key="frame" x="59" y="108" width="296" height="128"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="lBA-7g-xMd">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -748,7 +741,7 @@ All icons made by Freepik from www.flaticon.com</string>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R65-UM-iyw">
-                                <rect key="frame" x="20" y="336" width="374" height="506"/>
+                                <rect key="frame" x="20" y="296" width="374" height="516"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="goalCell" textLabel="2ll-aE-5jL" style="IBUITableViewCellStyleDefault" id="60W-tF-0Ps">
@@ -771,24 +764,36 @@ All icons made by Freepik from www.flaticon.com</string>
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwc-sS-szM">
-                                <rect key="frame" x="20" y="276" width="374" height="40"/>
+                                <rect key="frame" x="20" y="246" width="374" height="40"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85F-fW-kNj" customClass="AddButton" customModule="SantaDiary" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="832" width="139" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="          +            "/>
+                                <connections>
+                                    <action selector="addProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kCs-u4-WkC"/>
+                                    <segue destination="iXo-91-oFf" kind="show" id="fzU-0T-CTL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ysT-4Q-K1q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="R65-UM-iyw" firstAttribute="top" secondItem="fwc-sS-szM" secondAttribute="bottom" constant="20" id="3tm-20-sa1"/>
+                            <constraint firstItem="R65-UM-iyw" firstAttribute="top" secondItem="fwc-sS-szM" secondAttribute="bottom" constant="10" id="3tm-20-sa1"/>
                             <constraint firstItem="ysT-4Q-K1q" firstAttribute="trailing" secondItem="fwc-sS-szM" secondAttribute="trailing" constant="20" id="9uj-Sb-kgB"/>
+                            <constraint firstItem="85F-fW-kNj" firstAttribute="centerX" secondItem="Pxk-qy-2jj" secondAttribute="centerX" id="T1o-Xp-VLJ"/>
                             <constraint firstItem="R65-UM-iyw" firstAttribute="leading" secondItem="ysT-4Q-K1q" secondAttribute="leading" constant="20" id="ava-9d-1Tw"/>
-                            <constraint firstItem="fwc-sS-szM" firstAttribute="top" secondItem="54N-R9-4ZH" secondAttribute="bottom" constant="20" id="g2A-Ae-PT5"/>
+                            <constraint firstItem="fwc-sS-szM" firstAttribute="top" secondItem="54N-R9-4ZH" secondAttribute="bottom" constant="10" id="g2A-Ae-PT5"/>
                             <constraint firstItem="54N-R9-4ZH" firstAttribute="centerX" secondItem="Pxk-qy-2jj" secondAttribute="centerX" id="h3g-VJ-TU6"/>
-                            <constraint firstItem="ysT-4Q-K1q" firstAttribute="bottom" secondItem="R65-UM-iyw" secondAttribute="bottom" constant="20" id="jYn-eT-ysR"/>
+                            <constraint firstItem="ysT-4Q-K1q" firstAttribute="bottom" secondItem="R65-UM-iyw" secondAttribute="bottom" constant="50" id="jYn-eT-ysR"/>
                             <constraint firstItem="fwc-sS-szM" firstAttribute="leading" secondItem="ysT-4Q-K1q" secondAttribute="leading" constant="20" id="nGl-FT-5bB"/>
+                            <constraint firstAttribute="bottom" secondItem="85F-fW-kNj" secondAttribute="bottom" constant="20" id="neO-Vx-vXp"/>
                             <constraint firstItem="ysT-4Q-K1q" firstAttribute="trailing" secondItem="R65-UM-iyw" secondAttribute="trailing" constant="20" id="qH8-r2-jsa"/>
-                            <constraint firstItem="54N-R9-4ZH" firstAttribute="top" secondItem="ysT-4Q-K1q" secondAttribute="top" constant="40" id="xdd-ds-Mwc"/>
+                            <constraint firstItem="54N-R9-4ZH" firstAttribute="top" secondItem="ysT-4Q-K1q" secondAttribute="top" constant="20" id="xdd-ds-Mwc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Feedback" id="FLN-Du-JJz">
@@ -807,6 +812,49 @@ All icons made by Freepik from www.flaticon.com</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tq-g3-6TW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4477" y="-1254"/>
+        </scene>
+        <!--Add Goal-->
+        <scene sceneID="YKQ-SZ-izM">
+            <objects>
+                <viewController id="iXo-91-oFf" customClass="AddGoalViewController" customModule="SantaDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oyK-mN-SXm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Any-um-UWT">
+                                <rect key="frame" x="20" y="388" width="374" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="D3P-ye-HTb"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="El3-j7-JDu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Any-um-UWT" firstAttribute="centerX" secondItem="oyK-mN-SXm" secondAttribute="centerX" id="Kb9-qE-UKm"/>
+                            <constraint firstItem="El3-j7-JDu" firstAttribute="trailing" secondItem="Any-um-UWT" secondAttribute="trailing" constant="20" id="XTK-wX-kYf"/>
+                            <constraint firstItem="Any-um-UWT" firstAttribute="leading" secondItem="El3-j7-JDu" secondAttribute="leading" constant="20" id="fyG-IH-hip"/>
+                            <constraint firstItem="Any-um-UWT" firstAttribute="centerY" secondItem="oyK-mN-SXm" secondAttribute="centerY" id="gM7-Xt-tcU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Goal" id="UZE-vd-qUU">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="nOO-dH-rm8">
+                            <connections>
+                                <action selector="saveButtonTaped:" destination="iXo-91-oFf" id="jRp-VZ-PjK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="Any-um-UWT" id="lA3-go-3Rd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSC-Em-KsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5365" y="-1254"/>
         </scene>
         <!--Profile Name-->
         <scene sceneID="zot-V0-YLa">
@@ -919,10 +967,10 @@ All icons made by Freepik from www.flaticon.com</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CrA-ev-vXb">
-                                <rect key="frame" x="20" y="98" width="374" height="36"/>
+                                <rect key="frame" x="20" y="98" width="374" height="44"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jj-PJ-rUm">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <state key="normal" image="back-button"/>
                                         <connections>
@@ -930,13 +978,13 @@ All icons made by Freepik from www.flaticon.com</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="September 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COP-VV-JDF">
-                                        <rect key="frame" x="50" y="0.0" width="269" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <rect key="frame" x="48" y="0.0" width="274.5" height="44"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="31"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSZ-a4-6oY">
-                                        <rect key="frame" x="329" y="0.0" width="45" height="36"/>
+                                        <rect key="frame" x="332.5" y="0.0" width="41.5" height="44"/>
                                         <state key="normal" image="fast-forward"/>
                                         <connections>
                                             <action selector="changeMonth:" destination="hlw-1P-uSN" eventType="touchUpInside" id="0Q2-xF-7AA"/>
@@ -945,7 +993,7 @@ All icons made by Freepik from www.flaticon.com</string>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dej-BN-PXL">
-                                <rect key="frame" x="20" y="154" width="374" height="658"/>
+                                <rect key="frame" x="20" y="162" width="374" height="650"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="ox7-Ko-8g1" style="IBUITableViewCellStyleDefault" id="F7a-7E-hLc">
@@ -993,9 +1041,23 @@ All icons made by Freepik from www.flaticon.com</string>
                             <constraint firstItem="dej-BN-PXL" firstAttribute="top" secondItem="CrA-ev-vXb" secondAttribute="bottom" constant="20" id="vPO-eC-VPU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Diary" id="yNw-K6-xMG"/>
+                    <navigationItem key="navigationItem" title="Diary" id="yNw-K6-xMG">
+                        <rightBarButtonItems>
+                            <barButtonItem title="View all" id="3qc-Sx-Ck1">
+                                <connections>
+                                    <action selector="viewAll:" destination="hlw-1P-uSN" id="if8-Zr-zCQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="By Month" id="m5h-yn-p40">
+                                <connections>
+                                    <action selector="filterByMonth:" destination="hlw-1P-uSN" id="IFi-5y-uu6"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="dateLabel" destination="COP-VV-JDF" id="UjO-Fw-8BL"/>
+                        <outlet property="filterStackView" destination="CrA-ev-vXb" id="feC-4S-Ofl"/>
                         <outlet property="tableView" destination="dej-BN-PXL" id="DHx-1b-mgd"/>
                         <segue destination="Jrh-ua-Nuc" kind="show" identifier="diaryToReadEntry" id="TWI-rp-5RV"/>
                         <segue destination="i8Z-hF-12T" kind="show" identifier="diaryToWriteEntry" id="Onq-0d-ubw"/>
@@ -1014,19 +1076,19 @@ All icons made by Freepik from www.flaticon.com</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="wsM-lw-x4Y" userLabel="Progress View">
-                                <rect key="frame" x="20" y="98" width="374" height="150"/>
+                                <rect key="frame" x="20" y="98" width="374" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HwD-Eb-QoT" userLabel="Kindness">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kindness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3c-6y-jT2">
-                                                <rect key="frame" x="0.0" y="9.5" width="148.5" height="31.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="148.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Rw-Ow-wzz">
-                                                <rect key="frame" x="168.5" y="23.5" width="205.5" height="3"/>
+                                                <rect key="frame" x="168.5" y="18.5" width="205.5" height="3"/>
                                                 <subviews>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="JIi-bY-hhj">
                                                         <rect key="frame" x="0.0" y="0.0" width="205.5" height="4"/>
@@ -1064,16 +1126,16 @@ All icons made by Freepik from www.flaticon.com</string>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="miO-yE-gmW">
-                                        <rect key="frame" x="0.0" y="50" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="40" width="374" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smiles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ii-Wf-cVM">
-                                                <rect key="frame" x="0.0" y="9.5" width="158.5" height="31.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="158.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMv-bz-I9L">
-                                                <rect key="frame" x="168.5" y="23" width="205.5" height="4"/>
+                                                <rect key="frame" x="168.5" y="18" width="205.5" height="4"/>
                                                 <subviews>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Z6S-lb-pm9">
                                                         <rect key="frame" x="0.0" y="0.0" width="205.5" height="4"/>
@@ -1107,16 +1169,16 @@ All icons made by Freepik from www.flaticon.com</string>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-Sc-H3p">
-                                        <rect key="frame" x="0.0" y="100" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="80" width="374" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learning" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-yF-Xwy">
-                                                <rect key="frame" x="0.0" y="9.5" width="158.5" height="31.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="158.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="28"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ab-Nh-nv1">
-                                                <rect key="frame" x="168.5" y="23" width="205.5" height="4"/>
+                                                <rect key="frame" x="168.5" y="18" width="205.5" height="4"/>
                                                 <subviews>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kco-eR-BDx">
                                                         <rect key="frame" x="0.0" y="0.0" width="205.5" height="4"/>
@@ -1150,34 +1212,27 @@ All icons made by Freepik from www.flaticon.com</string>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="leQ-3q-Wli"/>
+                                    <constraint firstAttribute="height" constant="120" id="leQ-3q-Wli"/>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-Sn-FMD">
-                                <rect key="frame" x="20" y="268" width="374" height="608"/>
+                                <rect key="frame" x="20" y="238" width="374" height="638"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HL6-ZQ-PQd">
-                                        <rect key="frame" x="20" y="20" width="334" height="568"/>
+                                        <rect key="frame" x="20" y="20" width="334" height="598"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="PAv-fX-JgG">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="120"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="qfG-wK-tyf"/>
+                                                    <constraint firstAttribute="height" constant="120" id="qfG-wK-tyf"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob8-ja-20d">
-                                                <rect key="frame" x="0.0" y="160" width="334" height="192"/>
-                                                <string key="text">One of Santa's elves left you with a new goal. Doing positive activities is a great opportunity to smile, be kind, and learn something new.</string>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q9h-aR-KOs">
-                                                <rect key="frame" x="0.0" y="362" width="334" height="206"/>
+                                                <rect key="frame" x="0.0" y="130" width="334" height="468"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="22"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
@@ -1244,22 +1299,22 @@ All icons made by Freepik from www.flaticon.com</string>
                                     <constraint firstAttribute="height" constant="200" id="K3u-Co-3Sg"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     Dear Santa," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sQ-kV-VVS">
-                                <rect key="frame" x="15" y="333.5" width="384" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Dear Santa," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sQ-kV-VVS">
+                                <rect key="frame" x="15" y="328.5" width="384" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="qKT-lI-Jjr"/>
+                                    <constraint firstAttribute="height" constant="60" id="qKT-lI-Jjr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1NY-PC-pem">
-                                <rect key="frame" x="15" y="383.5" width="384" height="492.5"/>
+                                <rect key="frame" x="15" y="388.5" width="384" height="487.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reindeer" translatesAutoresizingMaskIntoConstraints="NO" id="wQ5-Ec-Ltw">
@@ -1384,13 +1439,13 @@ All icons made by Freepik from www.flaticon.com</string>
                                     <constraint firstAttribute="width" constant="200" id="xWM-Lv-74a"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     Dear Santa," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEh-PZ-DWr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Dear Santa," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEh-PZ-DWr">
                                 <rect key="frame" x="15" y="333.5" width="384" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tsq-Yz-KP7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1399,7 +1454,7 @@ All icons made by Freepik from www.flaticon.com</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reindeer" translatesAutoresizingMaskIntoConstraints="NO" id="pn9-RG-fRH">
@@ -1447,38 +1502,38 @@ All icons made by Freepik from www.flaticon.com</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mfk-84-add">
-                                <rect key="frame" x="0.0" y="44" width="414" height="674"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mfk-84-add">
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="K0q-2X-ecI">
-                                    <size key="itemSize" width="412" height="625"/>
+                                    <size key="itemSize" width="412" height="648"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onboardingCollectionViewCell" id="QrW-7A-GHZ" customClass="OnboardingCollectionViewCell" customModule="SantaDiary" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="412" height="625"/>
+                                        <rect key="frame" x="0.0" y="22" width="412" height="648"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fyE-dS-Xua">
-                                            <rect key="frame" x="0.0" y="0.0" width="412" height="625"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="412" height="648"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5v6-yD-GBg">
-                                                    <rect key="frame" x="106" y="72" width="200" height="200"/>
+                                                    <rect key="frame" x="106" y="78" width="200" height="200"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="CYP-bI-iko"/>
                                                         <constraint firstAttribute="width" constant="200" id="dXT-MB-s5C"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyn-aM-O2Z">
-                                                    <rect key="frame" x="177" y="292" width="58.5" height="51.5"/>
+                                                    <rect key="frame" x="177" y="298" width="58.5" height="51.5"/>
                                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xun-Dr-M3K">
-                                                    <rect key="frame" x="20" y="363.5" width="372" height="241.5"/>
+                                                    <rect key="frame" x="20" y="369.5" width="372" height="258.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1497,7 +1552,7 @@ All icons made by Freepik from www.flaticon.com</string>
                                                 <constraint firstItem="tyn-aM-O2Z" firstAttribute="top" secondItem="5v6-yD-GBg" secondAttribute="bottom" constant="20" id="irS-iW-qcp"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="412" height="625"/>
+                                        <size key="customSize" width="412" height="648"/>
                                         <connections>
                                             <outlet property="slideDescriptionTextView" destination="Xun-Dr-M3K" id="FIW-QJ-rF8"/>
                                             <outlet property="slideImageView" destination="5v6-yD-GBg" id="3Pl-R0-GoE"/>
@@ -1507,7 +1562,7 @@ All icons made by Freepik from www.flaticon.com</string>
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQQ-sG-MhQ">
-                                <rect key="frame" x="82" y="772" width="250" height="50"/>
+                                <rect key="frame" x="82" y="782" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.92941176469999998" green="0.86666666670000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PId-7V-0fj"/>
@@ -1523,7 +1578,7 @@ All icons made by Freepik from www.flaticon.com</string>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-Ni-3Zc">
-                                <rect key="frame" x="149" y="726" width="116" height="26"/>
+                                <rect key="frame" x="149" y="736" width="116" height="26"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K7z-H7-VpR"/>
@@ -1533,8 +1588,8 @@ All icons made by Freepik from www.flaticon.com</string>
                             <constraint firstItem="yQQ-sG-MhQ" firstAttribute="centerX" secondItem="zX0-zI-E5V" secondAttribute="centerX" id="6Ar-sH-ZpW"/>
                             <constraint firstItem="hAK-Ni-3Zc" firstAttribute="centerX" secondItem="zX0-zI-E5V" secondAttribute="centerX" id="BoB-26-CLh"/>
                             <constraint firstItem="mfk-84-add" firstAttribute="leading" secondItem="K7z-H7-VpR" secondAttribute="leading" id="Deo-dS-RVl"/>
-                            <constraint firstItem="hAK-Ni-3Zc" firstAttribute="top" secondItem="mfk-84-add" secondAttribute="bottom" constant="20" id="HGV-0N-36g"/>
-                            <constraint firstItem="K7z-H7-VpR" firstAttribute="bottom" secondItem="yQQ-sG-MhQ" secondAttribute="bottom" constant="40" id="Jv4-Ah-Rtg"/>
+                            <constraint firstItem="hAK-Ni-3Zc" firstAttribute="top" secondItem="mfk-84-add" secondAttribute="bottom" id="HGV-0N-36g"/>
+                            <constraint firstItem="K7z-H7-VpR" firstAttribute="bottom" secondItem="yQQ-sG-MhQ" secondAttribute="bottom" constant="30" id="Jv4-Ah-Rtg"/>
                             <constraint firstItem="yQQ-sG-MhQ" firstAttribute="top" secondItem="hAK-Ni-3Zc" secondAttribute="bottom" constant="20" id="Oyt-qJ-F3e"/>
                             <constraint firstItem="mfk-84-add" firstAttribute="centerX" secondItem="zX0-zI-E5V" secondAttribute="centerX" id="fAF-Ao-v9h"/>
                             <constraint firstItem="mfk-84-add" firstAttribute="top" secondItem="K7z-H7-VpR" secondAttribute="top" id="i6R-kV-EaB"/>
@@ -1548,7 +1603,7 @@ All icons made by Freepik from www.flaticon.com</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJB-DE-JWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1616" y="56"/>
+            <point key="canvasLocation" x="-1617.3913043478262" y="55.580357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gW7-ra-MRH">
@@ -1679,16 +1734,16 @@ All icons made by Freepik from www.flaticon.com</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y1T-Bn-7nq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2332" y="56"/>
+            <point key="canvasLocation" x="-2565" y="56"/>
         </scene>
     </scenes>
     <designables>
         <designable name="4tR-Z1-90J">
-            <size key="intrinsicContentSize" width="470.5" height="46.5"/>
+            <size key="intrinsicContentSize" width="531" height="51.5"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="yfh-cN-VXy"/>
+        <segue reference="5Mb-mu-djb"/>
         <segue reference="Hj1-GG-ugI"/>
         <segue reference="SFO-Ua-N9Q"/>
     </inferredMetricsTieBreakers>

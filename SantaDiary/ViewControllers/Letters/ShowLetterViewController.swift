@@ -39,7 +39,7 @@ class ShowLetterViewController: UIViewController {
     func setupTextView() {
         
         if let letter = letter {
-            recipientLabel.text = "     Dear \(profileName!)"
+            recipientLabel.text = "   Dear \(profileName!)"
             self.title = "Letter from \(letter.author)"
             letterTextView.text = letter.content
         }

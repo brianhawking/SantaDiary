@@ -44,7 +44,8 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     func showConfirmation() {
-        let appearence = CustomAlert().appearanceWithDone()
+        hiddenTextField.resignFirstResponder()
+        let appearence = CustomAlert().appearance()
         let alert = SCLAlertView(appearance: appearence)
         
 //
@@ -52,21 +53,29 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
         alert.addButton("Confirm") { [self] in
             UserDefaults.standard.set(self.hiddenTextField.text!, forKey: "parentalPassword")
                 self.navigationController?.popViewController(animated: true)
-            
         }
-        alert.showSuccess("Password set!", subTitle: "Your password is \(self.hiddenTextField.text!). Please save it somewhere because it cannot be reset or recovered.")
+        alert.addButton("Retry") { [self] in
+            hiddenTextField.becomeFirstResponder()
+        }
+        alert.showSuccess("Password set!", subTitle: "Your password is \(self.hiddenTextField.text!). You can reset it by pressing the hidden button on the top right of the list of profiles page.")
     
     }
     
     func showAlert() {
-        SCLAlertView(appearance: CustomAlert().appearanceWithDone()).showNotice("Password", subTitle: "Create your parental password. THIS CANNOT BE CHANGED OR RECOVERED.")
+        let appearence = CustomAlert().appearance()
+        let alert = SCLAlertView(appearance: appearence)
+        alert.addButton("I understand") { [self] in
+            
+            hiddenTextField.becomeFirstResponder()
+        }
+        alert.showNotice("Password", subTitle: "Create your parental password. Make sure you check out the parent's section after creating the child's profile to understand your role in this app.")
+//        hiddenTextField.becomeFirstResponder()
     }
 
     func setupHiddenTextField() {
         hiddenTextField.delegate = self
-        hiddenTextField.becomeFirstResponder()
+//        hiddenTextField.becomeFirstResponder()
         hiddenTextField.isHidden = true
-        hiddenTextField.becomeFirstResponder()
     }
     
     func setupBoxes() {
