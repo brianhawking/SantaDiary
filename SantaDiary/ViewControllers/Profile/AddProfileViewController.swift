@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 enum ProfileEditType {
     case create
@@ -23,11 +24,14 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var profileDetailsView: UIView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var birthdayPicker: UIDatePicker!
+    @IBOutlet weak var reindeerImageView: UIImageView!
     
     var completionHandler: ((Bool) -> Void)?
     var customImage = false
     
     var editingType: ProfileEditType = .create
+    
+    var reindeerPosition = 2
     
 
     override func viewDidLoad() {
@@ -35,6 +39,7 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
 
         // Do any additional setup after loading the view.
         setupView()
+        setupImages()
         setupProfileImageView()
     }
     
@@ -46,6 +51,82 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
         gesture.numberOfTouchesRequired = 1
         profileImageView.addGestureRecognizer(gesture)
         
+    }
+    
+    func setupImages() {
+       
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(rotateReindeer(tapGestureRecognizer:)))
+        reindeerImageView.addGestureRecognizer(gesture)
+        reindeerImageView.isUserInteractionEnabled = true
+    }
+    
+    func hideReindeer() {
+        switch reindeerPosition {
+        case 1:
+            // move left
+            self.reindeerImageView.frame.origin.x = -180
+        case 2:
+            // move down
+            self.reindeerImageView.frame.origin.y = self.view.frame.height + 180
+        default:
+            // move right
+            self.reindeerImageView.frame.origin.x = self.view.frame.width + 180
+        }
+    }
+    
+    func repositionReindeer() {
+        
+        self.reindeerImageView.transform = CGAffineTransform(rotationAngle: 0)
+        
+        reindeerPosition = Int.random(in: 1...3)
+        
+        let width = self.view.frame.width - 180
+        let height = self.view.frame.height - 180
+        
+        let randomX = Double.random(in: 0...width)
+        let randomY = Double.random(in: height/3...height)
+        
+        switch reindeerPosition {
+        case 1:
+            // on left
+            self.reindeerImageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi/2)
+            self.reindeerImageView.frame.origin.x = -180
+            self.reindeerImageView.frame.origin.y = randomY
+        case 2:
+            // bottom
+            self.reindeerImageView.frame.origin.x = randomX
+            self.reindeerImageView.frame.origin.y = self.view.frame.height
+        default:
+            // on right
+            reindeerImageView.transform = CGAffineTransform(rotationAngle: -1*CGFloat.pi/2)
+            self.reindeerImageView.frame.origin.x = self.view.frame.width
+            self.reindeerImageView.frame.origin.y = randomY
+        }
+    }
+    
+    @objc func rotateReindeer(tapGestureRecognizer: UITapGestureRecognizer) {
+        UIImageView.animate(withDuration: 0.5, delay: 0.1, options: [.curveEaseIn], animations: {
+            self.hideReindeer()
+            
+        }, completion: { _ in
+        
+            self.repositionReindeer()
+            
+            switch self.reindeerPosition {
+            case 1:
+                UIImageView.animate(withDuration: 0.5, delay: 1, animations: {
+                    self.reindeerImageView.frame.origin.x = -10
+                })
+            case 2:
+                UIImageView.animate(withDuration: 0.5, delay: 1, animations: {
+                    self.reindeerImageView.frame.origin.y = self.view.frame.height - 170
+                })
+            default:
+                UIImageView.animate(withDuration: 0.5, delay: 1, animations: {
+                    self.reindeerImageView.frame.origin.x = self.view.frame.width - 170
+                })
+            }
+        })
     }
     
     func setupView() {
@@ -65,6 +146,8 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
         else {
             self.title = "Edit Profile"
             let profile = ProfileViewModel(profile: ProfileManager.shared.getProfile(name: profileName!))
+            
+            print("DEBUG: BEFORE: ", profile.customImage)
             
             // if custom image, change corner radius
             if profile.customImage {
@@ -88,7 +171,6 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
     // MARK: - Selectors
     
     @objc func changeProfilePicture() {
-        print("DEBUG: change image")
         presentPhotoActionSheet()
     }
     
@@ -98,12 +180,10 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         
         if (nameTextField.text == "") {
-            print("DEBUG: Enter a name")
             nameTextField.shake()
             return
         }
         else if profileImageView.image == UIImage(systemName: "person.fill.badge.plus") {
-            print("DEBUG: Choose a photo")
             profileImageView.shake()
             return
         }
@@ -123,6 +203,7 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
         
         let oldProfile = ProfileManager.shared.getProfile(name: profileName!)
         let newProfile = Profile(userID: 0, name: nameTextField.text!, image: "profilePic.png", birthday: birthdayPicker.date, customImage: customImage)
+        print("DEBUG: AFTER ", customImage)
         
         if ProfileManager.shared.editProfile(from: oldProfile, to: newProfile) {
             print("DEBUG: editing profile for \(profileName!)")
@@ -139,7 +220,9 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
                  
     func createProfile() {
 
-        let newProfile = Profile(userID: 0, name: nameTextField.text!, image: "profilePic.png", birthday: birthdayPicker.date, customImage: customImage)
+        let profileName = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        let newProfile = Profile(userID: 0, name: profileName, image: "profilePic.png", birthday: birthdayPicker.date, customImage: customImage)
         let feedback = Feedback(name: nameTextField.text!, image: "Happy", feedback: "Please continue completing diary entries so we can figure out the types of goals for you.", goals: [
             "Do your homework without being asked.",
             "Tell someone a joke to make them laugh.",
@@ -167,6 +250,11 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
             // return to profiles viewcontroller
             completionHandler?(true)
             navigationController?.popViewController(animated: true)
+        }
+        else {
+            let appearence = CustomAlert().appearanceWithDone()
+            let alert = SCLAlertView(appearance: appearence)
+            alert.showError("Unavailable", subTitle: "\(profileName) is already taken.")
         }
         
     }

@@ -56,6 +56,8 @@ class OnboardingViewController: UIViewController {
         nextButton.setTitleColor(ColorScheme.eventButtonTextColor, for: .normal)
         
         pageControl.numberOfPages = slides.count
+        
+        view.backgroundColor = ColorScheme.backgroundColor
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {

@@ -53,6 +53,7 @@ class ParentalOnboardingViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        setupViews()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -68,6 +69,8 @@ class ParentalOnboardingViewController: UIViewController {
         nextButton.layer.cornerRadius = 10
         nextButton.backgroundColor = ColorScheme.eventButtonBackgroundColor
         nextButton.setTitleColor(ColorScheme.eventButtonTextColor, for: .normal)
+        
+        view.backgroundColor = ColorScheme.backgroundColor
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {

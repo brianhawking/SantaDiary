@@ -49,8 +49,19 @@ class WriteLetterViewController: UIViewController {
     }
     
     @objc func rotateReindeer(tapGestureRecognizer: UITapGestureRecognizer) {
-        print("rotate me")
-        reindeerImageView.rotate(end: -1/3)
+//        print("rotate me")
+//        reindeerImageView.rotate(end: -1/3)
+        UIImageView.animate(withDuration: 1, delay: 0.1, options: [.curveEaseIn], animations: {
+            self.reindeerImageView.transform = CGAffineTransform(translationX:375, y: 0)
+            
+        }, completion: { _ in
+           
+            UIImageView.animate(withDuration: 1, animations: {
+                self.reindeerImageView.transform = CGAffineTransform(translationX:0, y: 0)
+                self.reindeerImageView.transform = self.reindeerImageView.transform.rotated(by: .pi * -1/3)
+            })
+            
+        })
     }
     @objc func rotateSnowman(tapGestureRecognizer: UITapGestureRecognizer) {
         print("rotate me")

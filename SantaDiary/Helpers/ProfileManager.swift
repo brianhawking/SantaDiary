@@ -173,14 +173,22 @@ struct ProfileManager {
     
     func editProfile(from oldProfile: Profile, to newProfile: Profile) -> Bool {
         
+        var sameName = false
+        
         let old = profileRootURL(name: oldProfile.name)
+        var tempProfile = newProfile
+        
+        if oldProfile.name == newProfile.name {
+            sameName = true
+            tempProfile.name = oldProfile.name + "_temp"
+        }
         
         if userExists(name: newProfile.name) && oldProfile.name != newProfile.name {
             print("DEBUG: this profile already exists.")
             return false
         }
         
-        let new = profileRootURL(name: newProfile.name)
+        let new = profileRootURL(name: tempProfile.name)
         
         do{
             try FileManager.default.moveItem(atPath: old.path, toPath: new.path)
@@ -199,10 +207,18 @@ struct ProfileManager {
                 
                     // create the user's folder
                     do {
-                        try jsonData.write(to: profileURL(name: newProfile.name))
+                        try jsonData.write(to: profileURL(name: tempProfile.name))
                         
                         // change the name in all the letters
-                        LetterManager.shared.editNameInLetters(oldName: oldProfile.name, newName: newProfile.name)
+                        LetterManager.shared.editNameInLetters(oldName: oldProfile.name, newName: tempProfile.name)
+                        
+                        if sameName == true {
+                            if editProfile(from: tempProfile, to: newProfile) {
+                                print("EVERYTHING IS SUCCESSFUL")
+                            }
+                        }
+                        
+                        return true
                         
                     }
                     catch {
@@ -213,15 +229,12 @@ struct ProfileManager {
             }
             catch {
                 print(error)
-                return false
             }
-            
-            
         } catch   {
-            print("error")
+            print("error", error.localizedDescription)
         }
         
-        return true
+        return false
     }
     
     func deleteProfile(profile: Profile) -> Bool {

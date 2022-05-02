@@ -56,8 +56,9 @@ class FeedbackViewController: UIViewController {
         let nib = UINib(nibName: SettingsTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: SettingsTableViewCell.identifier)
         
+        tableView.estimatedRowHeight = 110
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 600
+        
         
         tableView.backgroundColor = .clear
         
@@ -83,9 +84,6 @@ class FeedbackViewController: UIViewController {
         for image in images {
             image.alpha = 0.25
             image.isUserInteractionEnabled = true
-//            let gesture = UITapGestureRecognizer(target: self, action: #selector(changeImage))
-//            gesture.numberOfTouchesRequired = 1
-//            image.addGestureRecognizer(gesture)
         }
         
         if let feedback = feedback {
@@ -200,7 +198,8 @@ class FeedbackViewController: UIViewController {
 extension FeedbackViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+//        return 110
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

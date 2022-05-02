@@ -16,6 +16,7 @@ class DiaryViewController: UIViewController {
     var readOrWrite = ReadOrWrite.write
     var entryToSend: DiaryEntryViewModel?
     var monthYear = MonthYear()
+    var filterByMonth = true
     
     @IBOutlet weak var filterStackView: UIStackView!
     
@@ -30,14 +31,14 @@ class DiaryViewController: UIViewController {
         
         setupView()
         setupTableView()
-        
+        updateDiary(filter: filterByMonth)
         dateLabel.text = monthYear.asString()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateDiary(filter: true)
+        updateDiary(filter: filterByMonth)
         setupView()
     }
     
@@ -114,12 +115,14 @@ class DiaryViewController: UIViewController {
     
     
     @IBAction func filterByMonth(_ sender: Any) {
+        filterByMonth = true
         updateDiary(filter: true)
         filterStackView.isHidden = false
     }
     
     
     @IBAction func viewAll(_ sender: Any) {
+        filterByMonth = false
         updateDiary(filter: false)
         filterStackView.isHidden = true
     }

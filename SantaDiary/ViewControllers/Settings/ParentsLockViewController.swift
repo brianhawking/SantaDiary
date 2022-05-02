@@ -31,6 +31,10 @@ class ParentsLockViewController: UIViewController, UITextViewDelegate, UITextFie
     
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        password = UserDefaults.standard.string(forKey: "parentalPassword")
+    }
+    
     func setupHiddenTextField() {
         hiddenTextField.delegate = self
         hiddenTextField.becomeFirstResponder()
@@ -89,7 +93,7 @@ class ParentsLockViewController: UIViewController, UITextViewDelegate, UITextFie
         else {
             
             // remove digit from box
-            digits[digit].text = " "
+            digits[digit-1].text = " "
             
             if (digit > 0) {
                 digit -= 1
@@ -99,7 +103,11 @@ class ParentsLockViewController: UIViewController, UITextViewDelegate, UITextFie
         if textField.text!.count == 4 && textField.text! != password {
             for digit in digits {
                 digit.shake()
+                digit.text = ""
             }
+            // reset
+            hiddenTextField.text = ""
+            digit = 0
         }
         
         if (textField.text == password) {
@@ -114,5 +122,20 @@ class ParentsLockViewController: UIViewController, UITextViewDelegate, UITextFie
         }
         
     }
-
+    
+    
+    @IBAction func forgotPasswordTapped(_ sender: Any) {
+        
+        performSegue(withIdentifier: "toForgotPassword", sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toForgotPassword" {
+            let vc = segue.destination as! CreatePasswordViewController
+            vc.reset = true
+        }
+    }
+    
 }

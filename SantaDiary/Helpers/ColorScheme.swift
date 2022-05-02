@@ -10,7 +10,7 @@ import UIKit
 
 struct ColorScheme {
     
-    static let backgroundColor          = UIColor(hex: "#216F60ff")
+    static let backgroundColor          = UIColor(hex: "#216F60FF")
     static let textColorOnBackground    = UIColor.white
     static let messageBackgroundColor   = UIColor.white
     static let messageTextColor         = UIColor.black

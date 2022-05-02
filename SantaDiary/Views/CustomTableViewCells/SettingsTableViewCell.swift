@@ -19,7 +19,7 @@ class SettingsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        
+        settingLabel.numberOfLines = 0
         cellView.layer.cornerRadius = 10
         cellView.layer.borderColor = UIColor.black.cgColor
         cellView.layer.borderWidth = 1

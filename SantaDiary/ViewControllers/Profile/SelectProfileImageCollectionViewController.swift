@@ -27,8 +27,6 @@ class SelectProfileImageCollectionViewController: UICollectionViewController, UI
 
         // Register cell classes
         collectionView!.register(ProfileImageCollectionViewCell.self, forCellWithReuseIdentifier: ProfileImageCollectionViewCell.identifier)
-
-        // Do any additional setup after loading the view.
     }
     
     func setupView() {

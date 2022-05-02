@@ -59,12 +59,19 @@ class ProfileViewController: UIViewController {
         // profile image
         profileImageView.image = profile.image
         
+        print("IN PROFILE PAGE - custom image is ", profile.customImage)
         // if custom image, add the corner radius and border
         if profile.customImage {
+            print("IN PROFILE customImageCheck - custom image is ", profile.customImage)
             profileImageView.layer.cornerRadius = profileImageView.bounds.height/2
             profileImageView.layer.borderWidth = 2
             profileImageView.layer.borderColor = ColorScheme.eventButtonBackgroundColor?.cgColor
             profileImageView.contentMode = .scaleToFill
+        }
+        else {
+            profileImageView.layer.cornerRadius = 0
+            profileImageView.layer.borderWidth = 0
+            profileImageView.layer.borderColor = UIColor.clear.cgColor
         }
         
     }

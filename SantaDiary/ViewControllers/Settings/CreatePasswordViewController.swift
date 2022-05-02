@@ -12,7 +12,11 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var hiddenTextField: UITextField!
     
+    @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet var digits: [UILabel]!
+
+    var task = "parentalBirthyear"
+    var reset = false
     
     var digit = 0
     
@@ -24,16 +28,14 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
         self.navigationItem.setHidesBackButton(true, animated: true)
         
         setupView()
-        showAlert()
+        showForgetPasswordNotice()
         setupHiddenTextField()
         setupBoxes()
     }
     
    
     @IBAction func saveButtonTapped(_ sender: Any) {
-        
-        print(hiddenTextField.text!)
-        
+    
         if hiddenTextField.text!.count < 4 {
             SCLAlertView().showWarning("Password", subTitle: "Password must be 4 digits long.")
             return
@@ -44,21 +46,49 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     func showConfirmation() {
+        
         hiddenTextField.resignFirstResponder()
         let appearence = CustomAlert().appearance()
         let alert = SCLAlertView(appearance: appearence)
         
-//
-//        let password = alert.addTextField("Confirm your password")
+        
         alert.addButton("Confirm") { [self] in
-            UserDefaults.standard.set(self.hiddenTextField.text!, forKey: "parentalPassword")
+            UserDefaults.standard.set(self.hiddenTextField.text!, forKey: task)
+            
+            if task == "parentalPassword" {
                 self.navigationController?.popViewController(animated: true)
+            } else {
+                if reset == false {
+                    task = "parentalPassword"
+                    showAlert()
+                    self.title = "Enter your password."
+                }
+                
+            }
+            
+            print(UserDefaults.standard.string(forKey: "parentalPassword"))
         }
         alert.addButton("Retry") { [self] in
+            resetPassword()
             hiddenTextField.becomeFirstResponder()
         }
-        alert.showSuccess("Password set!", subTitle: "Your password is \(self.hiddenTextField.text!). You can reset it by pressing the hidden button on the top right of the list of profiles page.")
+        
+        var message = "Your birth year is \(self.hiddenTextField.text!). Use this to reset your password in the future."
+        if task == "parentalPassword" {
+            message = "Your password is \(self.hiddenTextField.text!). You can reset it in the parental section of the app."
+        }
+        alert.showSuccess("Password set!", subTitle: message)
     
+    }
+    
+    func resetPassword() {
+        
+        for digit in digits {
+            digit.text = ""
+        }
+        digit = 0
+        hiddenTextField.text = ""
+        print("reset password")
     }
     
     func showAlert() {
@@ -67,9 +97,27 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
         alert.addButton("I understand") { [self] in
             
             hiddenTextField.becomeFirstResponder()
+            resetPassword()
         }
+    
         alert.showNotice("Password", subTitle: "Create your parental password. Make sure you check out the parent's section (settings icon in child's profile) after creating the child's profile to understand your role in this app.")
-//        hiddenTextField.becomeFirstResponder()
+    }
+    
+    func showForgetPasswordNotice() {
+        
+        let appearence = CustomAlert().appearance()
+        let alert = SCLAlertView(appearance: appearence)
+        alert.addButton("I understand") { [self] in
+            hiddenTextField.becomeFirstResponder()
+        }
+        
+        if reset == false {
+            alert.showNotice("Forget your password?", subTitle: "Enter your birth year now. Use this if you ever need to reset your password.")
+        }
+        else {
+            alert.showNotice("Forget your password?", subTitle: "Enter your birth year now.")
+        }
+        
     }
 
     func setupHiddenTextField() {
@@ -101,19 +149,16 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
         
         view.backgroundColor = ColorScheme.backgroundColor
         
-        self.title = "Set up parental passcode"
+        self.title = "Enter your birth year"
+        
+        
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         
-        if Int(textField.text!) == nil {
-//            return
-        }
-        
         // get text count, 0 if it's null
         var characterCount = textField.text?.count ?? 0
-        
-        
+    
         print("digit: \(digit), count \(characterCount)")
         
         // character reached it's max
@@ -127,20 +172,34 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
             
             // add a character
             digits[characterCount-1].text = textField.text![characterCount - 1]
-//            digits[characterCount-1].text = "\u{2022}"
             
             if (digit == 3) {
-                saveButtonTapped((Any).self)
+                
+                if reset == true && self.hiddenTextField.text! == UserDefaults.standard.string(forKey: "parentalBirthyear") {
+                    task = "parentalPassword"
+                    showAlert()
+                    self.title = "Set new password."
+                    reset = false
+                } else if reset == true && self.hiddenTextField.text! != UserDefaults.standard.string(forKey: "parentalBirthyear") {
+                    
+                    for digit in digits {
+                        digit.shake()
+                    }
+                    resetPassword()
+                    return
+                } else {
+                    saveButtonTapped((Any).self)
+                }
             }
             
             if (digit < 3) {
                 digit += 1
             }
         }
-        else {
+        else if digit != characterCount {
             
             // remove digit from box
-            digits[digit].text = " "
+            digits[digit-1].text = " "
             
             if (digit > 0) {
                 digit -= 1
